@@ -42,7 +42,9 @@ $(function() {
 <div class="textblock">Here is a list of all variables with links to the classes they belong to:</div>
 
 <h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
+<li>active&#160;:&#160;<a class="el" href="classroot__guard.html#acaa5548711687b8a823e4de4e61940b6">root_guard</a></li>
 <li>alloc_thread_pool&#160;:&#160;<a class="el" href="classallocators.html#aab834546e9bd4b83f7f0ff44fdb93f1e">allocators</a></li>
+<li>allocs&#160;:&#160;<a class="el" href="structdiagnostics.html#a946ca0a6b8884df23872bb2b5993b79b">diagnostics</a></li>
 </ul>
 
 
@@ -53,19 +55,22 @@ $(function() {
 
 <h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
 <li>capacity&#160;:&#160;<a class="el" href="classhash__map.html#a3a48f7db4fddf548e4b1b238bd0fd3a1">hash_map&lt; K, V, Hash &gt;</a>, <a class="el" href="classindexed__stack.html#aaeea3d637efcbee9abb13cb0fb7eeb7c">indexed_stack&lt; T &gt;</a></li>
-<li>category_dist&#160;:&#160;<a class="el" href="classallocators.html#a989a61d5a68bd46a5490235e538e2896">allocators</a></li>
 <li>cv&#160;:&#160;<a class="el" href="classthread__pool.html#a221e534710aa145b2d9b58fc96df3078">thread_pool</a></li>
 </ul>
 
 
 <h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
-<li>data&#160;:&#160;<a class="el" href="classindexed__stack.html#a35043d16b8337d46f263d5c57c36954c">indexed_stack&lt; T &gt;</a></li>
+<li>data&#160;:&#160;<a class="el" href="classfixed__stack.html#a02fdbeae7ae9b02bf6ac681df1e02acc">fixed_stack&lt; T, capacity &gt;</a>, <a class="el" href="classindexed__stack.html#a35043d16b8337d46f263d5c57c36954c">indexed_stack&lt; T &gt;</a></li>
+<li>diagnostic_records&#160;:&#160;<a class="el" href="classdiagnoser.html#a6742bcb77f958136283f3ea5d813b4c2">diagnoser</a></li>
+<li>duration&#160;:&#160;<a class="el" href="structdiagnostics.html#a10063dcdc1d18b35570a02deee444d7c">diagnostics</a></li>
 </ul>
 
 
 <h3><a id="index_f" name="index_f"></a>- f -</h3><ul>
+<li>failed_allocs&#160;:&#160;<a class="el" href="structdiagnostics.html#a004c3e077c4c6488af9c02f0f0cd56cc">diagnostics</a></li>
 <li>flags&#160;:&#160;<a class="el" href="structheader.html#acc46393e50aa06f0a40f19fee6798613">header</a></li>
-<li>free_bytes&#160;:&#160;<a class="el" href="structsegment__info.html#af16f3bc96d139d501cce9b7954c614ae">segment_info</a></li>
+<li>forwarding_address&#160;:&#160;<a class="el" href="structheader.html#a4a9717ee98955153b99d0af744ea4100">header</a></li>
+<li>free_bytes&#160;:&#160;<a class="el" href="structsegment__info.html#ab98ba480b10d98810bc55d83729872a4">segment_info</a></li>
 <li>free_list_head&#160;:&#160;<a class="el" href="structsegment__info.html#a14665b514470e2bc3af5e2220629d3ca">segment_info</a></li>
 <li>free_mem_table&#160;:&#160;<a class="el" href="classsegment__free__memory__table.html#a6801375a68e9bf477a7304a8e9c593ba">segment_free_memory_table</a></li>
 <li>free_memory&#160;:&#160;<a class="el" href="structsegment.html#a6381dfc479d6767bd894d5d3c09dbfab">segment</a></li>
@@ -74,21 +79,31 @@ $(function() {
 
 
 <h3><a id="index_g" name="index_g"></a>- g -</h3><ul>
-<li>gc&#160;:&#160;<a class="el" href="classheap__manager.html#afc54045ea8ed0c642647bba3d2df69ab">heap_manager</a></li>
+<li>gc&#160;:&#160;<a class="el" href="classheap__manager.html#a70c5bc5c5e4e39d84117ee37631cf89f">heap_manager</a></li>
 <li>gc_in_progress&#160;:&#160;<a class="el" href="classheap__manager.html#a8015662021ab871e3138848e7a2f8ccc">heap_manager</a></li>
 <li>gc_thread_pool&#160;:&#160;<a class="el" href="classgarbage__collector.html#ad12d4b309c4d322c7255e2a59356c523">garbage_collector</a></li>
 <li>gc_timer_thread&#160;:&#160;<a class="el" href="classheap__manager.html#a219e65393aa5654e1de60e63317ac58f">heap_manager</a></li>
-<li>global_mutex&#160;:&#160;<a class="el" href="classglobal__root.html#a5f5af23a29b6aef299941268397f5c35">global_root</a></li>
-<li>global_variable_ptr&#160;:&#160;<a class="el" href="classglobal__root.html#a6ae90f1a4f36edf1af592a8efd27d5a0">global_root</a></li>
+<li>gc_type&#160;:&#160;<a class="el" href="structcli_1_1cli__options.html#a8ca249dd5f3a6eea0ea7c7e58cb60545">cli::cli_options</a></li>
+<li>global_alloc_p&#160;:&#160;<a class="el" href="structrng_1_1sim_1_1operation__probability__t.html#afda7a74debc7b14a2da6c80773345d20">rng::sim::operation_probability_t</a></li>
+<li>global_realloc_p&#160;:&#160;<a class="el" href="structrng_1_1sim_1_1operation__probability__t.html#afd0a94136dfe01e2f65694628732217e">rng::sim::operation_probability_t</a></li>
+<li>global_space&#160;:&#160;<a class="el" href="classallocators.html#a682c70057b47332e3fd12b258d5ad8c0">allocators</a></li>
+<li>global_space_mtx&#160;:&#160;<a class="el" href="classshared__global__space.html#a911b4e205beb6a69191487c87a6434cd">shared_global_space</a></li>
+<li>global_variables&#160;:&#160;<a class="el" href="classshared__global__space.html#aeec03da90347dc17a0a1cbf592e4790c">shared_global_space</a></li>
 </ul>
 
 
 <h3><a id="index_h" name="index_h"></a>- h -</h3><ul>
 <li>hash_function&#160;:&#160;<a class="el" href="classhash__map.html#a27cdf2d05b1cd6a13a352bfd556ae83a">hash_map&lt; K, V, Hash &gt;</a></li>
 <li>head&#160;:&#160;<a class="el" href="classqueue.html#a5166a9530f1192d04456d9eb3cfbbbde">queue&lt; T &gt;</a></li>
-<li>heap_manager_ref&#160;:&#160;<a class="el" href="classallocators.html#a4f6cff42ca1af5316afd91f87b71b36d">allocators</a></li>
-<li>heap_manager_thread_pool&#160;:&#160;<a class="el" href="classheap__manager.html#af34d71935b35ec7e281595782dcbccfb">heap_manager</a></li>
+<li>heap_manager_ref&#160;:&#160;<a class="el" href="classallocators.html#a4f6cff42ca1af5316afd91f87b71b36d">allocators</a>, <a class="el" href="classshared__global__space.html#a0e19c1fbaaedf030b43015fb81ab2054">shared_global_space</a>, <a class="el" href="classshared__register__space.html#addb27539eb508377c6bca6188c837648">shared_register_space</a>, <a class="el" href="classthread__local__stack.html#ac4a6b1c3555d93a1cf3fecc99918a3ca">thread_local_stack</a></li>
 <li>heap_memory&#160;:&#160;<a class="el" href="classheap__manager.html#acd26d8a84ce68a1a957add14d55d064c">heap_manager</a></li>
+<li>help&#160;:&#160;<a class="el" href="structcli_1_1cli__options.html#a4d130f82db6ac3a8dfb611ea8746cf2f">cli::cli_options</a></li>
+<li>hm&#160;:&#160;<a class="el" href="structmutator__guard.html#af3b377d656eff994424b19625b5852e6">mutator_guard</a></li>
+</ul>
+
+
+<h3><a id="index_i" name="index_i"></a>- i -</h3><ul>
+<li>iterations&#160;:&#160;<a class="el" href="structcli_1_1cli__options.html#aa138ae68296bf3662c610a989297a696">cli::cli_options</a></li>
 </ul>
 
 
@@ -98,8 +113,8 @@ $(function() {
 
 
 <h3><a id="index_l" name="index_l"></a>- l -</h3><ul>
-<li>large_dist&#160;:&#160;<a class="el" href="classallocators.html#aef4705039443d14fea5f45f397e098a5">allocators</a></li>
-<li>large_object_segments&#160;:&#160;<a class="el" href="classheap.html#ad56e20d730abd666214f76543283774e">heap</a></li>
+<li>large_obj_p&#160;:&#160;<a class="el" href="structrng_1_1sim_1_1object__probability__t.html#a88128982c20ae6912d43975e235ffa63">rng::sim::object_probability_t</a></li>
+<li>large_object_segments&#160;:&#160;<a class="el" href="classheap.html#af11dbff9f98324cea97eb6f3b337cf4e">heap</a></li>
 <li>last_gc_time_ms&#160;:&#160;<a class="el" href="classheap__manager.html#aa78a8aa985483a45ef36ffeb352f4ffe">heap_manager</a></li>
 <li>last_large_segment&#160;:&#160;<a class="el" href="classheap__manager.html#a758cbb9fef487c5de624e32cc608ce3e">heap_manager</a></li>
 <li>last_medium_segment&#160;:&#160;<a class="el" href="classheap__manager.html#aa0e4d1f16c5505948d1f1d9afec47cb5">heap_manager</a></li>
@@ -108,59 +123,83 @@ $(function() {
 
 
 <h3><a id="index_m" name="index_m"></a>- m -</h3><ul>
-<li>medium_dist&#160;:&#160;<a class="el" href="classallocators.html#a87f4378169b5c6cfa4d79a32218e3544">allocators</a></li>
-<li>medium_object_segments&#160;:&#160;<a class="el" href="classheap.html#a7be8376124bdb28bf66e4f3ee4e0903a">heap</a></li>
-<li>MIN_GC_INTERVAL&#160;:&#160;<a class="el" href="classheap__manager.html#ab4bb45ca11400d066a46ada0b60b6a89">heap_manager</a></li>
+<li>medium_obj_p&#160;:&#160;<a class="el" href="structrng_1_1sim_1_1object__probability__t.html#a53f0e0d9de8fff6109e9e443b3813f47">rng::sim::object_probability_t</a></li>
+<li>medium_object_segments&#160;:&#160;<a class="el" href="classheap.html#ad4a2876a94551e465b083a1c5ccedd2a">heap</a></li>
+<li>mode&#160;:&#160;<a class="el" href="structcli_1_1cli__options.html#a70c894368b01540173f63069fb6ab662">cli::cli_options</a></li>
 <li>mtx&#160;:&#160;<a class="el" href="classthread__pool.html#a0704de22136fe8dd6a8ee51c46001fb4">thread_pool</a></li>
+<li>mutator_count&#160;:&#160;<a class="el" href="classheap__manager.html#abab15e5da728c8a9b43fe9ac74f68771">heap_manager</a></li>
+<li>mutators&#160;:&#160;<a class="el" href="structcli_1_1cli__options.html#a14a6fc9e7f77d9b54fe5ebfa941a5216">cli::cli_options</a></li>
+<li>mutators_at_safepoint&#160;:&#160;<a class="el" href="classheap__manager.html#aad7778b8d1b937fb88a87ac7fec39650">heap_manager</a></li>
 </ul>
 
 
 <h3><a id="index_n" name="index_n"></a>- n -</h3><ul>
 <li>next&#160;:&#160;<a class="el" href="structhash__map__entry.html#a6ffe5fbd38989b950b27f7ddf6471631">hash_map_entry&lt; K, V &gt;</a>, <a class="el" href="structheader.html#ab3ba278665ef037aa27e655847a99fae">header</a>, <a class="el" href="structqueue__entry.html#af3afdff324616e37fbd7949fa6afa18b">queue_entry&lt; T &gt;</a></li>
+<li>no_ref_p&#160;:&#160;<a class="el" href="structrng_1_1sim_1_1ref__probability__t.html#a4d5bc49519666832b71365269124d0be">rng::sim::ref_probability_t</a></li>
+</ul>
+
+
+<h3><a id="index_o" name="index_o"></a>- o -</h3><ul>
+<li>one_ref_p&#160;:&#160;<a class="el" href="structrng_1_1sim_1_1ref__probability__t.html#a1dc2e39af727971726869c344905371c">rng::sim::ref_probability_t</a></li>
+<li>options&#160;:&#160;<a class="el" href="classdiagnoser.html#a6869034e347d12d3e13f27f132463be8">diagnoser</a></li>
+<li>output&#160;:&#160;<a class="el" href="structcli_1_1cli__options.html#a022f925e03778d184a0d75385daff19e">cli::cli_options</a></li>
 </ul>
 
 
 <h3><a id="index_p" name="index_p"></a>- p -</h3><ul>
-<li>PERIODIC_GC_INTERVAL&#160;:&#160;<a class="el" href="classheap__manager.html#ab72b5e16a845100e3d82851607a32ba9">heap_manager</a></li>
+<li>per_thread_allocs&#160;:&#160;<a class="el" href="classallocators.html#ad1ac9d2b1aa95838c133b3ed45c77ed1">allocators</a></li>
+<li>per_thread_failed_allocs&#160;:&#160;<a class="el" href="classallocators.html#a8318d252d2ebaed63cffe6a60740c024">allocators</a></li>
 </ul>
 
 
 <h3><a id="index_r" name="index_r"></a>- r -</h3><ul>
+<li>ref_count&#160;:&#160;<a class="el" href="structtype__descriptor.html#a07857f88bd248271f0bb6df9f1f2604f">type_descriptor</a></li>
 <li>ref_to&#160;:&#160;<a class="el" href="structthread__local__stack__entry.html#acfd0a5f5235466190bea25740d32aab0">thread_local_stack_entry</a></li>
-<li>register_mutex&#160;:&#160;<a class="el" href="classregister__root.html#a2aa8486280e6c2f3a7912dba827ffcd1">register_root</a></li>
-<li>register_variable&#160;:&#160;<a class="el" href="classregister__root.html#aa0835031b4874bac79e2e25fdaf4bb1f">register_root</a></li>
-<li>rng&#160;:&#160;<a class="el" href="classallocators.html#afa4e9a56a9c7c6ec9e35c5ade0d6ce0e">allocators</a></li>
+<li>register_id&#160;:&#160;<a class="el" href="classshared__register__space.html#a4633f193a0eec6a1cdea70455a6aa19d">shared_register_space</a></li>
+<li>register_realloc_p&#160;:&#160;<a class="el" href="structrng_1_1sim_1_1operation__probability__t.html#ab29d1c460390e450edd67f2b23d25772">rng::sim::operation_probability_t</a></li>
+<li>register_space&#160;:&#160;<a class="el" href="classallocators.html#a0671b837e54eda92042b8306f8fe69a8">allocators</a></li>
+<li>register_space_mtx&#160;:&#160;<a class="el" href="classshared__register__space.html#a0ff045a4dc23987588c0196644e261cb">shared_register_space</a></li>
+<li>registers&#160;:&#160;<a class="el" href="classshared__register__space.html#a561c5fa7f8d9a365661fc0c14bc9dc1e">shared_register_space</a></li>
+<li>root_id&#160;:&#160;<a class="el" href="classshared__global__space.html#a34c851b821a1f8cae9a32fea6f664ef2">shared_global_space</a></li>
 <li>root_set&#160;:&#160;<a class="el" href="classheap__manager.html#a032ba98bf5b4b1b59559dc14e33beff4">heap_manager</a></li>
 <li>root_set_mutex&#160;:&#160;<a class="el" href="classheap__manager.html#a84433adaefdfa364947972792fa8ab34">heap_manager</a></li>
-<li>roots&#160;:&#160;<a class="el" href="classroot__set__table.html#abd16cf8c89108826c75568c6110a9920">root_set_table</a></li>
+<li>roots&#160;:&#160;<a class="el" href="classroot__set__table.html#a003dbca6b4493d5c5bac820c5dc361d6">root_set_table</a></li>
 </ul>
 
 
 <h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
 <li>scope&#160;:&#160;<a class="el" href="classthread__local__stack.html#a24ae820c5b42f49fe7deadde4ad12952">thread_local_stack</a>, <a class="el" href="structthread__local__stack__entry.html#aa5a5cee802705df2bcf45279b3c1375b">thread_local_stack_entry</a></li>
-<li>segment_locks&#160;:&#160;<a class="el" href="classheap__manager.html#a7ba8dbdcaf49cec29204c6cbd154950e">heap_manager</a></li>
+<li>segment_locks&#160;:&#160;<a class="el" href="classheap__manager.html#a1019acdd1ec6dd09f1abf295e31f5b36">heap_manager</a></li>
 <li>segment_memory&#160;:&#160;<a class="el" href="structsegment.html#a8ff76be28fc32255b563224d2e399c69">segment</a></li>
 <li>size&#160;:&#160;<a class="el" href="classhash__map.html#ac095d7e012ae915dfd3e285ed874003f">hash_map&lt; K, V, Hash &gt;</a>, <a class="el" href="structheader.html#a872dcf9fd70e1853e59512a3c0b9b8aa">header</a>, <a class="el" href="classindexed__stack.html#a3445de23aba16a6f4186e2da659c2cb7">indexed_stack&lt; T &gt;</a>, <a class="el" href="classqueue.html#acae3cd3f9e08d32d00bbdebab9f4ae68">queue&lt; T &gt;</a></li>
-<li>small_dist&#160;:&#160;<a class="el" href="classallocators.html#aba77325173e746fc57064d244196d066">allocators</a></li>
-<li>small_object_segments&#160;:&#160;<a class="el" href="classheap.html#a0d1bdff9412f530294e32c1fc9ea1497">heap</a></li>
+<li>slot&#160;:&#160;<a class="el" href="classroot__guard.html#a692096c00fbf8a8ad949ca19cca2ed2f">root_guard</a></li>
+<li>small_obj_p&#160;:&#160;<a class="el" href="structrng_1_1sim_1_1object__probability__t.html#ab20aab3054d7d6a357f3c5ea83f1b1d0">rng::sim::object_probability_t</a></li>
+<li>small_object_segments&#160;:&#160;<a class="el" href="classheap.html#a589333c2dfab5e014dc2924f27decd15">heap</a></li>
 <li>stop&#160;:&#160;<a class="el" href="classthread__pool.html#a8c196e7559bb0505b1b25b1101c5c7a0">thread_pool</a></li>
+<li>stw_cv&#160;:&#160;<a class="el" href="classheap__manager.html#a31b508c064b31e4d2f9ac917480d9eab">heap_manager</a></li>
+<li>stw_mutex&#160;:&#160;<a class="el" href="classheap__manager.html#ae5e766f9d0ad0919e183d57c37ff48eb">heap_manager</a></li>
+<li>stw_requested&#160;:&#160;<a class="el" href="classheap__manager.html#a0a8ed90ad3f0b03600682f65c2d67064">heap_manager</a></li>
 </ul>
 
 
 <h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
 <li>tail&#160;:&#160;<a class="el" href="classqueue.html#a3c9f49c2eb284e1d8707316ea1c654e4">queue&lt; T &gt;</a></li>
-<li>tasks&#160;:&#160;<a class="el" href="classthread__pool.html#ae292a53b295a84070c5aa725f4ca6015">thread_pool</a></li>
+<li>tasks&#160;:&#160;<a class="el" href="classthread__pool.html#aae2cd1d918d62e106d312b6fcb4606fa">thread_pool</a></li>
+<li>temporaries&#160;:&#160;<a class="el" href="classthread__local__stack.html#a3478780b85d05fd56c9309831d3bd9a8">thread_local_stack</a></li>
 <li>thread_count&#160;:&#160;<a class="el" href="classthread__pool.html#a7bcb5f5fb1eeedfcd23f7aa5be9db0ea">thread_pool</a></li>
-<li>thread_stack&#160;:&#160;<a class="el" href="classthread__local__stack.html#a72af7e8f356c2d82ce9198f24ec95fbf">thread_local_stack</a></li>
 <li>threads&#160;:&#160;<a class="el" href="classthread__pool.html#a531ba6a17eabd334184c1d6b1a94b625">thread_pool</a></li>
-<li>tls_mutex&#160;:&#160;<a class="el" href="classthread__local__stack.html#aa00bba7f0aa1e9b25f97b8c4e838f9d0">thread_local_stack</a></li>
+<li>tls&#160;:&#160;<a class="el" href="classroot__guard.html#a5f4ec244ba4778cc3d5cdbf830493837">root_guard</a>, <a class="el" href="classthread__local__stack.html#a74efc6ea648c8cb5a1760e7c2193b4fa">thread_local_stack</a></li>
+<li>tls_alloc_p&#160;:&#160;<a class="el" href="structrng_1_1sim_1_1operation__probability__t.html#a34dcfd4cd305db8657d700886f4cc599">rng::sim::operation_probability_t</a></li>
+<li>tls_id&#160;:&#160;<a class="el" href="classthread__local__stack.html#a8b28f145b28bfd984f451ff7ba24a023">thread_local_stack</a></li>
+<li>top&#160;:&#160;<a class="el" href="classfixed__stack.html#a39cc5c072b0916826e26364a485b6c06">fixed_stack&lt; T, capacity &gt;</a></li>
+<li>total_allocs&#160;:&#160;<a class="el" href="classallocators.html#a4768775984ccddbde12af6ed21b953ea">allocators</a></li>
+<li>total_failed_allocs&#160;:&#160;<a class="el" href="classallocators.html#abbc41225b83ceae3833b9b478cc4bda4">allocators</a></li>
+<li>two_ref_p&#160;:&#160;<a class="el" href="structrng_1_1sim_1_1ref__probability__t.html#a95d4c8a7ff1520597ea53cd27fb89436">rng::sim::ref_probability_t</a></li>
 </ul>
 
 
 <h3><a id="index_v" name="index_v"></a>- v -</h3><ul>
 <li>value&#160;:&#160;<a class="el" href="structhash__map__entry.html#a7be3cd35537f5657f9309df45d90bb14">hash_map_entry&lt; K, V &gt;</a>, <a class="el" href="structqueue__entry.html#adcc27a1545c6963ad4522e508c8b470a">queue_entry&lt; T &gt;</a></li>
-<li>var_to_idx&#160;:&#160;<a class="el" href="classthread__local__stack.html#a03674ef710c6bbb789aa3753597031bd">thread_local_stack</a></li>
-<li>variable_name&#160;:&#160;<a class="el" href="structthread__local__stack__entry.html#a7249cc63ffa56a9eb6a9a92129433ce8">thread_local_stack_entry</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

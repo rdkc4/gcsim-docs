@@ -66,9 +66,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a14665b514470e2bc3af5e2220629d3ca" id="r_a14665b514470e2bc3af5e2220629d3ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structheader.html">header</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsegment__info.html#a14665b514470e2bc3af5e2220629d3ca">free_list_head</a></td></tr>
 <tr class="memdesc:a14665b514470e2bc3af5e2220629d3ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">pointer to a head of the free list.  <br /></td></tr>
 <tr class="separator:a14665b514470e2bc3af5e2220629d3ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af16f3bc96d139d501cce9b7954c614ae" id="r_af16f3bc96d139d501cce9b7954c614ae"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsegment__info.html#af16f3bc96d139d501cce9b7954c614ae">free_bytes</a></td></tr>
-<tr class="memdesc:af16f3bc96d139d501cce9b7954c614ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of free bytes in a segment.  <br /></td></tr>
-<tr class="separator:af16f3bc96d139d501cce9b7954c614ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab98ba480b10d98810bc55d83729872a4" id="r_ab98ba480b10d98810bc55d83729872a4"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsegment__info.html#ab98ba480b10d98810bc55d83729872a4">free_bytes</a></td></tr>
+<tr class="memdesc:ab98ba480b10d98810bc55d83729872a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of free bytes in a segment.  <br /></td></tr>
+<tr class="separator:ab98ba480b10d98810bc55d83729872a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>representation of the element inside of the free_memory_table. </p>
@@ -131,14 +131,14 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="af16f3bc96d139d501cce9b7954c614ae" name="af16f3bc96d139d501cce9b7954c614ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af16f3bc96d139d501cce9b7954c614ae">&#9670;&#160;</a></span>free_bytes</h2>
+<a id="ab98ba480b10d98810bc55d83729872a4" name="ab98ba480b10d98810bc55d83729872a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab98ba480b10d98810bc55d83729872a4">&#9670;&#160;</a></span>free_bytes</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t segment_info::free_bytes</td>
+          <td class="memname">std::atomic&lt;uint32_t&gt; segment_info::free_bytes</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -164,8 +164,8 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
-<li>ikp-team-16/src/common/segment/<a class="el" href="segment-info_8hpp.html">segment-info.hpp</a></li>
-<li>ikp-team-16/src/common/segment/<a class="el" href="segment-info_8cpp.html">segment-info.cpp</a></li>
+<li>gcsim/src/common/segment/<a class="el" href="segment-info_8hpp.html">segment-info.hpp</a></li>
+<li>gcsim/src/common/segment/<a class="el" href="segment-info_8cpp.html">segment-info.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -43,7 +43,6 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="#friends">Friends</a> &#124;
 <a href="classthread__local__stack-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">thread_local_stack Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div></div>
 </div><!--header-->
@@ -56,12 +55,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad5cf0775bee5cb55a35d257acc239154" id="r_ad5cf0775bee5cb55a35d257acc239154"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#ad5cf0775bee5cb55a35d257acc239154">thread_local_stack</a> ()</td></tr>
-<tr class="memdesc:ad5cf0775bee5cb55a35d257acc239154"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates the instance of the <a class="el" href="classthread__local__stack.html" title="local memory of a thread.">thread_local_stack</a>.  <br /></td></tr>
-<tr class="separator:ad5cf0775bee5cb55a35d257acc239154"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69e6a91a89b87c09278265e38dfd7392" id="r_a69e6a91a89b87c09278265e38dfd7392"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#a69e6a91a89b87c09278265e38dfd7392">thread_local_stack</a> (size_t hash_map_capacity)</td></tr>
-<tr class="memdesc:a69e6a91a89b87c09278265e38dfd7392"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates the instance of the <a class="el" href="classthread__local__stack.html" title="local memory of a thread.">thread_local_stack</a>.  <br /></td></tr>
-<tr class="separator:a69e6a91a89b87c09278265e38dfd7392"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73a715df8891b95757e1af5b3bcb4b11" id="r_a73a715df8891b95757e1af5b3bcb4b11"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#a73a715df8891b95757e1af5b3bcb4b11">thread_local_stack</a> (<a class="el" href="classheap__manager.html">heap_manager</a> &amp;heap_mngr, uint64_t id)</td></tr>
+<tr class="memdesc:a73a715df8891b95757e1af5b3bcb4b11"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates the instance of the <a class="el" href="classthread__local__stack.html" title="local memory of a thread.">thread_local_stack</a>.  <br /></td></tr>
+<tr class="separator:a73a715df8891b95757e1af5b3bcb4b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a982aa78e83cf105004b68a4f1e91a320" id="r_a982aa78e83cf105004b68a4f1e91a320"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#a982aa78e83cf105004b68a4f1e91a320">~thread_local_stack</a> ()</td></tr>
 <tr class="memdesc:a982aa78e83cf105004b68a4f1e91a320"><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes the <a class="el" href="classthread__local__stack.html" title="local memory of a thread.">thread_local_stack</a>.  <br /></td></tr>
 <tr class="separator:a982aa78e83cf105004b68a4f1e91a320"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -71,30 +67,43 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a35600f6800481a6275640884fa733a96" id="r_a35600f6800481a6275640884fa733a96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classthread__local__stack.html">thread_local_stack</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#a35600f6800481a6275640884fa733a96">operator=</a> (const <a class="el" href="classthread__local__stack.html">thread_local_stack</a> &amp;)=delete</td></tr>
 <tr class="memdesc:a35600f6800481a6275640884fa733a96"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted assignment operator.  <br /></td></tr>
 <tr class="separator:a35600f6800481a6275640884fa733a96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85d23b024d8d185cd7c9c00ddc2a18e9" id="r_a85d23b024d8d185cd7c9c00ddc2a18e9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#a85d23b024d8d185cd7c9c00ddc2a18e9">thread_local_stack</a> (<a class="el" href="classthread__local__stack.html">thread_local_stack</a> &amp;&amp;other) noexcept</td></tr>
-<tr class="memdesc:a85d23b024d8d185cd7c9c00ddc2a18e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructs the <a class="el" href="classthread__local__stack.html" title="local memory of a thread.">thread_local_stack</a> instance from an existing one.  <br /></td></tr>
-<tr class="separator:a85d23b024d8d185cd7c9c00ddc2a18e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fbbc0b7e22f7149291bf4b2db487a73" id="r_a0fbbc0b7e22f7149291bf4b2db487a73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classthread__local__stack.html">thread_local_stack</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#a0fbbc0b7e22f7149291bf4b2db487a73">operator=</a> (<a class="el" href="classthread__local__stack.html">thread_local_stack</a> &amp;&amp;other) noexcept</td></tr>
-<tr class="memdesc:a0fbbc0b7e22f7149291bf4b2db487a73"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructs new <a class="el" href="classthread__local__stack.html" title="local memory of a thread.">thread_local_stack</a> by assigning it an existing one.  <br /></td></tr>
-<tr class="separator:a0fbbc0b7e22f7149291bf4b2db487a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51d79c9c82df08a62ba36195dd3623b0" id="r_a51d79c9c82df08a62ba36195dd3623b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#a51d79c9c82df08a62ba36195dd3623b0">init</a> (std::string variable_name, <a class="el" href="structheader.html">header</a> *heap_ptr=nullptr)</td></tr>
-<tr class="memdesc:a51d79c9c82df08a62ba36195dd3623b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">initializes new variable.  <br /></td></tr>
-<tr class="separator:a51d79c9c82df08a62ba36195dd3623b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dced308eaacd76b62293c49222500e7" id="r_a4dced308eaacd76b62293c49222500e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#a4dced308eaacd76b62293c49222500e7">reassign_ref</a> (const std::string &amp;variable_name, <a class="el" href="structheader.html">header</a> *new_ref_to)</td></tr>
-<tr class="memdesc:a4dced308eaacd76b62293c49222500e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">assigns new value to a variable.  <br /></td></tr>
-<tr class="separator:a4dced308eaacd76b62293c49222500e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e8313e95412f8d918b87e76402f7748" id="r_a4e8313e95412f8d918b87e76402f7748"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#a4e8313e95412f8d918b87e76402f7748">remove_ref</a> (const std::string &amp;variable_name)</td></tr>
-<tr class="memdesc:a4e8313e95412f8d918b87e76402f7748"><td class="mdescLeft">&#160;</td><td class="mdescRight">removes the reference to a value on the heap.  <br /></td></tr>
-<tr class="separator:a4e8313e95412f8d918b87e76402f7748"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80d0d9ae62238c9c1493e0dc866f19c0" id="r_a80d0d9ae62238c9c1493e0dc866f19c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#a80d0d9ae62238c9c1493e0dc866f19c0">thread_local_stack</a> (<a class="el" href="classthread__local__stack.html">thread_local_stack</a> &amp;&amp;other)=delete</td></tr>
+<tr class="memdesc:a80d0d9ae62238c9c1493e0dc866f19c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted move constructor.  <br /></td></tr>
+<tr class="separator:a80d0d9ae62238c9c1493e0dc866f19c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebe8bbed7da55cedc09cc37dae58641b" id="r_aebe8bbed7da55cedc09cc37dae58641b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classthread__local__stack.html">thread_local_stack</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#aebe8bbed7da55cedc09cc37dae58641b">operator=</a> (<a class="el" href="classthread__local__stack.html">thread_local_stack</a> &amp;&amp;other)=delete</td></tr>
+<tr class="memdesc:aebe8bbed7da55cedc09cc37dae58641b"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted move assignment operator.  <br /></td></tr>
+<tr class="separator:aebe8bbed7da55cedc09cc37dae58641b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8f725227ceccb4c0db2f8f1f6af61ab" id="r_aa8f725227ceccb4c0db2f8f1f6af61ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#aa8f725227ceccb4c0db2f8f1f6af61ab">init</a> (<a class="el" href="structheader.html">header</a> *heap_ptr=nullptr)</td></tr>
+<tr class="memdesc:aa8f725227ceccb4c0db2f8f1f6af61ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">initializes new variable.  <br /></td></tr>
+<tr class="separator:aa8f725227ceccb4c0db2f8f1f6af61ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e66e8baea62fd4818e8f036883b8e47" id="r_a4e66e8baea62fd4818e8f036883b8e47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#a4e66e8baea62fd4818e8f036883b8e47">reassign_ref</a> (size_t index, <a class="el" href="structheader.html">header</a> *new_ref_to)</td></tr>
+<tr class="memdesc:a4e66e8baea62fd4818e8f036883b8e47"><td class="mdescLeft">&#160;</td><td class="mdescRight">assigns new value to a variable.  <br /></td></tr>
+<tr class="separator:a4e66e8baea62fd4818e8f036883b8e47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04745cf14ebe923e2553eaadb8c26c9b" id="r_a04745cf14ebe923e2553eaadb8c26c9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#a04745cf14ebe923e2553eaadb8c26c9b">remove_ref</a> (size_t index)</td></tr>
+<tr class="memdesc:a04745cf14ebe923e2553eaadb8c26c9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">removes the reference to a value on the heap.  <br /></td></tr>
+<tr class="separator:a04745cf14ebe923e2553eaadb8c26c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc7e3c915e5dae1f212ed307e92df270" id="r_adc7e3c915e5dae1f212ed307e92df270"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structheader.html">header</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#adc7e3c915e5dae1f212ed307e92df270">push_temp</a> (<a class="el" href="structheader.html">header</a> *heap_ptr)</td></tr>
+<tr class="memdesc:adc7e3c915e5dae1f212ed307e92df270"><td class="mdescLeft">&#160;</td><td class="mdescRight">pushes temporary root onto stack.  <br /></td></tr>
+<tr class="separator:adc7e3c915e5dae1f212ed307e92df270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac89465789914548ac415f012d80fdf34" id="r_ac89465789914548ac415f012d80fdf34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#ac89465789914548ac415f012d80fdf34">pop_temp</a> ()</td></tr>
+<tr class="memdesc:ac89465789914548ac415f012d80fdf34"><td class="mdescLeft">&#160;</td><td class="mdescRight">pops the temporary root from the stack.  <br /></td></tr>
+<tr class="separator:ac89465789914548ac415f012d80fdf34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73d2bcd217f491bf862b9dc377708008" id="r_a73d2bcd217f491bf862b9dc377708008"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#a73d2bcd217f491bf862b9dc377708008">push_scope</a> () noexcept</td></tr>
 <tr class="memdesc:a73d2bcd217f491bf862b9dc377708008"><td class="mdescLeft">&#160;</td><td class="mdescRight">simulates entering new scope.  <br /></td></tr>
 <tr class="separator:a73d2bcd217f491bf862b9dc377708008"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cf85ca93050f4ace09f15a58d6d06fa" id="r_a3cf85ca93050f4ace09f15a58d6d06fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#a3cf85ca93050f4ace09f15a58d6d06fa">pop_scope</a> (bool destr=false)</td></tr>
 <tr class="memdesc:a3cf85ca93050f4ace09f15a58d6d06fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">simulates exiting scope.  <br /></td></tr>
 <tr class="separator:a3cf85ca93050f4ace09f15a58d6d06fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58f889a131f160a9380bc5bb94d5c8b0" id="r_a58f889a131f160a9380bc5bb94d5c8b0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#a58f889a131f160a9380bc5bb94d5c8b0">accept</a> (<a class="el" href="classgc__visitor.html">gc_visitor</a> &amp;visitor) noexcept override</td></tr>
-<tr class="memdesc:a58f889a131f160a9380bc5bb94d5c8b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">accepts the gc visitor.  <br /></td></tr>
-<tr class="separator:a58f889a131f160a9380bc5bb94d5c8b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48eea2b6fb3e617d0e424068f6049194" id="r_a48eea2b6fb3e617d0e424068f6049194"><td class="memTemplParams" colspan="2">template&lt;typename Fn &gt; </td></tr>
+<tr class="memitem:a48eea2b6fb3e617d0e424068f6049194"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#a48eea2b6fb3e617d0e424068f6049194">for_each</a> (Fn &amp;&amp;fn)</td></tr>
+<tr class="memdesc:a48eea2b6fb3e617d0e424068f6049194"><td class="mdescLeft">&#160;</td><td class="mdescRight">performs an operation on all roots owned by tls.  <br /></td></tr>
+<tr class="separator:a48eea2b6fb3e617d0e424068f6049194"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec72e50b17f549f74eee09d7a39b0994" id="r_aec72e50b17f549f74eee09d7a39b0994"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#aec72e50b17f549f74eee09d7a39b0994">accept</a> (<a class="el" href="classgc__visitor.html">gc_visitor</a> &amp;visitor) noexcept override final</td></tr>
+<tr class="memdesc:aec72e50b17f549f74eee09d7a39b0994"><td class="mdescLeft">&#160;</td><td class="mdescRight">accepts the gc visitor.  <br /></td></tr>
+<tr class="separator:aec72e50b17f549f74eee09d7a39b0994"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d158467a0f76616620c5e732bc25cda" id="r_a1d158467a0f76616620c5e732bc25cda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#a1d158467a0f76616620c5e732bc25cda">accept_forward</a> (<a class="el" href="classgc__forwarder.html">gc_forwarder</a> &amp;forwarder) noexcept override final</td></tr>
+<tr class="memdesc:a1d158467a0f76616620c5e732bc25cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">accepts the gc forwarder.  <br /></td></tr>
+<tr class="separator:a1d158467a0f76616620c5e732bc25cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classroot__set__base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classroot__set__base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classroot__set__base.html">root_set_base</a></td></tr>
 <tr class="memitem:a457131392eea750cadfa04833345d62b inherit pub_methods_classroot__set__base" id="r_a457131392eea750cadfa04833345d62b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classroot__set__base.html#a457131392eea750cadfa04833345d62b">~root_set_base</a> ()=default</td></tr>
 <tr class="memdesc:a457131392eea750cadfa04833345d62b inherit pub_methods_classroot__set__base"><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes the <a class="el" href="classroot__set__base.html" title="parent class of root-set table entries.">root_set_base</a> object.  <br /></td></tr>
@@ -102,36 +111,38 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a31ee2bb9cb898f55882fe9adc0cc94f1" id="r_a31ee2bb9cb898f55882fe9adc0cc94f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classindexed__stack.html">indexed_stack</a>&lt; <a class="el" href="structthread__local__stack__entry.html">thread_local_stack_entry</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#a31ee2bb9cb898f55882fe9adc0cc94f1">get_thread_stack_unlocked</a> () noexcept</td></tr>
-<tr class="memdesc:a31ee2bb9cb898f55882fe9adc0cc94f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for the thread_stack.  <br /></td></tr>
-<tr class="separator:a31ee2bb9cb898f55882fe9adc0cc94f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6ed413a0532e076c68086a1ccd0dbfd" id="r_ab6ed413a0532e076c68086a1ccd0dbfd"><td class="memTemplParams" colspan="2">template&lt;typename Fn &gt; </td></tr>
+<tr class="memitem:ab6ed413a0532e076c68086a1ccd0dbfd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#ab6ed413a0532e076c68086a1ccd0dbfd">for_each_variable</a> (Fn &amp;&amp;fn)</td></tr>
+<tr class="memdesc:ab6ed413a0532e076c68086a1ccd0dbfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">performs an operation on each variable on the tls.  <br /></td></tr>
+<tr class="separator:ab6ed413a0532e076c68086a1ccd0dbfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a978662f76a56854adf4c4171abea4ef4" id="r_a978662f76a56854adf4c4171abea4ef4"><td class="memTemplParams" colspan="2">template&lt;typename Fn &gt; </td></tr>
+<tr class="memitem:a978662f76a56854adf4c4171abea4ef4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#a978662f76a56854adf4c4171abea4ef4">for_each_temp_variable</a> (Fn &amp;&amp;fn)</td></tr>
+<tr class="memdesc:a978662f76a56854adf4c4171abea4ef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">performs an operation on each temporary variable.  <br /></td></tr>
+<tr class="separator:a978662f76a56854adf4c4171abea4ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:aa00bba7f0aa1e9b25f97b8c4e838f9d0" id="r_aa00bba7f0aa1e9b25f97b8c4e838f9d0"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#aa00bba7f0aa1e9b25f97b8c4e838f9d0">tls_mutex</a></td></tr>
-<tr class="memdesc:aa00bba7f0aa1e9b25f97b8c4e838f9d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">used for tls synchronization.  <br /></td></tr>
-<tr class="separator:aa00bba7f0aa1e9b25f97b8c4e838f9d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24ae820c5b42f49fe7deadde4ad12952" id="r_a24ae820c5b42f49fe7deadde4ad12952"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#a24ae820c5b42f49fe7deadde4ad12952">scope</a></td></tr>
 <tr class="memdesc:a24ae820c5b42f49fe7deadde4ad12952"><td class="mdescLeft">&#160;</td><td class="mdescRight">id of the last pushed scope.  <br /></td></tr>
 <tr class="separator:a24ae820c5b42f49fe7deadde4ad12952"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72af7e8f356c2d82ce9198f24ec95fbf" id="r_a72af7e8f356c2d82ce9198f24ec95fbf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classindexed__stack.html">indexed_stack</a>&lt; <a class="el" href="structthread__local__stack__entry.html">thread_local_stack_entry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#a72af7e8f356c2d82ce9198f24ec95fbf">thread_stack</a></td></tr>
-<tr class="memdesc:a72af7e8f356c2d82ce9198f24ec95fbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">stack of initialized variables.  <br /></td></tr>
-<tr class="separator:a72af7e8f356c2d82ce9198f24ec95fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03674ef710c6bbb789aa3753597031bd" id="r_a03674ef710c6bbb789aa3753597031bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhash__map.html">hash_map</a>&lt; std::string, size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#a03674ef710c6bbb789aa3753597031bd">var_to_idx</a></td></tr>
-<tr class="memdesc:a03674ef710c6bbb789aa3753597031bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">mapping the variable name to its index inside of the thread_stack.  <br /></td></tr>
-<tr class="separator:a03674ef710c6bbb789aa3753597031bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:a35c0117a0dd467a096a038ac0b39dd7a" id="r_a35c0117a0dd467a096a038ac0b39dd7a"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#a35c0117a0dd467a096a038ac0b39dd7a">garbage_collector</a></td></tr>
-<tr class="memdesc:a35c0117a0dd467a096a038ac0b39dd7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">allowing gc to access getter for the variable.  <br /></td></tr>
-<tr class="separator:a35c0117a0dd467a096a038ac0b39dd7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b28f145b28bfd984f451ff7ba24a023" id="r_a8b28f145b28bfd984f451ff7ba24a023"><td class="memItemLeft" align="right" valign="top">const uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#a8b28f145b28bfd984f451ff7ba24a023">tls_id</a></td></tr>
+<tr class="memdesc:a8b28f145b28bfd984f451ff7ba24a023"><td class="mdescLeft">&#160;</td><td class="mdescRight">tls id for root-set-table.  <br /></td></tr>
+<tr class="separator:a8b28f145b28bfd984f451ff7ba24a023"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4a6b1c3555d93a1cf3fecc99918a3ca" id="r_ac4a6b1c3555d93a1cf3fecc99918a3ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classheap__manager.html">heap_manager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#ac4a6b1c3555d93a1cf3fecc99918a3ca">heap_manager_ref</a></td></tr>
+<tr class="memdesc:ac4a6b1c3555d93a1cf3fecc99918a3ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">reference to a heap manager.  <br /></td></tr>
+<tr class="separator:ac4a6b1c3555d93a1cf3fecc99918a3ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74efc6ea648c8cb5a1760e7c2193b4fa" id="r_a74efc6ea648c8cb5a1760e7c2193b4fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classindexed__stack.html">indexed_stack</a>&lt; <a class="el" href="structthread__local__stack__entry.html">thread_local_stack_entry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#a74efc6ea648c8cb5a1760e7c2193b4fa">tls</a></td></tr>
+<tr class="memdesc:a74efc6ea648c8cb5a1760e7c2193b4fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">stack of initialized variables.  <br /></td></tr>
+<tr class="separator:a74efc6ea648c8cb5a1760e7c2193b4fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3478780b85d05fd56c9309831d3bd9a8" id="r_a3478780b85d05fd56c9309831d3bd9a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classfixed__stack.html">fixed_stack</a>&lt; <a class="el" href="structheader.html">header</a> *, <a class="el" href="namespacecfg_1_1structs_1_1fixed__stack.html#a22428b2c4247b2fbe3edcccfdaf3e583">cfg::structs::fixed_stack::MAX_STACK_CAPACITY</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__local__stack.html#a3478780b85d05fd56c9309831d3bd9a8">temporaries</a></td></tr>
+<tr class="memdesc:a3478780b85d05fd56c9309831d3bd9a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">stack of temporary objects.  <br /></td></tr>
+<tr class="separator:a3478780b85d05fd56c9309831d3bd9a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>local memory of a thread. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ad5cf0775bee5cb55a35d257acc239154" name="ad5cf0775bee5cb55a35d257acc239154"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5cf0775bee5cb55a35d257acc239154">&#9670;&#160;</a></span>thread_local_stack() <span class="overload">[1/4]</span></h2>
+<a id="a73a715df8891b95757e1af5b3bcb4b11" name="a73a715df8891b95757e1af5b3bcb4b11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73a715df8891b95757e1af5b3bcb4b11">&#9670;&#160;</a></span>thread_local_stack() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -139,29 +150,19 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">thread_local_stack::thread_local_stack </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="paramtype"><a class="el" href="classheap__manager.html">heap_manager</a> &amp;&#160;</td>
+          <td class="paramname"><em>heap_mngr</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>creates the instance of the <a class="el" href="classthread__local__stack.html" title="local memory of a thread.">thread_local_stack</a>. </p>
-<p>scope defaults to 1. </p>
-
-</div>
-</div>
-<a id="a69e6a91a89b87c09278265e38dfd7392" name="a69e6a91a89b87c09278265e38dfd7392"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69e6a91a89b87c09278265e38dfd7392">&#9670;&#160;</a></span>thread_local_stack() <span class="overload">[2/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">thread_local_stack::thread_local_stack </td>
-          <td>(</td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>hash_map_capacity</em></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -169,7 +170,8 @@ Friends</h2></td></tr>
 <p>creates the instance of the <a class="el" href="classthread__local__stack.html" title="local memory of a thread.">thread_local_stack</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hash_map_capacity</td><td>- number of buckets in the <a class="el" href="classhash__map.html" title="implementation of the hash_map; using constant number of buckets and chaining.">hash_map</a>.</td></tr>
+    <tr><td class="paramname">heap_mngr</td><td>- reference to a heap manager. </td></tr>
+    <tr><td class="paramname">id</td><td>- id of the tls for root-set-table.</td></tr>
   </table>
   </dd>
 </dl>
@@ -198,7 +200,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <a id="ade57dc931ca19f4a6fddd0bafdfa21a3" name="ade57dc931ca19f4a6fddd0bafdfa21a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade57dc931ca19f4a6fddd0bafdfa21a3">&#9670;&#160;</a></span>thread_local_stack() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ade57dc931ca19f4a6fddd0bafdfa21a3">&#9670;&#160;</a></span>thread_local_stack() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -225,8 +227,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a85d23b024d8d185cd7c9c00ddc2a18e9" name="a85d23b024d8d185cd7c9c00ddc2a18e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85d23b024d8d185cd7c9c00ddc2a18e9">&#9670;&#160;</a></span>thread_local_stack() <span class="overload">[4/4]</span></h2>
+<a id="a80d0d9ae62238c9c1493e0dc866f19c0" name="a80d0d9ae62238c9c1493e0dc866f19c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80d0d9ae62238c9c1493e0dc866f19c0">&#9670;&#160;</a></span>thread_local_stack() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -244,25 +246,18 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>constructs the <a class="el" href="classthread__local__stack.html" title="local memory of a thread.">thread_local_stack</a> instance from an existing one. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">other</td><td>- rvalue of the existing <a class="el" href="classthread__local__stack.html" title="local memory of a thread.">thread_local_stack</a>.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>moves the ownership of the scope, thread_stack and var_to_idx map from other to this. </p>
+<p>deleted move constructor. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a58f889a131f160a9380bc5bb94d5c8b0" name="a58f889a131f160a9380bc5bb94d5c8b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58f889a131f160a9380bc5bb94d5c8b0">&#9670;&#160;</a></span>accept()</h2>
+<a id="aec72e50b17f549f74eee09d7a39b0994" name="aec72e50b17f549f74eee09d7a39b0994"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec72e50b17f549f74eee09d7a39b0994">&#9670;&#160;</a></span>accept()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -280,7 +275,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -297,8 +292,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a31ee2bb9cb898f55882fe9adc0cc94f1" name="a31ee2bb9cb898f55882fe9adc0cc94f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31ee2bb9cb898f55882fe9adc0cc94f1">&#9670;&#160;</a></span>get_thread_stack_unlocked()</h2>
+<a id="a1d158467a0f76616620c5e732bc25cda" name="a1d158467a0f76616620c5e732bc25cda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d158467a0f76616620c5e732bc25cda">&#9670;&#160;</a></span>accept_forward()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -307,27 +302,160 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classindexed__stack.html">indexed_stack</a>&lt; <a class="el" href="structthread__local__stack__entry.html">thread_local_stack_entry</a> &gt; &amp; thread_local_stack::get_thread_stack_unlocked </td>
+          <td class="memname">void thread_local_stack::accept_forward </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classgc__forwarder.html">gc_forwarder</a> &amp;&#160;</td>
+          <td class="paramname"><em>forwarder</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>getter for the thread_stack. </p>
-<dl class="section warning"><dt>Warning</dt><dd>must be called when lock is held already. </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>reference to thread_stack. </dd></dl>
+<p>accepts the gc forwarder. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">forwarder</td><td>- reference to a gc forwarder. Calls forward on the gc forwarder for thread-local elements. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classroot__set__base.html#ae552ced08ee796c9b82c0e31746a3a68">root_set_base</a>.</p>
 
 </div>
 </div>
-<a id="a51d79c9c82df08a62ba36195dd3623b0" name="a51d79c9c82df08a62ba36195dd3623b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51d79c9c82df08a62ba36195dd3623b0">&#9670;&#160;</a></span>init()</h2>
+<a id="a48eea2b6fb3e617d0e424068f6049194" name="a48eea2b6fb3e617d0e424068f6049194"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48eea2b6fb3e617d0e424068f6049194">&#9670;&#160;</a></span>for_each()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Fn &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void thread_local_stack::for_each </td>
+          <td>(</td>
+          <td class="paramtype">Fn &amp;&amp;&#160;</td>
+          <td class="paramname"><em>fn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>performs an operation on all roots owned by tls. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Fn</td><td>- type of the function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fn</td><td>- function that is performed on each root. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a978662f76a56854adf4c4171abea4ef4" name="a978662f76a56854adf4c4171abea4ef4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a978662f76a56854adf4c4171abea4ef4">&#9670;&#160;</a></span>for_each_temp_variable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Fn &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void thread_local_stack::for_each_temp_variable </td>
+          <td>(</td>
+          <td class="paramtype">Fn &amp;&amp;&#160;</td>
+          <td class="paramname"><em>fn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>performs an operation on each temporary variable. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Fn</td><td>- type of the function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fn</td><td>- function that is performed on elements. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab6ed413a0532e076c68086a1ccd0dbfd" name="ab6ed413a0532e076c68086a1ccd0dbfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6ed413a0532e076c68086a1ccd0dbfd">&#9670;&#160;</a></span>for_each_variable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Fn &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void thread_local_stack::for_each_variable </td>
+          <td>(</td>
+          <td class="paramtype">Fn &amp;&amp;&#160;</td>
+          <td class="paramname"><em>fn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>performs an operation on each variable on the tls. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Fn</td><td>- type of the function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fn</td><td>- function that is performed on elements. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa8f725227ceccb4c0db2f8f1f6af61ab" name="aa8f725227ceccb4c0db2f8f1f6af61ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8f725227ceccb4c0db2f8f1f6af61ab">&#9670;&#160;</a></span>init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -335,19 +463,9 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void thread_local_stack::init </td>
           <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>variable_name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype"><a class="el" href="structheader.html">header</a> *&#160;</td>
-          <td class="paramname"><em>heap_ptr</em> = <code>nullptr</code>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>heap_ptr</em> = <code>nullptr</code></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -355,14 +473,7 @@ Friends</h2></td></tr>
 <p>initializes new variable. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">variable_name</td><td>- name of the variable. </td></tr>
     <tr><td class="paramname">heap_ptr</td><td>- pointer to the value of the variable on the heap. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::invalid_argument</td><td>when variable already exists. </td></tr>
   </table>
   </dd>
 </dl>
@@ -397,8 +508,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a0fbbc0b7e22f7149291bf4b2db487a73" name="a0fbbc0b7e22f7149291bf4b2db487a73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0fbbc0b7e22f7149291bf4b2db487a73">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="aebe8bbed7da55cedc09cc37dae58641b" name="aebe8bbed7da55cedc09cc37dae58641b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebe8bbed7da55cedc09cc37dae58641b">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -416,19 +527,12 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>constructs new <a class="el" href="classthread__local__stack.html" title="local memory of a thread.">thread_local_stack</a> by assigning it an existing one. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">other</td><td>- rvalue of the existing <a class="el" href="classthread__local__stack.html" title="local memory of a thread.">thread_local_stack</a>.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>moves the ownership of the scope, thread_stack and var_to_idx map from other to this. </p>
+<p>deleted move assignment operator. </p>
 
 </div>
 </div>
@@ -456,6 +560,25 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>simulation purposes. </dd></dl>
+
+</div>
+</div>
+<a id="ac89465789914548ac415f012d80fdf34" name="ac89465789914548ac415f012d80fdf34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac89465789914548ac415f012d80fdf34">&#9670;&#160;</a></span>pop_temp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void thread_local_stack::pop_temp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>pops the temporary root from the stack. </p>
 
 </div>
 </div>
@@ -487,8 +610,34 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a4dced308eaacd76b62293c49222500e7" name="a4dced308eaacd76b62293c49222500e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4dced308eaacd76b62293c49222500e7">&#9670;&#160;</a></span>reassign_ref()</h2>
+<a id="adc7e3c915e5dae1f212ed307e92df270" name="adc7e3c915e5dae1f212ed307e92df270"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc7e3c915e5dae1f212ed307e92df270">&#9670;&#160;</a></span>push_temp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structheader.html">header</a> ** thread_local_stack::push_temp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structheader.html">header</a> *&#160;</td>
+          <td class="paramname"><em>heap_ptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>pushes temporary root onto stack. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">heap_ptr</td><td>- pointer to an object on the heap. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4e66e8baea62fd4818e8f036883b8e47" name="a4e66e8baea62fd4818e8f036883b8e47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e66e8baea62fd4818e8f036883b8e47">&#9670;&#160;</a></span>reassign_ref()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -496,8 +645,8 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void thread_local_stack::reassign_ref </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>variable_name</em>, </td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -516,22 +665,16 @@ Friends</h2></td></tr>
 <p>assigns new value to a variable. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">variable_name</td><td>- name of the variable. </td></tr>
+    <tr><td class="paramname">index</td><td>- index on the indexed stack. </td></tr>
     <tr><td class="paramname">new_ref_to</td><td>- pointer to a new value on the heap. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::invalid_argument</td><td>when variable_name is not previously initialized. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a4e8313e95412f8d918b87e76402f7748" name="a4e8313e95412f8d918b87e76402f7748"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e8313e95412f8d918b87e76402f7748">&#9670;&#160;</a></span>remove_ref()</h2>
+<a id="a04745cf14ebe923e2553eaadb8c26c9b" name="a04745cf14ebe923e2553eaadb8c26c9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04745cf14ebe923e2553eaadb8c26c9b">&#9670;&#160;</a></span>remove_ref()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -539,8 +682,8 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void thread_local_stack::remove_ref </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>variable_name</em></td><td>)</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -549,22 +692,16 @@ Friends</h2></td></tr>
 <p>removes the reference to a value on the heap. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">variable_name</td><td>- name of the variable. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::invalid_argument</td><td>when variable_name is not previously initialized. </td></tr>
+    <tr><td class="paramname">index</td><td>- index on the indexed stack. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<h2 class="groupheader">Friends And Related Symbol Documentation</h2>
-<a id="a35c0117a0dd467a096a038ac0b39dd7a" name="a35c0117a0dd467a096a038ac0b39dd7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35c0117a0dd467a096a038ac0b39dd7a">&#9670;&#160;</a></span>garbage_collector</h2>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ac4a6b1c3555d93a1cf3fecc99918a3ca" name="ac4a6b1c3555d93a1cf3fecc99918a3ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4a6b1c3555d93a1cf3fecc99918a3ca">&#9670;&#160;</a></span>heap_manager_ref</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -573,21 +710,20 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">friend class <a class="el" href="classgarbage__collector.html">garbage_collector</a></td>
+          <td class="memname"><a class="el" href="classheap__manager.html">heap_manager</a>&amp; thread_local_stack::heap_manager_ref</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>allowing gc to access getter for the variable. </p>
+<p>reference to a heap manager. </p>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
 <a id="a24ae820c5b42f49fe7deadde4ad12952" name="a24ae820c5b42f49fe7deadde4ad12952"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a24ae820c5b42f49fe7deadde4ad12952">&#9670;&#160;</a></span>scope</h2>
 
@@ -612,8 +748,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a72af7e8f356c2d82ce9198f24ec95fbf" name="a72af7e8f356c2d82ce9198f24ec95fbf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72af7e8f356c2d82ce9198f24ec95fbf">&#9670;&#160;</a></span>thread_stack</h2>
+<a id="a3478780b85d05fd56c9309831d3bd9a8" name="a3478780b85d05fd56c9309831d3bd9a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3478780b85d05fd56c9309831d3bd9a8">&#9670;&#160;</a></span>temporaries</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -622,7 +758,31 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classindexed__stack.html">indexed_stack</a>&lt;<a class="el" href="structthread__local__stack__entry.html">thread_local_stack_entry</a>&gt; thread_local_stack::thread_stack</td>
+          <td class="memname"><a class="el" href="classfixed__stack.html">fixed_stack</a>&lt;<a class="el" href="structheader.html">header</a>*, <a class="el" href="namespacecfg_1_1structs_1_1fixed__stack.html#a22428b2c4247b2fbe3edcccfdaf3e583">cfg::structs::fixed_stack::MAX_STACK_CAPACITY</a>&gt; thread_local_stack::temporaries</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>stack of temporary objects. </p>
+
+</div>
+</div>
+<a id="a74efc6ea648c8cb5a1760e7c2193b4fa" name="a74efc6ea648c8cb5a1760e7c2193b4fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74efc6ea648c8cb5a1760e7c2193b4fa">&#9670;&#160;</a></span>tls</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classindexed__stack.html">indexed_stack</a>&lt;<a class="el" href="structthread__local__stack__entry.html">thread_local_stack_entry</a>&gt; thread_local_stack::tls</td>
         </tr>
       </table>
   </td>
@@ -636,8 +796,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="aa00bba7f0aa1e9b25f97b8c4e838f9d0" name="aa00bba7f0aa1e9b25f97b8c4e838f9d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa00bba7f0aa1e9b25f97b8c4e838f9d0">&#9670;&#160;</a></span>tls_mutex</h2>
+<a id="a8b28f145b28bfd984f451ff7ba24a023" name="a8b28f145b28bfd984f451ff7ba24a023"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b28f145b28bfd984f451ff7ba24a023">&#9670;&#160;</a></span>tls_id</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -646,31 +806,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::mutex thread_local_stack::tls_mutex</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>used for tls synchronization. </p>
-
-</div>
-</div>
-<a id="a03674ef710c6bbb789aa3753597031bd" name="a03674ef710c6bbb789aa3753597031bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03674ef710c6bbb789aa3753597031bd">&#9670;&#160;</a></span>var_to_idx</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classhash__map.html">hash_map</a>&lt;std::string, size_t&gt; thread_local_stack::var_to_idx</td>
+          <td class="memname">const uint64_t thread_local_stack::tls_id</td>
         </tr>
       </table>
   </td>
@@ -680,13 +816,13 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>mapping the variable name to its index inside of the thread_stack. </p>
+<p>tls id for root-set-table. </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>ikp-team-16/src/root-set-table/<a class="el" href="thread-local-stack_8hpp.html">thread-local-stack.hpp</a></li>
-<li>ikp-team-16/src/root-set-table/<a class="el" href="thread-local-stack_8cpp.html">thread-local-stack.cpp</a></li>
+<li>gcsim/src/root-set-table/<a class="el" href="thread-local-stack_8hpp.html">thread-local-stack.hpp</a></li>
+<li>gcsim/src/root-set-table/<a class="el" href="thread-local-stack_8cpp.html">thread-local-stack.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

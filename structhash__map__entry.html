@@ -60,6 +60,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a97778fa0eeabf308ca5c185f17a51388" id="r_a97778fa0eeabf308ca5c185f17a51388"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhash__map__entry.html#a97778fa0eeabf308ca5c185f17a51388">hash_map_entry</a> (K &amp;&amp;k, V &amp;&amp;v)</td></tr>
 <tr class="memdesc:a97778fa0eeabf308ca5c185f17a51388"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates an instance of the <a class="el" href="classhash__map.html" title="implementation of the hash_map; using constant number of buckets and chaining.">hash_map</a> entry.  <br /></td></tr>
 <tr class="separator:a97778fa0eeabf308ca5c185f17a51388"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd54c2fed58d41a4b4bbc875e99015f5" id="r_afd54c2fed58d41a4b4bbc875e99015f5"><td class="memTemplParams" colspan="2">template&lt;typename KK , typename... VVArgs&gt; </td></tr>
+<tr class="memitem:afd54c2fed58d41a4b4bbc875e99015f5"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structhash__map__entry.html#afd54c2fed58d41a4b4bbc875e99015f5">hash_map_entry</a> (KK &amp;&amp;<a class="el" href="structhash__map__entry.html#ae4daa885cf15ffa052f6f28f4e434e33">key</a>, VVArgs &amp;&amp;... value_args)</td></tr>
+<tr class="memdesc:afd54c2fed58d41a4b4bbc875e99015f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates an instance of the <a class="el" href="classhash__map.html" title="implementation of the hash_map; using constant number of buckets and chaining.">hash_map</a> entry.  <br /></td></tr>
+<tr class="separator:afd54c2fed58d41a4b4bbc875e99015f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -85,7 +89,7 @@ struct hash_map_entry&lt; K, V &gt;</div><p>the structure of the element inside 
 </dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a91e61b19bcb2d17aab90cf8a1c2131d9" name="a91e61b19bcb2d17aab90cf8a1c2131d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91e61b19bcb2d17aab90cf8a1c2131d9">&#9670;&#160;</a></span>hash_map_entry() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a91e61b19bcb2d17aab90cf8a1c2131d9">&#9670;&#160;</a></span>hash_map_entry() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -133,7 +137,7 @@ template&lt;typename K , typename V &gt; </div>
 </div>
 </div>
 <a id="a97778fa0eeabf308ca5c185f17a51388" name="a97778fa0eeabf308ca5c185f17a51388"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a97778fa0eeabf308ca5c185f17a51388">&#9670;&#160;</a></span>hash_map_entry() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a97778fa0eeabf308ca5c185f17a51388">&#9670;&#160;</a></span>hash_map_entry() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -177,6 +181,62 @@ template&lt;typename K , typename V &gt; </div>
   </dd>
 </dl>
 <p>next defaults to nullptr. </p>
+
+</div>
+</div>
+<a id="afd54c2fed58d41a4b4bbc875e99015f5" name="afd54c2fed58d41a4b4bbc875e99015f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd54c2fed58d41a4b4bbc875e99015f5">&#9670;&#160;</a></span>hash_map_entry() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V &gt; </div>
+<div class="memtemplate">
+template&lt;typename KK , typename... VVArgs&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structhash__map__entry.html">hash_map_entry</a>&lt; K, V &gt;<a class="el" href="structhash__map__entry.html">::hash_map_entry</a> </td>
+          <td>(</td>
+          <td class="paramtype">KK &amp;&amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">VVArgs &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>value_args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>creates an instance of the <a class="el" href="classhash__map.html" title="implementation of the hash_map; using constant number of buckets and chaining.">hash_map</a> entry. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">KK</td><td>- type of the key. </td></tr>
+    <tr><td class="paramname">VVArgs</td><td>- types of the arguments. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>- key of the entry. </td></tr>
+    <tr><td class="paramname">value_args</td><td>- value arguments. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -236,7 +296,7 @@ template&lt;typename K , typename V &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>ikp-team-16/src/common/hash-map/<a class="el" href="hash-map-entry_8hpp.html">hash-map-entry.hpp</a></li>
+<li>gcsim/src/common/hash-map/<a class="el" href="hash-map-entry_8hpp.html">hash-map-entry.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

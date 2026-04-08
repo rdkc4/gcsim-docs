@@ -83,9 +83,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a8c196e7559bb0505b1b25b1101c5c7a0" id="r_a8c196e7559bb0505b1b25b1101c5c7a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__pool.html#a8c196e7559bb0505b1b25b1101c5c7a0">stop</a></td></tr>
 <tr class="memdesc:a8c196e7559bb0505b1b25b1101c5c7a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">flag that handles stoppage of worker threads.  <br /></td></tr>
 <tr class="separator:a8c196e7559bb0505b1b25b1101c5c7a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae292a53b295a84070c5aa725f4ca6015" id="r_ae292a53b295a84070c5aa725f4ca6015"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classqueue.html">queue</a>&lt; std::function&lt; void()&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__pool.html#ae292a53b295a84070c5aa725f4ca6015">tasks</a></td></tr>
-<tr class="memdesc:ae292a53b295a84070c5aa725f4ca6015"><td class="mdescLeft">&#160;</td><td class="mdescRight">queue of tasks.  <br /></td></tr>
-<tr class="separator:ae292a53b295a84070c5aa725f4ca6015"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae2cd1d918d62e106d312b6fcb4606fa" id="r_aae2cd1d918d62e106d312b6fcb4606fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classqueue.html">queue</a>&lt; std::move_only_function&lt; void()&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__pool.html#aae2cd1d918d62e106d312b6fcb4606fa">tasks</a></td></tr>
+<tr class="memdesc:aae2cd1d918d62e106d312b6fcb4606fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">queue of tasks.  <br /></td></tr>
+<tr class="separator:aae2cd1d918d62e106d312b6fcb4606fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a531ba6a17eabd334184c1d6b1a94b625" id="r_a531ba6a17eabd334184c1d6b1a94b625"><td class="memItemLeft" align="right" valign="top">std::thread *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthread__pool.html#a531ba6a17eabd334184c1d6b1a94b625">threads</a></td></tr>
 <tr class="memdesc:a531ba6a17eabd334184c1d6b1a94b625"><td class="mdescLeft">&#160;</td><td class="mdescRight">list of threads owned by thread pool.  <br /></td></tr>
 <tr class="separator:a531ba6a17eabd334184c1d6b1a94b625"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -284,8 +284,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="ae292a53b295a84070c5aa725f4ca6015" name="ae292a53b295a84070c5aa725f4ca6015"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae292a53b295a84070c5aa725f4ca6015">&#9670;&#160;</a></span>tasks</h2>
+<a id="aae2cd1d918d62e106d312b6fcb4606fa" name="aae2cd1d918d62e106d312b6fcb4606fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae2cd1d918d62e106d312b6fcb4606fa">&#9670;&#160;</a></span>tasks</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -294,7 +294,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classqueue.html">queue</a>&lt;std::function&lt;void()&gt; &gt; thread_pool::tasks</td>
+          <td class="memname"><a class="el" href="classqueue.html">queue</a>&lt;std::move_only_function&lt;void()&gt; &gt; thread_pool::tasks</td>
         </tr>
       </table>
   </td>
@@ -357,8 +357,8 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>ikp-team-16/src/common/thread-pool/<a class="el" href="thread-pool_8hpp.html">thread-pool.hpp</a></li>
-<li>ikp-team-16/src/common/thread-pool/<a class="el" href="thread-pool_8cpp.html">thread-pool.cpp</a></li>
+<li>gcsim/src/common/thread-pool/<a class="el" href="thread-pool_8hpp.html">thread-pool.hpp</a></li>
+<li>gcsim/src/common/thread-pool/<a class="el" href="thread-pool_8cpp.html">thread-pool.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

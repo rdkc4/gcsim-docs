@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>GCSIM: ikp-team-16/src/common/header/header.hpp File Reference</title>
+<title>GCSIM: gcsim/src/common/header/header.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -39,83 +39,26 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_0650ffdb9baffe2755e5bd3bee9f62d1.html">ikp-team-16</a></li><li class="navelem"><a class="el" href="dir_821e665c8d7a4ce5fa745ad344dd01b1.html">src</a></li><li class="navelem"><a class="el" href="dir_a375abb726835d5ef0f70c7cceed35c7.html">common</a></li><li class="navelem"><a class="el" href="dir_5f71318b7068256d44bd7a4038a7867c.html">header</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_8024f756d125b28b5314401d4840ea81.html">gcsim</a></li><li class="navelem"><a class="el" href="dir_e353ccc119a27762b7e0ce4543be79f4.html">src</a></li><li class="navelem"><a class="el" href="dir_67bc55127eedd2fdc4dcc50fd2e56e73.html">common</a></li><li class="navelem"><a class="el" href="dir_b03386381f26c0477c00cbb3401241cc.html">header</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle"><div class="title">header.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
 <code>#include &lt;atomic&gt;</code><br />
+<code>#include &quot;<a class="el" href="header-cfg_8hpp.html">../cfg/header-cfg.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="type-descriptor_8hpp.html">type-descriptor.hpp</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structheader.html">header</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">header of the block inside of the heap segment. Occupies 16 bytes.  <a href="structheader.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a0fefdb593b4b6838c7fbf61bf77530df" id="r_a0fefdb593b4b6838c7fbf61bf77530df"><td class="memItemLeft" align="right" valign="top">constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="header_8hpp.html#a0fefdb593b4b6838c7fbf61bf77530df">IS_FREE</a> = 0x01</td></tr>
-<tr class="memdesc:a0fefdb593b4b6838c7fbf61bf77530df"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_free flag is on the lowest bit.  <br /></td></tr>
-<tr class="separator:a0fefdb593b4b6838c7fbf61bf77530df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85f791d356bc9972e32d567c4dedc859" id="r_a85f791d356bc9972e32d567c4dedc859"><td class="memItemLeft" align="right" valign="top">constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="header_8hpp.html#a85f791d356bc9972e32d567c4dedc859">IS_MARKED</a> = 0x02</td></tr>
-<tr class="memdesc:a85f791d356bc9972e32d567c4dedc859"><td class="mdescLeft">&#160;</td><td class="mdescRight">is marked flag is on the second lowest bit.  <br /></td></tr>
-<tr class="separator:a85f791d356bc9972e32d567c4dedc859"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a0fefdb593b4b6838c7fbf61bf77530df" name="a0fefdb593b4b6838c7fbf61bf77530df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0fefdb593b4b6838c7fbf61bf77530df">&#9670;&#160;</a></span>IS_FREE</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr uint8_t IS_FREE = 0x01</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>is_free flag is on the lowest bit. </p>
-
-</div>
-</div>
-<a id="a85f791d356bc9972e32d567c4dedc859" name="a85f791d356bc9972e32d567c4dedc859"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85f791d356bc9972e32d567c4dedc859">&#9670;&#160;</a></span>IS_MARKED</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr uint8_t IS_MARKED = 0x02</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>is marked flag is on the second lowest bit. </p>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

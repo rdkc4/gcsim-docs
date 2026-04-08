@@ -82,6 +82,11 @@ requires std::is_constructible_v&lt;K, KK&amp;&amp;&gt; &amp;&amp; std::is_const
 <tr class="memitem:a2ee65f25d523be7863444ee8c7615cf0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classhash__map.html#a2ee65f25d523be7863444ee8c7615cf0">insert</a> (KK &amp;&amp;key, VV &amp;&amp;value)</td></tr>
 <tr class="memdesc:a2ee65f25d523be7863444ee8c7615cf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">inserts new (key, value) pair; or updates value if key already exists.  <br /></td></tr>
 <tr class="separator:a2ee65f25d523be7863444ee8c7615cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ad05fa33591eaf26f8f1e929b92daf3" id="r_a1ad05fa33591eaf26f8f1e929b92daf3"><td class="memTemplParams" colspan="2">template&lt;typename KK , typename... VVArgs&gt; <br />
+requires std::is_constructible_v&lt;K, KK&amp;&amp;&gt; &amp;&amp; std::is_constructible_v&lt;V, VVArgs&amp;&amp;...&gt;</td></tr>
+<tr class="memitem:a1ad05fa33591eaf26f8f1e929b92daf3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classhash__map.html#a1ad05fa33591eaf26f8f1e929b92daf3">emplace</a> (KK &amp;&amp;key, VVArgs &amp;&amp;... value_args)</td></tr>
+<tr class="memdesc:a1ad05fa33591eaf26f8f1e929b92daf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">emplaces the entry in the <a class="el" href="classhash__map.html" title="implementation of the hash_map; using constant number of buckets and chaining.">hash_map</a>.  <br /></td></tr>
+<tr class="separator:a1ad05fa33591eaf26f8f1e929b92daf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad140e427cc17d0a0b7f434cb040a764f" id="r_ad140e427cc17d0a0b7f434cb040a764f"><td class="memItemLeft" align="right" valign="top">V *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhash__map.html#ad140e427cc17d0a0b7f434cb040a764f">find</a> (const K &amp;key) noexcept</td></tr>
 <tr class="memdesc:ad140e427cc17d0a0b7f434cb040a764f"><td class="mdescLeft">&#160;</td><td class="mdescRight">looks up element in a <a class="el" href="classhash__map.html" title="implementation of the hash_map; using constant number of buckets and chaining.">hash_map</a>.  <br /></td></tr>
 <tr class="separator:ad140e427cc17d0a0b7f434cb040a764f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -522,6 +527,63 @@ template&lt;typename K , typename V , typename Hash  = std::hash&lt;K&gt;&gt; </
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">head</td><td>- pointer to the first element of the bucket linked list. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1ad05fa33591eaf26f8f1e929b92daf3" name="a1ad05fa33591eaf26f8f1e929b92daf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ad05fa33591eaf26f8f1e929b92daf3">&#9670;&#160;</a></span>emplace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = std::hash&lt;K&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;typename KK , typename... VVArgs&gt; <br />
+requires std::is_constructible_v&lt;K, KK&amp;&amp;&gt; &amp;&amp; std::is_constructible_v&lt;V, VVArgs&amp;&amp;...&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classhash__map.html">hash_map</a>&lt; K, V, Hash &gt;::emplace </td>
+          <td>(</td>
+          <td class="paramtype">KK &amp;&amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">VVArgs &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>value_args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>emplaces the entry in the <a class="el" href="classhash__map.html" title="implementation of the hash_map; using constant number of buckets and chaining.">hash_map</a>. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">KK</td><td>- type of the key. </td></tr>
+    <tr><td class="paramname">VVArgs</td><td>- types of the arguments. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>- key of the entry. </td></tr>
+    <tr><td class="paramname">value_args</td><td>- value arguments. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1135,7 +1197,7 @@ template&lt;typename K , typename V , typename Hash  = std::hash&lt;K&gt;&gt; </
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>ikp-team-16/src/common/hash-map/<a class="el" href="hash-map_8hpp.html">hash-map.hpp</a></li>
+<li>gcsim/src/common/hash-map/<a class="el" href="hash-map_8hpp.html">hash-map.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

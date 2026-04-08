@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>GCSIM: GCSIM</title>
+<title>GCSIM: GCSim</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -39,10 +39,10 @@ $(function() {
 <div id="main-nav"></div>
 </div><!-- top -->
 <div><div class="header">
-  <div class="headertitle"><div class="title">GCSIM </div></div>
+  <div class="headertitle"><div class="title">GCSim </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_ikp-team-16_2mainpage"></a>Mark-Sweep GC simulator written in C++23.</p>
+<div class="textblock"><p><a class="anchor" id="md_gcsim_2mainpage"></a>Heap manager simulator using mark-sweep and mark-compact garbage collectors, written in C++23.</p>
 <h2><a class="anchor" id="autotoc_md1"></a>
 Getting Started</h2>
 <h3><a class="anchor" id="autotoc_md2"></a>
@@ -53,84 +53,40 @@ Prerequisites</h3>
 <li><b>Pthread Support</b> (the build uses the -pthread flag)</li>
 </ul>
 <h3><a class="anchor" id="autotoc_md3"></a>
+Unit Tests (optional)</h3>
+<ul>
+<li><b>Google Test (gtest)</b> for running unit tests.</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md4"></a>
 Installation</h3>
 <ol type="1">
-<li>Clone the repository: <div class="fragment"><div class="line">git clone https://github.com/rdkc4/ikp-team-16.git</div>
-<div class="line">cd ikp-team-16</div>
+<li>Clone the repository: <div class="fragment"><div class="line">git clone https://github.com/rdkc4/gcsim.git</div>
+<div class="line">cd gcsim</div>
 </div><!-- fragment --></li>
-<li>Build the project: <div class="fragment"><div class="line">make</div>
-</div><!-- fragment --> or (recommended, to use all available cores for a faster build): <div class="fragment"><div class="line">make -j$(nproc)</div>
+<li>Build the project:<ul>
+<li>-O1 optimization with debugging flags <div class="fragment"><div class="line">make [-j$(nproc)]</div>
 </div><!-- fragment --></li>
+<li>-O2 optimization, no debugging flags <div class="fragment"><div class="line">make perf [-j$(nproc)]</div>
+</div><!-- fragment --></li>
+<li>-O3 optimization, no debugging flags <code>bash make benchmark [-j$(nproc)] </code></li>
+</ul>
+</li>
 </ol>
-<h3><a class="anchor" id="autotoc_md4"></a>
+<h3><a class="anchor" id="autotoc_md5"></a>
 Usage</h3>
-<p>To start the simulations, run: </p><div class="fragment"><div class="line">./gcsim</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md5"></a>
-Architecture</h2>
-<div class="image">
-<img src="gcsim.drawio.png" alt=""/>
-<div class="caption">
-Architecture Diagram</div></div>
-    <h3><a class="anchor" id="autotoc_md6"></a>
-HEAP</h3>
-<p>heap consists of 8 segments, 16MB each:</p><ul>
-<li>4 small object segments</li>
-<li>2 medium object segments</li>
-<li>2 large object segments</li>
+<p>To run a simulation: </p><div class="fragment"><div class="line">./gcsim [options]</div>
+</div><!-- fragment --><p>Options:</p><ul>
+<li>-gc, &ndash;garbage-collector : type of the garbage collector: mc, ms (mc - mark-compact, ms - mark-sweep)</li>
+<li>-i, &ndash;iterations : number of simulation iterations, positive number</li>
+<li>-m, &ndash;mode : simulation mode: stress, relaxed</li>
+<li>-M, &ndash;mutators : number of concurrent mutators min 1, max 10</li>
+<li>-o, &ndash;output : output file for simulation results</li>
+<li>-h, &ndash;help : display this help text</li>
 </ul>
-<p>each block on the heap starts with header, which consists of:</p><ul>
-<li>pointer to the next free block (if current block is free), nullptr otherwise</li>
-<li>size of the block</li>
-<li>flags (is_marked, is_free)</li>
-</ul>
-<h3><a class="anchor" id="autotoc_md7"></a>
-ROOT-SET-TABLE</h3>
-<p><a class="el" href="classroot__set__table.html" title="manages root sets for garbage collection.">root_set_table</a> uses <a class="el" href="classhash__map.html" title="implementation of the hash_map; using constant number of buckets and chaining.">hash_map</a> to map name of the root to a pointer to the <a class="el" href="classroot__set__base.html" title="parent class of root-set table entries.">root_set_base</a>.</p>
-<p><a class="el" href="classroot__set__base.html" title="parent class of root-set table entries.">root_set_base</a> types:</p><ul>
-<li><a class="el" href="classthread__local__stack.html" title="local memory of a thread.">thread_local_stack</a></li>
-<li><a class="el" href="classglobal__root.html" title="defines the structure of the global variable in the root-set table. Inherits from root_set_base.">global_root</a></li>
-<li><a class="el" href="classregister__root.html" title="defines the structure of the register variable in the root-set table. Inherits from the root_set_base...">register_root</a></li>
-</ul>
-<h3><a class="anchor" id="autotoc_md8"></a>
-THREAD-LOCAL-STACK</h3>
-<p><a class="el" href="classthread__local__stack.html" title="local memory of a thread.">thread_local_stack</a> uses <a class="el" href="classindexed__stack.html" title="hybrid implementation of an array and stack.">indexed_stack</a> to store variables allocated by the thread, <a class="el" href="classindexed__stack.html" title="hybrid implementation of an array and stack.">indexed_stack</a> stores pointers to headers on the heap.</p>
-<p><a class="el" href="classthread__local__stack.html" title="local memory of a thread.">thread_local_stack</a> has a <a class="el" href="classhash__map.html" title="implementation of the hash_map; using constant number of buckets and chaining.">hash_map</a> that maps name of the variable to its index for easier reassignation and deletion.</p>
-<h3><a class="anchor" id="autotoc_md9"></a>
-GLOBAL-ROOT &amp; REGISTER-ROOT</h3>
-<p><a class="el" href="classglobal__root.html" title="defines the structure of the global variable in the root-set table. Inherits from root_set_base.">global_root</a> and <a class="el" href="classregister__root.html" title="defines the structure of the register variable in the root-set table. Inherits from the root_set_base...">register_root</a> have pointers to headers on the heap.</p>
-<h3><a class="anchor" id="autotoc_md10"></a>
-SEGMENT-FREE-MEMORY-TABLE</h3>
-<p><a class="el" href="classsegment__free__memory__table.html" title="table containing the information of all segments.">segment_free_memory_table</a> uses <a class="el" href="classhash__map.html" title="implementation of the hash_map; using constant number of buckets and chaining.">hash_map</a> that maps index of the segment to <a class="el" href="structsegment__info.html" title="representation of the element inside of the free_memory_table.">segment_info</a>.</p>
-<p>segment_free_memory_table_entry consists of:</p><ul>
-<li>pointer to the head of the free block linked list</li>
-<li>number of free bytes in the segment</li>
-</ul>
-<h3><a class="anchor" id="autotoc_md11"></a>
-GARBAGE-COLLECTOR</h3>
-<p>mark-sweep stop-the-world <a class="el" href="classgarbage__collector.html" title="implementation of the mark-sweep gc">garbage_collector</a>.</p>
-<p>during its execution all allocator threads are sleeping.</p>
-<p><a class="el" href="classgarbage__collector.html" title="implementation of the mark-sweep gc">garbage_collector</a> uses thread pool to mark all objects reachable from the <a class="el" href="classroot__set__table.html" title="manages root sets for garbage collection.">root_set_table</a>.</p>
-<p><a class="el" href="classgarbage__collector.html" title="implementation of the mark-sweep gc">garbage_collector</a> uses <a class="el" href="classthread__pool.html" title="manages a fixed number of worker threads that execute queued tasks.">thread_pool</a> to sweep all segments.</p>
-<h3><a class="anchor" id="autotoc_md12"></a>
-HEAP-MANAGER</h3>
-<p><a class="el" href="classheap__manager.html" title="manages the memory on the heap.">heap_manager</a> manages all allocations.</p>
-<p><a class="el" href="classheap__manager.html" title="manages the memory on the heap.">heap_manager</a> owns <a class="el" href="classroot__set__table.html" title="manages root sets for garbage collection.">root_set_table</a>, <a class="el" href="classsegment__free__memory__table.html" title="table containing the information of all segments.">segment_free_memory_table</a> and heap.</p>
-<p><a class="el" href="classgarbage__collector.html" title="implementation of the mark-sweep gc">garbage_collector</a> is run either periodically or on allocation failure if enough time has passed since last garbage collection.</p>
-<p><a class="el" href="classheap__manager.html" title="manages the memory on the heap.">heap_manager</a> uses <a class="el" href="classthread__pool.html" title="manages a fixed number of worker threads that execute queued tasks.">thread_pool</a> to coalesce free segments after the garbage collection.</p>
-<h3><a class="anchor" id="autotoc_md13"></a>
-ALLOCATORS</h3>
-<p>allocators simulate multi-threaded allocation of the memory on the heap.</p>
-<p>allocators use <a class="el" href="classthread__pool.html" title="manages a fixed number of worker threads that execute queued tasks.">thread_pool</a> to simulate multi-threaded allocation from threads, global variables and registers.</p>
-<p>simulation has two modes:</p><ul>
-<li>stress mode</li>
-<li>relaxed mode</li>
-</ul>
-<p>after simulation performance is measured in:</p><ul>
-<li>execution time in milliseconds and seconds</li>
-<li>number of allocations during the simulation</li>
-<li>allocation throughput in allocs/ms and allocs/s </li>
-</ul>
-</div></div><!-- PageDoc -->
+<h3><a class="anchor" id="autotoc_md6"></a>
+Unit Tests</h3>
+<p>Running the tests: </p><div class="fragment"><div class="line">make test [-j$(nproc)]</div>
+</div><!-- fragment --> </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

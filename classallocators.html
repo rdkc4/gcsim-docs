@@ -63,54 +63,31 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9ce1502ac67a8eb4da0a5b97e40da116" id="r_a9ce1502ac67a8eb4da0a5b97e40da116"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#a9ce1502ac67a8eb4da0a5b97e40da116">~allocators</a> ()=default</td></tr>
 <tr class="memdesc:a9ce1502ac67a8eb4da0a5b97e40da116"><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes the instance of the allocators.  <br /></td></tr>
 <tr class="separator:a9ce1502ac67a8eb4da0a5b97e40da116"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a720f9065837f1653d4d7c7c6c198ae24" id="r_a720f9065837f1653d4d7c7c6c198ae24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#a720f9065837f1653d4d7c7c6c198ae24">simulate_alloc</a> (size_t tls_count, size_t global_count, size_t register_count, <a class="el" href="allocators_8hpp.html#afe8830984c993345b268afcb0167ed63">simulation_mode</a> mode)</td></tr>
-<tr class="memdesc:a720f9065837f1653d4d7c7c6c198ae24"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts the allocation simulation, stress mode.  <br /></td></tr>
-<tr class="separator:a720f9065837f1653d4d7c7c6c198ae24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cb0ac72a3377bc09fbf3a45736a8242" id="r_a3cb0ac72a3377bc09fbf3a45736a8242"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdiagnostics.html">diagnostics</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#a3cb0ac72a3377bc09fbf3a45736a8242">simulate_alloc</a> (size_t tls_count, <a class="el" href="allocator-defs_8hpp.html#afe8830984c993345b268afcb0167ed63">simulation_mode</a> mode)</td></tr>
+<tr class="memdesc:a3cb0ac72a3377bc09fbf3a45736a8242"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts the allocation simulation, stress mode.  <br /></td></tr>
+<tr class="separator:a3cb0ac72a3377bc09fbf3a45736a8242"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a683ae6e40508d78ec7180d353e6003aa" id="r_a683ae6e40508d78ec7180d353e6003aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#a683ae6e40508d78ec7180d353e6003aa">simulate_tls_alloc</a> (<a class="el" href="classthread__local__stack.html">thread_local_stack</a> *tls, size_t scope_count, size_t allocs_per_scope)</td></tr>
-<tr class="memdesc:a683ae6e40508d78ec7180d353e6003aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">simulates allocation of a thread, stress mode.  <br /></td></tr>
-<tr class="separator:a683ae6e40508d78ec7180d353e6003aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9eb18af2726f38fdac0c667f25a885e" id="r_ab9eb18af2726f38fdac0c667f25a885e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#ab9eb18af2726f38fdac0c667f25a885e">simulate_global_alloc</a> (<a class="el" href="classglobal__root.html">global_root</a> *global, size_t global_allocs)</td></tr>
-<tr class="memdesc:ab9eb18af2726f38fdac0c667f25a885e"><td class="mdescLeft">&#160;</td><td class="mdescRight">simulates allocation of a global variable, stress mode.  <br /></td></tr>
-<tr class="separator:ab9eb18af2726f38fdac0c667f25a885e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47e9ab13a6d5ed79f8b4210c41192dda" id="r_a47e9ab13a6d5ed79f8b4210c41192dda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#a47e9ab13a6d5ed79f8b4210c41192dda">simulate_register_alloc</a> (<a class="el" href="classregister__root.html">register_root</a> *reg, size_t register_allocs)</td></tr>
-<tr class="memdesc:a47e9ab13a6d5ed79f8b4210c41192dda"><td class="mdescLeft">&#160;</td><td class="mdescRight">simulates allocation of a register variable, stress mode.  <br /></td></tr>
-<tr class="separator:a47e9ab13a6d5ed79f8b4210c41192dda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3fa285ffa5c02c3159283449548ee7c" id="r_ad3fa285ffa5c02c3159283449548ee7c"><td class="memTemplParams" colspan="2">template&lt;typename root , typename... args&gt; <br />
-requires std::derived_from&lt;root, <a class="el" href="classroot__set__base.html">root_set_base</a>&gt;</td></tr>
-<tr class="memitem:ad3fa285ffa5c02c3159283449548ee7c"><td class="memTemplItemLeft" align="right" valign="top">root *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classallocators.html#ad3fa285ffa5c02c3159283449548ee7c">create_root</a> (const std::string &amp;key, args &amp;&amp;... arguments)</td></tr>
-<tr class="memdesc:ad3fa285ffa5c02c3159283449548ee7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates the root for root-set-table.  <br /></td></tr>
-<tr class="separator:ad3fa285ffa5c02c3159283449548ee7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46a43e42ba6fc13aaeca09b69648b80c" id="r_a46a43e42ba6fc13aaeca09b69648b80c"><td class="memTemplParams" colspan="2">template&lt;typename fn &gt; </td></tr>
-<tr class="memitem:a46a43e42ba6fc13aaeca09b69648b80c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classallocators.html#a46a43e42ba6fc13aaeca09b69648b80c">enqueue_simulation</a> (const std::string &amp;label, size_t index, fn &amp;&amp;simulate, std::latch &amp;completion_latch)</td></tr>
-<tr class="memdesc:a46a43e42ba6fc13aaeca09b69648b80c"><td class="mdescLeft">&#160;</td><td class="mdescRight">adds simulation to queue.  <br /></td></tr>
-<tr class="separator:a46a43e42ba6fc13aaeca09b69648b80c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acafff8758c417489979281c6b5f5a704" id="r_acafff8758c417489979281c6b5f5a704"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#acafff8758c417489979281c6b5f5a704">generate_random_size</a> ()</td></tr>
-<tr class="memdesc:acafff8758c417489979281c6b5f5a704"><td class="mdescLeft">&#160;</td><td class="mdescRight">generates the size of the object.  <br /></td></tr>
-<tr class="separator:acafff8758c417489979281c6b5f5a704"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70870c858db25a7e6ddad919f7caf06f" id="r_a70870c858db25a7e6ddad919f7caf06f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#a70870c858db25a7e6ddad919f7caf06f">simulate_thread_alloc</a> (<a class="el" href="classthread__local__stack.html">thread_local_stack</a> *tls, size_t scope_count, size_t operations_per_scope)</td></tr>
+<tr class="memdesc:a70870c858db25a7e6ddad919f7caf06f"><td class="mdescLeft">&#160;</td><td class="mdescRight">simulates allocation of a thread, stress mode.  <br /></td></tr>
+<tr class="separator:a70870c858db25a7e6ddad919f7caf06f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d9d934d782ad6e5acee298a65021fe7" id="r_a8d9d934d782ad6e5acee298a65021fe7"><td class="memTemplParams" colspan="2">template&lt;typename fn &gt; </td></tr>
+<tr class="memitem:a8d9d934d782ad6e5acee298a65021fe7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classallocators.html#a8d9d934d782ad6e5acee298a65021fe7">enqueue_simulation</a> (fn &amp;&amp;simulate, std::latch &amp;completion_latch)</td></tr>
+<tr class="memdesc:a8d9d934d782ad6e5acee298a65021fe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">adds simulation to queue.  <br /></td></tr>
+<tr class="separator:a8d9d934d782ad6e5acee298a65021fe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf01a227c35cf17774bd1b3501eb2af2" id="r_aaf01a227c35cf17774bd1b3501eb2af2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structheader.html">header</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#aaf01a227c35cf17774bd1b3501eb2af2">allocate_object</a> (<a class="el" href="classthread__local__stack.html">thread_local_stack</a> *tls)</td></tr>
+<tr class="memdesc:aaf01a227c35cf17774bd1b3501eb2af2"><td class="mdescLeft">&#160;</td><td class="mdescRight">allocates an object on the heap.  <br /></td></tr>
+<tr class="separator:aaf01a227c35cf17774bd1b3501eb2af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
-<tr class="memitem:add229a65a23fbfa423f3303d27e1ef84" id="r_add229a65a23fbfa423f3303d27e1ef84"><td class="memItemLeft" align="right" valign="top">static constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#add229a65a23fbfa423f3303d27e1ef84">simulation_mode_name</a> (<a class="el" href="allocators_8hpp.html#afe8830984c993345b268afcb0167ed63">simulation_mode</a> mode)</td></tr>
-<tr class="memdesc:add229a65a23fbfa423f3303d27e1ef84"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for the name of the mode of simulation.  <br /></td></tr>
-<tr class="separator:add229a65a23fbfa423f3303d27e1ef84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39bd16de6a3863a68fd5dcb98ad2b8cb" id="r_a39bd16de6a3863a68fd5dcb98ad2b8cb"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#a39bd16de6a3863a68fd5dcb98ad2b8cb">tls_scope_count</a> (<a class="el" href="allocators_8hpp.html#afe8830984c993345b268afcb0167ed63">simulation_mode</a> mode)</td></tr>
+<tr class="memitem:a39bd16de6a3863a68fd5dcb98ad2b8cb" id="r_a39bd16de6a3863a68fd5dcb98ad2b8cb"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#a39bd16de6a3863a68fd5dcb98ad2b8cb">tls_scope_count</a> (<a class="el" href="allocator-defs_8hpp.html#afe8830984c993345b268afcb0167ed63">simulation_mode</a> mode)</td></tr>
 <tr class="memdesc:a39bd16de6a3863a68fd5dcb98ad2b8cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for tls scope count.  <br /></td></tr>
 <tr class="separator:a39bd16de6a3863a68fd5dcb98ad2b8cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a351b557239fe74d9e50e29977b2372ea" id="r_a351b557239fe74d9e50e29977b2372ea"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#a351b557239fe74d9e50e29977b2372ea">tls_allocs_per_scope</a> (<a class="el" href="allocators_8hpp.html#afe8830984c993345b268afcb0167ed63">simulation_mode</a> mode)</td></tr>
-<tr class="memdesc:a351b557239fe74d9e50e29977b2372ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for tls allocation count per scope.  <br /></td></tr>
-<tr class="separator:a351b557239fe74d9e50e29977b2372ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88efafc7732fecb5fe6f663079c4b042" id="r_a88efafc7732fecb5fe6f663079c4b042"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#a88efafc7732fecb5fe6f663079c4b042">tls_map_capacity</a> (<a class="el" href="allocators_8hpp.html#afe8830984c993345b268afcb0167ed63">simulation_mode</a> mode)</td></tr>
-<tr class="memdesc:a88efafc7732fecb5fe6f663079c4b042"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for the initial capacity of the hash-map that maps tls variable to its index.  <br /></td></tr>
-<tr class="separator:a88efafc7732fecb5fe6f663079c4b042"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e4197d71a8ce450a6af99c8b2c84785" id="r_a1e4197d71a8ce450a6af99c8b2c84785"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#a1e4197d71a8ce450a6af99c8b2c84785">global_alloc_count</a> (<a class="el" href="allocators_8hpp.html#afe8830984c993345b268afcb0167ed63">simulation_mode</a> mode)</td></tr>
-<tr class="memdesc:a1e4197d71a8ce450a6af99c8b2c84785"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for global allocation count.  <br /></td></tr>
-<tr class="separator:a1e4197d71a8ce450a6af99c8b2c84785"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadd0153cd11996f466eced34fb98617e" id="r_aadd0153cd11996f466eced34fb98617e"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#aadd0153cd11996f466eced34fb98617e">register_alloc_count</a> (<a class="el" href="allocators_8hpp.html#afe8830984c993345b268afcb0167ed63">simulation_mode</a> mode)</td></tr>
-<tr class="memdesc:aadd0153cd11996f466eced34fb98617e"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for register allocation count.  <br /></td></tr>
-<tr class="separator:aadd0153cd11996f466eced34fb98617e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac212b409de623c877bd7d5e45005536a" id="r_ac212b409de623c877bd7d5e45005536a"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#ac212b409de623c877bd7d5e45005536a">tls_allocs_per_scope</a> (<a class="el" href="allocator-defs_8hpp.html#afe8830984c993345b268afcb0167ed63">simulation_mode</a> mode, size_t thread_count=1)</td></tr>
+<tr class="memdesc:ac212b409de623c877bd7d5e45005536a"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for tls allocation count per scope.  <br /></td></tr>
+<tr class="separator:ac212b409de623c877bd7d5e45005536a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -120,24 +97,27 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:aab834546e9bd4b83f7f0ff44fdb93f1e" id="r_aab834546e9bd4b83f7f0ff44fdb93f1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classthread__pool.html">thread_pool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#aab834546e9bd4b83f7f0ff44fdb93f1e">alloc_thread_pool</a></td></tr>
 <tr class="memdesc:aab834546e9bd4b83f7f0ff44fdb93f1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">allocators thread pool.  <br /></td></tr>
 <tr class="separator:aab834546e9bd4b83f7f0ff44fdb93f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0671b837e54eda92042b8306f8fe69a8" id="r_a0671b837e54eda92042b8306f8fe69a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classshared__register__space.html">shared_register_space</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#a0671b837e54eda92042b8306f8fe69a8">register_space</a></td></tr>
+<tr class="memdesc:a0671b837e54eda92042b8306f8fe69a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">shared space for registers.  <br /></td></tr>
+<tr class="separator:a0671b837e54eda92042b8306f8fe69a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a682c70057b47332e3fd12b258d5ad8c0" id="r_a682c70057b47332e3fd12b258d5ad8c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classshared__global__space.html">shared_global_space</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#a682c70057b47332e3fd12b258d5ad8c0">global_space</a></td></tr>
+<tr class="memdesc:a682c70057b47332e3fd12b258d5ad8c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">shared space for global variables.  <br /></td></tr>
+<tr class="separator:a682c70057b47332e3fd12b258d5ad8c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4768775984ccddbde12af6ed21b953ea" id="r_a4768775984ccddbde12af6ed21b953ea"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#a4768775984ccddbde12af6ed21b953ea">total_allocs</a> {}</td></tr>
+<tr class="memdesc:a4768775984ccddbde12af6ed21b953ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">total number of allocations.  <br /></td></tr>
+<tr class="separator:a4768775984ccddbde12af6ed21b953ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbc41225b83ceae3833b9b478cc4bda4" id="r_abbc41225b83ceae3833b9b478cc4bda4"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#abbc41225b83ceae3833b9b478cc4bda4">total_failed_allocs</a> {}</td></tr>
+<tr class="memdesc:abbc41225b83ceae3833b9b478cc4bda4"><td class="mdescLeft">&#160;</td><td class="mdescRight">total number of unsucessful allocations.  <br /></td></tr>
+<tr class="separator:abbc41225b83ceae3833b9b478cc4bda4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
-<tr class="memitem:afa4e9a56a9c7c6ec9e35c5ade0d6ce0e" id="r_afa4e9a56a9c7c6ec9e35c5ade0d6ce0e"><td class="memItemLeft" align="right" valign="top">static thread_local std::mt19937&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#afa4e9a56a9c7c6ec9e35c5ade0d6ce0e">rng</a> {std::random_device{}() + std::hash&lt;std::thread::id&gt;{}(std::this_thread::get_id())}</td></tr>
-<tr class="memdesc:afa4e9a56a9c7c6ec9e35c5ade0d6ce0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">random number generator.  <br /></td></tr>
-<tr class="separator:afa4e9a56a9c7c6ec9e35c5ade0d6ce0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a989a61d5a68bd46a5490235e538e2896" id="r_a989a61d5a68bd46a5490235e538e2896"><td class="memItemLeft" align="right" valign="top">static thread_local std::uniform_int_distribution&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#a989a61d5a68bd46a5490235e538e2896">category_dist</a></td></tr>
-<tr class="memdesc:a989a61d5a68bd46a5490235e538e2896"><td class="mdescLeft">&#160;</td><td class="mdescRight">distribution for object size category.  <br /></td></tr>
-<tr class="separator:a989a61d5a68bd46a5490235e538e2896"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba77325173e746fc57064d244196d066" id="r_aba77325173e746fc57064d244196d066"><td class="memItemLeft" align="right" valign="top">static thread_local std::uniform_int_distribution&lt; uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#aba77325173e746fc57064d244196d066">small_dist</a></td></tr>
-<tr class="memdesc:aba77325173e746fc57064d244196d066"><td class="mdescLeft">&#160;</td><td class="mdescRight">distribution for small object size.  <br /></td></tr>
-<tr class="separator:aba77325173e746fc57064d244196d066"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87f4378169b5c6cfa4d79a32218e3544" id="r_a87f4378169b5c6cfa4d79a32218e3544"><td class="memItemLeft" align="right" valign="top">static thread_local std::uniform_int_distribution&lt; uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#a87f4378169b5c6cfa4d79a32218e3544">medium_dist</a></td></tr>
-<tr class="memdesc:a87f4378169b5c6cfa4d79a32218e3544"><td class="mdescLeft">&#160;</td><td class="mdescRight">distribution for medium object size.  <br /></td></tr>
-<tr class="separator:a87f4378169b5c6cfa4d79a32218e3544"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef4705039443d14fea5f45f397e098a5" id="r_aef4705039443d14fea5f45f397e098a5"><td class="memItemLeft" align="right" valign="top">static thread_local std::uniform_int_distribution&lt; uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#aef4705039443d14fea5f45f397e098a5">large_dist</a></td></tr>
-<tr class="memdesc:aef4705039443d14fea5f45f397e098a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">distribution for large object size.  <br /></td></tr>
-<tr class="separator:aef4705039443d14fea5f45f397e098a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1ac9d2b1aa95838c133b3ed45c77ed1" id="r_ad1ac9d2b1aa95838c133b3ed45c77ed1"><td class="memItemLeft" align="right" valign="top">static thread_local size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#ad1ac9d2b1aa95838c133b3ed45c77ed1">per_thread_allocs</a> {0}</td></tr>
+<tr class="memdesc:ad1ac9d2b1aa95838c133b3ed45c77ed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">total number of a single thread's allocations.  <br /></td></tr>
+<tr class="separator:ad1ac9d2b1aa95838c133b3ed45c77ed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8318d252d2ebaed63cffe6a60740c024" id="r_a8318d252d2ebaed63cffe6a60740c024"><td class="memItemLeft" align="right" valign="top">static thread_local size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html#a8318d252d2ebaed63cffe6a60740c024">per_thread_failed_allocs</a> {0}</td></tr>
+<tr class="memdesc:a8318d252d2ebaed63cffe6a60740c024"><td class="mdescLeft">&#160;</td><td class="mdescRight">total number of a single thread's unsuccessful allocations.  <br /></td></tr>
+<tr class="separator:a8318d252d2ebaed63cffe6a60740c024"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>simulates the allocations on the heap. </p>
@@ -207,64 +187,43 @@ Static Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad3fa285ffa5c02c3159283449548ee7c" name="ad3fa285ffa5c02c3159283449548ee7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3fa285ffa5c02c3159283449548ee7c">&#9670;&#160;</a></span>create_root()</h2>
+<a id="aaf01a227c35cf17774bd1b3501eb2af2" name="aaf01a227c35cf17774bd1b3501eb2af2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf01a227c35cf17774bd1b3501eb2af2">&#9670;&#160;</a></span>allocate_object()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename root , typename... args&gt; <br />
-requires std::derived_from&lt;root, <a class="el" href="classroot__set__base.html">root_set_base</a>&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">root * allocators::create_root </td>
+          <td class="memname"><a class="el" href="structheader.html">header</a> * allocators::allocate_object </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="classthread__local__stack.html">thread_local_stack</a> *&#160;</td>
+          <td class="paramname"><em>tls</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">args &amp;&amp;...&#160;</td>
-          <td class="paramname"><em>arguments</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>creates the root for root-set-table. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">root</td><td>- type of the root. </td></tr>
-    <tr><td class="paramname">...args</td><td>- types of arguments for root construction. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>allocates an object on the heap. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">key</td><td>- key of the root. </td></tr>
-    <tr><td class="paramname">arguments</td><td>- arguments for the construction. </td></tr>
+    <tr><td class="paramname">tls</td><td>- pointer to a stack of the thread that wants to allocate object. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>pointer to a root-set-table element. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>pointer to the header of the object. </dd></dl>
 
 </div>
 </div>
-<a id="a46a43e42ba6fc13aaeca09b69648b80c" name="a46a43e42ba6fc13aaeca09b69648b80c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46a43e42ba6fc13aaeca09b69648b80c">&#9670;&#160;</a></span>enqueue_simulation()</h2>
+<a id="a8d9d934d782ad6e5acee298a65021fe7" name="a8d9d934d782ad6e5acee298a65021fe7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d9d934d782ad6e5acee298a65021fe7">&#9670;&#160;</a></span>enqueue_simulation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -277,18 +236,6 @@ template&lt;typename fn &gt; </div>
         <tr>
           <td class="memname">void allocators::enqueue_simulation </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>label</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">fn &amp;&amp;&#160;</td>
           <td class="paramname"><em>simulate</em>, </td>
         </tr>
@@ -320,8 +267,6 @@ template&lt;typename fn &gt; </div>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>- name of caller. </td></tr>
-    <tr><td class="paramname">index</td><td>- index of the caller. </td></tr>
     <tr><td class="paramname">simulate</td><td>- simulation function. </td></tr>
     <tr><td class="paramname">completion_latch</td><td>- synchronization for simulation. </td></tr>
   </table>
@@ -330,112 +275,14 @@ template&lt;typename fn &gt; </div>
 
 </div>
 </div>
-<a id="acafff8758c417489979281c6b5f5a704" name="acafff8758c417489979281c6b5f5a704"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acafff8758c417489979281c6b5f5a704">&#9670;&#160;</a></span>generate_random_size()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t allocators::generate_random_size </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>generates the size of the object. </p>
-<dl class="section return"><dt>Returns</dt><dd>amount of bytes object needs for allocation. </dd></dl>
-
-</div>
-</div>
-<a id="a1e4197d71a8ce450a6af99c8b2c84785" name="a1e4197d71a8ce450a6af99c8b2c84785"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e4197d71a8ce450a6af99c8b2c84785">&#9670;&#160;</a></span>global_alloc_count()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static constexpr size_t allocators::global_alloc_count </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="allocators_8hpp.html#afe8830984c993345b268afcb0167ed63">simulation_mode</a>&#160;</td>
-          <td class="paramname"><em>mode</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>getter for global allocation count. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">mode</td><td>- mode of the simulation. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>number of allocation for global variable. </dd></dl>
-
-</div>
-</div>
-<a id="aadd0153cd11996f466eced34fb98617e" name="aadd0153cd11996f466eced34fb98617e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aadd0153cd11996f466eced34fb98617e">&#9670;&#160;</a></span>register_alloc_count()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static constexpr size_t allocators::register_alloc_count </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="allocators_8hpp.html#afe8830984c993345b268afcb0167ed63">simulation_mode</a>&#160;</td>
-          <td class="paramname"><em>mode</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>getter for register allocation count. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">mode</td><td>- mode of the simulation. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>number of allocation for register. </dd></dl>
-
-</div>
-</div>
-<a id="a720f9065837f1653d4d7c7c6c198ae24" name="a720f9065837f1653d4d7c7c6c198ae24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a720f9065837f1653d4d7c7c6c198ae24">&#9670;&#160;</a></span>simulate_alloc()</h2>
+<a id="a3cb0ac72a3377bc09fbf3a45736a8242" name="a3cb0ac72a3377bc09fbf3a45736a8242"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cb0ac72a3377bc09fbf3a45736a8242">&#9670;&#160;</a></span>simulate_alloc()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void allocators::simulate_alloc </td>
+          <td class="memname"><a class="el" href="structdiagnostics.html">diagnostics</a> allocators::simulate_alloc </td>
           <td>(</td>
           <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>tls_count</em>, </td>
@@ -443,19 +290,7 @@ template&lt;typename fn &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>global_count</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>register_count</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="allocators_8hpp.html#afe8830984c993345b268afcb0167ed63">simulation_mode</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="allocator-defs_8hpp.html#afe8830984c993345b268afcb0167ed63">simulation_mode</a>&#160;</td>
           <td class="paramname"><em>mode</em>&#160;</td>
         </tr>
         <tr>
@@ -470,17 +305,16 @@ template&lt;typename fn &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tls_count</td><td>- number of threads that are allocating objects. </td></tr>
-    <tr><td class="paramname">global_count</td><td>- number of global variables that are referencing objects. </td></tr>
-    <tr><td class="paramname">register_count</td><td>- number of register variables that are referencing objects. </td></tr>
     <tr><td class="paramname">mode</td><td>- mode of the simulation. </td></tr>
   </table>
   </dd>
 </dl>
+<p>cleanup after simulation.</p>
 
 </div>
 </div>
-<a id="ab9eb18af2726f38fdac0c667f25a885e" name="ab9eb18af2726f38fdac0c667f25a885e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9eb18af2726f38fdac0c667f25a885e">&#9670;&#160;</a></span>simulate_global_alloc()</h2>
+<a id="a70870c858db25a7e6ddad919f7caf06f" name="a70870c858db25a7e6ddad919f7caf06f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70870c858db25a7e6ddad919f7caf06f">&#9670;&#160;</a></span>simulate_thread_alloc()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -489,97 +323,7 @@ template&lt;typename fn &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void allocators::simulate_global_alloc </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classglobal__root.html">global_root</a> *&#160;</td>
-          <td class="paramname"><em>global</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>global_allocs</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>simulates allocation of a global variable, stress mode. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">global</td><td>- pointer to a global root. </td></tr>
-    <tr><td class="paramname">global_allocs</td><td>- number of allocations for global variable. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a47e9ab13a6d5ed79f8b4210c41192dda" name="a47e9ab13a6d5ed79f8b4210c41192dda"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47e9ab13a6d5ed79f8b4210c41192dda">&#9670;&#160;</a></span>simulate_register_alloc()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void allocators::simulate_register_alloc </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classregister__root.html">register_root</a> *&#160;</td>
-          <td class="paramname"><em>reg</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>register_allocs</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>simulates allocation of a register variable, stress mode. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">register</td><td>- pointer to a register root. </td></tr>
-    <tr><td class="paramname">register_allocs</td><td>- number of allocations for register. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a683ae6e40508d78ec7180d353e6003aa" name="a683ae6e40508d78ec7180d353e6003aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a683ae6e40508d78ec7180d353e6003aa">&#9670;&#160;</a></span>simulate_tls_alloc()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void allocators::simulate_tls_alloc </td>
+          <td class="memname">void allocators::simulate_thread_alloc </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classthread__local__stack.html">thread_local_stack</a> *&#160;</td>
           <td class="paramname"><em>tls</em>, </td>
@@ -594,7 +338,7 @@ template&lt;typename fn &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>allocs_per_scope</em>&#160;</td>
+          <td class="paramname"><em>operations_per_scope</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -614,50 +358,15 @@ template&lt;typename fn &gt; </div>
   <table class="params">
     <tr><td class="paramname">tls</td><td>- pointer to a thread local stack. </td></tr>
     <tr><td class="paramname">scope_count</td><td>- number of scopes. </td></tr>
-    <tr><td class="paramname">allocs_per_scope</td><td>- number of allocations per scope. </td></tr>
+    <tr><td class="paramname">operations_per_scope</td><td>- number of operations per scope. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="add229a65a23fbfa423f3303d27e1ef84" name="add229a65a23fbfa423f3303d27e1ef84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add229a65a23fbfa423f3303d27e1ef84">&#9670;&#160;</a></span>simulation_mode_name()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static constexpr const char * allocators::simulation_mode_name </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="allocators_8hpp.html#afe8830984c993345b268afcb0167ed63">simulation_mode</a>&#160;</td>
-          <td class="paramname"><em>mode</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>getter for the name of the mode of simulation. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">mode</td><td>- simulation mode. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>name of the mode. </dd></dl>
-
-</div>
-</div>
-<a id="a351b557239fe74d9e50e29977b2372ea" name="a351b557239fe74d9e50e29977b2372ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a351b557239fe74d9e50e29977b2372ea">&#9670;&#160;</a></span>tls_allocs_per_scope()</h2>
+<a id="ac212b409de623c877bd7d5e45005536a" name="ac212b409de623c877bd7d5e45005536a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac212b409de623c877bd7d5e45005536a">&#9670;&#160;</a></span>tls_allocs_per_scope()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -668,9 +377,19 @@ template&lt;typename fn &gt; </div>
         <tr>
           <td class="memname">static constexpr size_t allocators::tls_allocs_per_scope </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="allocators_8hpp.html#afe8830984c993345b268afcb0167ed63">simulation_mode</a>&#160;</td>
-          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="allocator-defs_8hpp.html#afe8830984c993345b268afcb0167ed63">simulation_mode</a>&#160;</td>
+          <td class="paramname"><em>mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>thread_count</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -684,45 +403,11 @@ template&lt;typename fn &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mode</td><td>- mode of the simulation. </td></tr>
+    <tr><td class="paramname">thread_count</td><td>- number of threads that share the work, used for relaxed simulations. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>number of allocation for tls per scope. </dd></dl>
-
-</div>
-</div>
-<a id="a88efafc7732fecb5fe6f663079c4b042" name="a88efafc7732fecb5fe6f663079c4b042"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88efafc7732fecb5fe6f663079c4b042">&#9670;&#160;</a></span>tls_map_capacity()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static constexpr size_t allocators::tls_map_capacity </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="allocators_8hpp.html#afe8830984c993345b268afcb0167ed63">simulation_mode</a>&#160;</td>
-          <td class="paramname"><em>mode</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>getter for the initial capacity of the hash-map that maps tls variable to its index. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">mode</td><td>- mode of the simulation. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>initial capacity of the hash-map. </dd></dl>
 
 </div>
 </div>
@@ -738,7 +423,7 @@ template&lt;typename fn &gt; </div>
         <tr>
           <td class="memname">static constexpr size_t allocators::tls_scope_count </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="allocators_8hpp.html#afe8830984c993345b268afcb0167ed63">simulation_mode</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="allocator-defs_8hpp.html#afe8830984c993345b268afcb0167ed63">simulation_mode</a>&#160;</td>
           <td class="paramname"><em>mode</em></td><td>)</td>
           <td></td>
         </tr>
@@ -786,8 +471,8 @@ template&lt;typename fn &gt; </div>
 
 </div>
 </div>
-<a id="a989a61d5a68bd46a5490235e538e2896" name="a989a61d5a68bd46a5490235e538e2896"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a989a61d5a68bd46a5490235e538e2896">&#9670;&#160;</a></span>category_dist</h2>
+<a id="a682c70057b47332e3fd12b258d5ad8c0" name="a682c70057b47332e3fd12b258d5ad8c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a682c70057b47332e3fd12b258d5ad8c0">&#9670;&#160;</a></span>global_space</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -796,17 +481,17 @@ template&lt;typename fn &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">thread_local std::uniform_int_distribution&lt; int &gt; allocators::category_dist</td>
+          <td class="memname"><a class="el" href="classshared__global__space.html">shared_global_space</a> allocators::global_space</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>distribution for object size category. </p>
+<p>shared space for global variables. </p>
 
 </div>
 </div>
@@ -834,8 +519,8 @@ template&lt;typename fn &gt; </div>
 
 </div>
 </div>
-<a id="aef4705039443d14fea5f45f397e098a5" name="aef4705039443d14fea5f45f397e098a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef4705039443d14fea5f45f397e098a5">&#9670;&#160;</a></span>large_dist</h2>
+<a id="ad1ac9d2b1aa95838c133b3ed45c77ed1" name="ad1ac9d2b1aa95838c133b3ed45c77ed1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1ac9d2b1aa95838c133b3ed45c77ed1">&#9670;&#160;</a></span>per_thread_allocs</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -844,7 +529,7 @@ template&lt;typename fn &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">thread_local std::uniform_int_distribution&lt; uint32_t &gt; allocators::large_dist</td>
+          <td class="memname">thread_local size_t allocators::per_thread_allocs {0}</td>
         </tr>
       </table>
   </td>
@@ -854,12 +539,12 @@ template&lt;typename fn &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>distribution for large object size. </p>
+<p>total number of a single thread's allocations. </p>
 
 </div>
 </div>
-<a id="a87f4378169b5c6cfa4d79a32218e3544" name="a87f4378169b5c6cfa4d79a32218e3544"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87f4378169b5c6cfa4d79a32218e3544">&#9670;&#160;</a></span>medium_dist</h2>
+<a id="a8318d252d2ebaed63cffe6a60740c024" name="a8318d252d2ebaed63cffe6a60740c024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8318d252d2ebaed63cffe6a60740c024">&#9670;&#160;</a></span>per_thread_failed_allocs</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -868,7 +553,7 @@ template&lt;typename fn &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">thread_local std::uniform_int_distribution&lt; uint32_t &gt; allocators::medium_dist</td>
+          <td class="memname">thread_local size_t allocators::per_thread_failed_allocs {0}</td>
         </tr>
       </table>
   </td>
@@ -878,12 +563,12 @@ template&lt;typename fn &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>distribution for medium object size. </p>
+<p>total number of a single thread's unsuccessful allocations. </p>
 
 </div>
 </div>
-<a id="afa4e9a56a9c7c6ec9e35c5ade0d6ce0e" name="afa4e9a56a9c7c6ec9e35c5ade0d6ce0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa4e9a56a9c7c6ec9e35c5ade0d6ce0e">&#9670;&#160;</a></span>rng</h2>
+<a id="a0671b837e54eda92042b8306f8fe69a8" name="a0671b837e54eda92042b8306f8fe69a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0671b837e54eda92042b8306f8fe69a8">&#9670;&#160;</a></span>register_space</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -892,22 +577,22 @@ template&lt;typename fn &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">thread_local std::mt19937 allocators::rng {std::random_device{}() + std::hash&lt;std::thread::id&gt;{}(std::this_thread::get_id())}</td>
+          <td class="memname"><a class="el" href="classshared__register__space.html">shared_register_space</a> allocators::register_space</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>random number generator. </p>
+<p>shared space for registers. </p>
 
 </div>
 </div>
-<a id="aba77325173e746fc57064d244196d066" name="aba77325173e746fc57064d244196d066"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba77325173e746fc57064d244196d066">&#9670;&#160;</a></span>small_dist</h2>
+<a id="a4768775984ccddbde12af6ed21b953ea" name="a4768775984ccddbde12af6ed21b953ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4768775984ccddbde12af6ed21b953ea">&#9670;&#160;</a></span>total_allocs</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -916,23 +601,47 @@ template&lt;typename fn &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">thread_local std::uniform_int_distribution&lt; uint32_t &gt; allocators::small_dist</td>
+          <td class="memname">std::atomic&lt;size_t&gt; allocators::total_allocs {}</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>distribution for small object size. </p>
+<p>total number of allocations. </p>
+
+</div>
+</div>
+<a id="abbc41225b83ceae3833b9b478cc4bda4" name="abbc41225b83ceae3833b9b478cc4bda4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbc41225b83ceae3833b9b478cc4bda4">&#9670;&#160;</a></span>total_failed_allocs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;size_t&gt; allocators::total_failed_allocs {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>total number of unsucessful allocations. </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>ikp-team-16/src/allocators/<a class="el" href="allocators_8hpp.html">allocators.hpp</a></li>
-<li>ikp-team-16/src/allocators/<a class="el" href="allocators_8cpp.html">allocators.cpp</a></li>
+<li>gcsim/src/allocators/<a class="el" href="allocators_8hpp.html">allocators.hpp</a></li>
+<li>gcsim/src/allocators/<a class="el" href="allocators_8cpp.html">allocators.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

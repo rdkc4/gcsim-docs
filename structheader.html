@@ -68,12 +68,19 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3aba4412979088eab009f71ebcb67e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0df3f1045445aaeff3caaaf9012e4544" id="r_a0df3f1045445aaeff3caaaf9012e4544"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structheader.html#a0df3f1045445aaeff3caaaf9012e4544">set_marked</a> (bool marked) noexcept</td></tr>
 <tr class="separator:a0df3f1045445aaeff3caaaf9012e4544"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a179dc0224c7ee7c598379722d9457926" id="r_a179dc0224c7ee7c598379722d9457926"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structheader.html#a179dc0224c7ee7c598379722d9457926">try_mark</a> () noexcept</td></tr>
+<tr class="memdesc:a179dc0224c7ee7c598379722d9457926"><td class="mdescLeft">&#160;</td><td class="mdescRight">tries to mark the header.  <br /></td></tr>
+<tr class="separator:a179dc0224c7ee7c598379722d9457926"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34a217d4e3cb753afdca29019689ccf3" id="r_a34a217d4e3cb753afdca29019689ccf3"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structheader.html#a34a217d4e3cb753afdca29019689ccf3">data_ptr</a> () noexcept</td></tr>
 <tr class="memdesc:a34a217d4e3cb753afdca29019689ccf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for the address where data begins.  <br /></td></tr>
 <tr class="separator:a34a217d4e3cb753afdca29019689ccf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b0eaaf3f7b49a9f7a4273a60072f06a" id="r_a7b0eaaf3f7b49a9f7a4273a60072f06a"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structheader.html#a7b0eaaf3f7b49a9f7a4273a60072f06a">data_ptr</a> () const noexcept</td></tr>
 <tr class="memdesc:a7b0eaaf3f7b49a9f7a4273a60072f06a"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for the address where data begins.  <br /></td></tr>
 <tr class="separator:a7b0eaaf3f7b49a9f7a4273a60072f06a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ac834254cf98e80ab25e31e60e7e673" id="r_a8ac834254cf98e80ab25e31e60e7e673"><td class="memTemplParams" colspan="2">template&lt;typename Fn &gt; </td></tr>
+<tr class="memitem:a8ac834254cf98e80ab25e31e60e7e673"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structheader.html#a8ac834254cf98e80ab25e31e60e7e673">trace_refs</a> (Fn &amp;&amp;fn) noexcept</td></tr>
+<tr class="memdesc:a8ac834254cf98e80ab25e31e60e7e673"><td class="mdescLeft">&#160;</td><td class="mdescRight">performs a function on each ref owned by object.  <br /></td></tr>
+<tr class="separator:a8ac834254cf98e80ab25e31e60e7e673"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -86,9 +93,16 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ab3ba278665ef037aa27e655847a99fae" id="r_ab3ba278665ef037aa27e655847a99fae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structheader.html">header</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structheader.html#ab3ba278665ef037aa27e655847a99fae">next</a></td></tr>
-<tr class="memdesc:ab3ba278665ef037aa27e655847a99fae"><td class="mdescLeft">&#160;</td><td class="mdescRight">if current block is free =&gt; pointer to the next free block; otherwise nullptr.  <br /></td></tr>
-<tr class="separator:ab3ba278665ef037aa27e655847a99fae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a474e652f0e78c717a3a30675dc900a27" id="r_a474e652f0e78c717a3a30675dc900a27"><td class="memItemLeft" >union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc2a1db1b492e49ad0ddf1d1ec8e9cc5" id="r_afc2a1db1b492e49ad0ddf1d1ec8e9cc5"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="structheader.html">header</a> *&#160;&#160;&#160;<a class="el" href="structheader.html#ab3ba278665ef037aa27e655847a99fae">next</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:afc2a1db1b492e49ad0ddf1d1ec8e9cc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">if current block is free =&gt; pointer to the next free block; otherwise nullptr.  <a href="structheader.html#ab3ba278665ef037aa27e655847a99fae">More...</a><br /></td></tr>
+<tr class="separator:afc2a1db1b492e49ad0ddf1d1ec8e9cc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad7cc9e482a79e18683205e02ee40b38" id="r_aad7cc9e482a79e18683205e02ee40b38"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="structheader.html">header</a> *&#160;&#160;&#160;<a class="el" href="structheader.html#a4a9717ee98955153b99d0af744ea4100">forwarding_address</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:aad7cc9e482a79e18683205e02ee40b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores the forwarding address during the mark-compact gc run.  <a href="structheader.html#a4a9717ee98955153b99d0af744ea4100">More...</a><br /></td></tr>
+<tr class="separator:aad7cc9e482a79e18683205e02ee40b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a474e652f0e78c717a3a30675dc900a27" id="r_a474e652f0e78c717a3a30675dc900a27"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a474e652f0e78c717a3a30675dc900a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a872dcf9fd70e1853e59512a3c0b9b8aa" id="r_a872dcf9fd70e1853e59512a3c0b9b8aa"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structheader.html#a872dcf9fd70e1853e59512a3c0b9b8aa">size</a></td></tr>
 <tr class="memdesc:a872dcf9fd70e1853e59512a3c0b9b8aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">size - the amount of memory the current block occupies.  <br /></td></tr>
 <tr class="separator:a872dcf9fd70e1853e59512a3c0b9b8aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -354,7 +368,91 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a8ac834254cf98e80ab25e31e60e7e673" name="a8ac834254cf98e80ab25e31e60e7e673"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ac834254cf98e80ab25e31e60e7e673">&#9670;&#160;</a></span>trace_refs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Fn &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void header::trace_refs </td>
+          <td>(</td>
+          <td class="paramtype">Fn &amp;&amp;&#160;</td>
+          <td class="paramname"><em>fn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>performs a function on each ref owned by object. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Fn</td><td>- function type. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fn</td><td>- function called on each ref. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a179dc0224c7ee7c598379722d9457926" name="a179dc0224c7ee7c598379722d9457926"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a179dc0224c7ee7c598379722d9457926">&#9670;&#160;</a></span>try_mark()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool header::try_mark </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>tries to mark the header. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if header wasn't marked previously, false otherwise. </dd></dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a474e652f0e78c717a3a30675dc900a27" name="a474e652f0e78c717a3a30675dc900a27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a474e652f0e78c717a3a30675dc900a27">&#9670;&#160;</a></span>[union]</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union  { ... }  <a class="el" href="structheader.html">header</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="acc46393e50aa06f0a40f19fee6798613" name="acc46393e50aa06f0a40f19fee6798613"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acc46393e50aa06f0a40f19fee6798613">&#9670;&#160;</a></span>flags</h2>
 
@@ -368,6 +466,22 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>flags - 0x000000mf; m - marked (0/1), f - free (0/1). </p>
+
+</div>
+</div>
+<a id="a4a9717ee98955153b99d0af744ea4100" name="a4a9717ee98955153b99d0af744ea4100"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a9717ee98955153b99d0af744ea4100">&#9670;&#160;</a></span>forwarding_address</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structheader.html">header</a>* header::forwarding_address</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>stores the forwarding address during the mark-compact gc run. </p>
 
 </div>
 </div>
@@ -404,8 +518,8 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
-<li>ikp-team-16/src/common/header/<a class="el" href="header_8hpp.html">header.hpp</a></li>
-<li>ikp-team-16/src/common/header/<a class="el" href="header_8cpp.html">header.cpp</a></li>
+<li>gcsim/src/common/header/<a class="el" href="header_8hpp.html">header.hpp</a></li>
+<li>gcsim/src/common/header/<a class="el" href="header_8cpp.html">header.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

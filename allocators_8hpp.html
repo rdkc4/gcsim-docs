@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>GCSIM: ikp-team-16/src/allocators/allocators.hpp File Reference</title>
+<title>GCSIM: gcsim/src/allocators/allocators.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -39,402 +39,34 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_0650ffdb9baffe2755e5bd3bee9f62d1.html">ikp-team-16</a></li><li class="navelem"><a class="el" href="dir_821e665c8d7a4ce5fa745ad344dd01b1.html">src</a></li><li class="navelem"><a class="el" href="dir_3be8cae1c342b02c2b4f20bc568d29e2.html">allocators</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_8024f756d125b28b5314401d4840ea81.html">gcsim</a></li><li class="navelem"><a class="el" href="dir_e353ccc119a27762b7e0ce4543be79f4.html">src</a></li><li class="navelem"><a class="el" href="dir_f0801f2619aa3d1972810258d2dc8cf3.html">allocators</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle"><div class="title">allocators.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;format&gt;</code><br />
-<code>#include &lt;memory&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
-<code>#include &lt;latch&gt;</code><br />
-<code>#include &lt;random&gt;</code><br />
+<div class="textblock"><code>#include &lt;latch&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
-<code>#include &lt;concepts&gt;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;atomic&gt;</code><br />
+<code>#include &lt;cstddef&gt;</code><br />
 <code>#include &quot;<a class="el" href="heap-manager_8hpp.html">../heap-manager/heap-manager.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="thread-pool_8hpp.html">../common/thread-pool/thread-pool.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="thread-local-stack_8hpp.html">../root-set-table/thread-local-stack.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="global-root_8hpp.html">../root-set-table/global-root.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="register-root_8hpp.html">../root-set-table/register-root.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="shared-register-space_8hpp.html">../root-set-table/shared-register-space.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="shared-global-space_8hpp.html">../root-set-table/shared-global-space.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="sim-cfg_8hpp.html">../common/cfg/sim-cfg.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="diagnostics_8hpp.html">../diagnostics/diagnostics.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="allocator-defs_8hpp.html">allocator-defs.hpp</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classallocators.html">allocators</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">simulates the allocations on the heap.  <a href="classallocators.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:afe8830984c993345b268afcb0167ed63" id="r_afe8830984c993345b268afcb0167ed63"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="allocators_8hpp.html#afe8830984c993345b268afcb0167ed63">simulation_mode</a> { <a class="el" href="allocators_8hpp.html#afe8830984c993345b268afcb0167ed63ae10a36f1a5231e597daf8f42dc1ab55a">stress</a>
-, <a class="el" href="allocators_8hpp.html#afe8830984c993345b268afcb0167ed63a81f32be24a2a62fc472cc43edc97e65b">relaxed</a>
- }</td></tr>
-<tr class="memdesc:afe8830984c993345b268afcb0167ed63"><td class="mdescLeft">&#160;</td><td class="mdescRight">defines the type of the simulation.  <a href="allocators_8hpp.html#afe8830984c993345b268afcb0167ed63">More...</a><br /></td></tr>
-<tr class="separator:afe8830984c993345b268afcb0167ed63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:ab7754248ef94e32b3e9827f74ef369d6" id="r_ab7754248ef94e32b3e9827f74ef369d6"><td class="memItemLeft" align="right" valign="top">size_t constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="allocators_8hpp.html#ab7754248ef94e32b3e9827f74ef369d6">TLS_ALLOC_STRESS_THRESHOLD</a> = 8192</td></tr>
-<tr class="memdesc:ab7754248ef94e32b3e9827f74ef369d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of allocations per tls in stress mode.  <br /></td></tr>
-<tr class="separator:ab7754248ef94e32b3e9827f74ef369d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4d32aef92fd17d74a62ab4a2eeed4c2" id="r_ad4d32aef92fd17d74a62ab4a2eeed4c2"><td class="memItemLeft" align="right" valign="top">size_t constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="allocators_8hpp.html#ad4d32aef92fd17d74a62ab4a2eeed4c2">TLS_SCOPE_COUNT_STRESS</a> = 8</td></tr>
-<tr class="memdesc:ad4d32aef92fd17d74a62ab4a2eeed4c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of scopes per tls for stress mode.  <br /></td></tr>
-<tr class="separator:ad4d32aef92fd17d74a62ab4a2eeed4c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada4cb1ad2f0d5e43076f981128137721" id="r_ada4cb1ad2f0d5e43076f981128137721"><td class="memItemLeft" align="right" valign="top">size_t constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="allocators_8hpp.html#ada4cb1ad2f0d5e43076f981128137721">TLS_ALLOC_STRESS_THRESHOLD_PER_SCOPE</a> = <a class="el" href="allocators_8hpp.html#ab7754248ef94e32b3e9827f74ef369d6">TLS_ALLOC_STRESS_THRESHOLD</a> / <a class="el" href="allocators_8hpp.html#ad4d32aef92fd17d74a62ab4a2eeed4c2">TLS_SCOPE_COUNT_STRESS</a></td></tr>
-<tr class="memdesc:ada4cb1ad2f0d5e43076f981128137721"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of allocations per scope for tls in stress mode.  <br /></td></tr>
-<tr class="separator:ada4cb1ad2f0d5e43076f981128137721"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64b2214d5025e3c00c1cb37792adfa38" id="r_a64b2214d5025e3c00c1cb37792adfa38"><td class="memItemLeft" align="right" valign="top">size_t constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="allocators_8hpp.html#a64b2214d5025e3c00c1cb37792adfa38">TLS_MAP_CAPACITY_STRESS</a> = <a class="el" href="allocators_8hpp.html#ada4cb1ad2f0d5e43076f981128137721">TLS_ALLOC_STRESS_THRESHOLD_PER_SCOPE</a> &lt;&lt; 1</td></tr>
-<tr class="memdesc:a64b2214d5025e3c00c1cb37792adfa38"><td class="mdescLeft">&#160;</td><td class="mdescRight">capacity of the hash-map that maps tls variable to its index in stress mode.  <br /></td></tr>
-<tr class="separator:a64b2214d5025e3c00c1cb37792adfa38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb3b306e0bac63db69d512c7bfa2a107" id="r_acb3b306e0bac63db69d512c7bfa2a107"><td class="memItemLeft" align="right" valign="top">size_t constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="allocators_8hpp.html#acb3b306e0bac63db69d512c7bfa2a107">TLS_ALLOC_RELAXED_THRESHOLD</a> = 1024</td></tr>
-<tr class="memdesc:acb3b306e0bac63db69d512c7bfa2a107"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of allocations per tls in relaxed mode.  <br /></td></tr>
-<tr class="separator:acb3b306e0bac63db69d512c7bfa2a107"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a393eb4f0d9f7ea580c1d9a6a3e5cc127" id="r_a393eb4f0d9f7ea580c1d9a6a3e5cc127"><td class="memItemLeft" align="right" valign="top">size_t constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="allocators_8hpp.html#a393eb4f0d9f7ea580c1d9a6a3e5cc127">TLS_SCOPE_COUNT_RELAXED</a> = 8</td></tr>
-<tr class="memdesc:a393eb4f0d9f7ea580c1d9a6a3e5cc127"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of scopes per tls in relaxed mode.  <br /></td></tr>
-<tr class="separator:a393eb4f0d9f7ea580c1d9a6a3e5cc127"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff702b75941f91623c807222de745197" id="r_aff702b75941f91623c807222de745197"><td class="memItemLeft" align="right" valign="top">size_t constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="allocators_8hpp.html#aff702b75941f91623c807222de745197">TLS_ALLOC_RELAXED_THRESHOLD_PER_SCOPE</a> = <a class="el" href="allocators_8hpp.html#acb3b306e0bac63db69d512c7bfa2a107">TLS_ALLOC_RELAXED_THRESHOLD</a> / <a class="el" href="allocators_8hpp.html#a393eb4f0d9f7ea580c1d9a6a3e5cc127">TLS_SCOPE_COUNT_RELAXED</a></td></tr>
-<tr class="memdesc:aff702b75941f91623c807222de745197"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of allocations per scope for tls in relaxed mode.  <br /></td></tr>
-<tr class="separator:aff702b75941f91623c807222de745197"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa8f58aeb0b02b9aae0ab22077fa5d48" id="r_aaa8f58aeb0b02b9aae0ab22077fa5d48"><td class="memItemLeft" align="right" valign="top">size_t constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="allocators_8hpp.html#aaa8f58aeb0b02b9aae0ab22077fa5d48">TLS_MAP_CAPACITY_RELAXED</a> = <a class="el" href="allocators_8hpp.html#ada4cb1ad2f0d5e43076f981128137721">TLS_ALLOC_STRESS_THRESHOLD_PER_SCOPE</a> &lt;&lt; 1</td></tr>
-<tr class="memdesc:aaa8f58aeb0b02b9aae0ab22077fa5d48"><td class="mdescLeft">&#160;</td><td class="mdescRight">capacity of the hash-map that maps tls variable to its index in relaxed mode.  <br /></td></tr>
-<tr class="separator:aaa8f58aeb0b02b9aae0ab22077fa5d48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a4950526c886040c95ccab9fd8fd475" id="r_a7a4950526c886040c95ccab9fd8fd475"><td class="memItemLeft" align="right" valign="top">size_t constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="allocators_8hpp.html#a7a4950526c886040c95ccab9fd8fd475">GLOBAL_ALLOC_STRESS_THRESHOLD</a> = 128</td></tr>
-<tr class="memdesc:a7a4950526c886040c95ccab9fd8fd475"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of allocations per global in stress mode.  <br /></td></tr>
-<tr class="separator:a7a4950526c886040c95ccab9fd8fd475"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6dc7abb3635f356ef4e04027abfa1ae7" id="r_a6dc7abb3635f356ef4e04027abfa1ae7"><td class="memItemLeft" align="right" valign="top">size_t constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="allocators_8hpp.html#a6dc7abb3635f356ef4e04027abfa1ae7">GLOBAL_ALLOC_RELAXED_THRESHOLD</a> = 32</td></tr>
-<tr class="memdesc:a6dc7abb3635f356ef4e04027abfa1ae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of allocations per global in relaxed mode.  <br /></td></tr>
-<tr class="separator:a6dc7abb3635f356ef4e04027abfa1ae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adea5d383c0eeec5d91a4cd3e3c639827" id="r_adea5d383c0eeec5d91a4cd3e3c639827"><td class="memItemLeft" align="right" valign="top">size_t constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="allocators_8hpp.html#adea5d383c0eeec5d91a4cd3e3c639827">REGISTER_ALLOC_STRESS_THRESHOLD</a> = 128</td></tr>
-<tr class="memdesc:adea5d383c0eeec5d91a4cd3e3c639827"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of allocations per register in stress mode.  <br /></td></tr>
-<tr class="separator:adea5d383c0eeec5d91a4cd3e3c639827"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8158b74d68edf70864b1a391e023ff4a" id="r_a8158b74d68edf70864b1a391e023ff4a"><td class="memItemLeft" align="right" valign="top">size_t constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="allocators_8hpp.html#a8158b74d68edf70864b1a391e023ff4a">REGISTER_ALLOC_RELAXED_THRESHOLD</a> = 32</td></tr>
-<tr class="memdesc:a8158b74d68edf70864b1a391e023ff4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of allocations per register in relaxed mode.  <br /></td></tr>
-<tr class="separator:a8158b74d68edf70864b1a391e023ff4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="afe8830984c993345b268afcb0167ed63" name="afe8830984c993345b268afcb0167ed63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe8830984c993345b268afcb0167ed63">&#9670;&#160;</a></span>simulation_mode</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum class <a class="el" href="allocators_8hpp.html#afe8830984c993345b268afcb0167ed63">simulation_mode</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>defines the type of the simulation. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="afe8830984c993345b268afcb0167ed63ae10a36f1a5231e597daf8f42dc1ab55a" name="afe8830984c993345b268afcb0167ed63ae10a36f1a5231e597daf8f42dc1ab55a"></a>stress&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afe8830984c993345b268afcb0167ed63a81f32be24a2a62fc472cc43edc97e65b" name="afe8830984c993345b268afcb0167ed63a81f32be24a2a62fc472cc43edc97e65b"></a>relaxed&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a6dc7abb3635f356ef4e04027abfa1ae7" name="a6dc7abb3635f356ef4e04027abfa1ae7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6dc7abb3635f356ef4e04027abfa1ae7">&#9670;&#160;</a></span>GLOBAL_ALLOC_RELAXED_THRESHOLD</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t constexpr GLOBAL_ALLOC_RELAXED_THRESHOLD = 32</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>number of allocations per global in relaxed mode. </p>
-
-</div>
-</div>
-<a id="a7a4950526c886040c95ccab9fd8fd475" name="a7a4950526c886040c95ccab9fd8fd475"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a4950526c886040c95ccab9fd8fd475">&#9670;&#160;</a></span>GLOBAL_ALLOC_STRESS_THRESHOLD</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t constexpr GLOBAL_ALLOC_STRESS_THRESHOLD = 128</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>number of allocations per global in stress mode. </p>
-
-</div>
-</div>
-<a id="a8158b74d68edf70864b1a391e023ff4a" name="a8158b74d68edf70864b1a391e023ff4a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8158b74d68edf70864b1a391e023ff4a">&#9670;&#160;</a></span>REGISTER_ALLOC_RELAXED_THRESHOLD</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t constexpr REGISTER_ALLOC_RELAXED_THRESHOLD = 32</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>number of allocations per register in relaxed mode. </p>
-
-</div>
-</div>
-<a id="adea5d383c0eeec5d91a4cd3e3c639827" name="adea5d383c0eeec5d91a4cd3e3c639827"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adea5d383c0eeec5d91a4cd3e3c639827">&#9670;&#160;</a></span>REGISTER_ALLOC_STRESS_THRESHOLD</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t constexpr REGISTER_ALLOC_STRESS_THRESHOLD = 128</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>number of allocations per register in stress mode. </p>
-
-</div>
-</div>
-<a id="acb3b306e0bac63db69d512c7bfa2a107" name="acb3b306e0bac63db69d512c7bfa2a107"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb3b306e0bac63db69d512c7bfa2a107">&#9670;&#160;</a></span>TLS_ALLOC_RELAXED_THRESHOLD</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t constexpr TLS_ALLOC_RELAXED_THRESHOLD = 1024</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>number of allocations per tls in relaxed mode. </p>
-
-</div>
-</div>
-<a id="aff702b75941f91623c807222de745197" name="aff702b75941f91623c807222de745197"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff702b75941f91623c807222de745197">&#9670;&#160;</a></span>TLS_ALLOC_RELAXED_THRESHOLD_PER_SCOPE</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t constexpr TLS_ALLOC_RELAXED_THRESHOLD_PER_SCOPE = <a class="el" href="allocators_8hpp.html#acb3b306e0bac63db69d512c7bfa2a107">TLS_ALLOC_RELAXED_THRESHOLD</a> / <a class="el" href="allocators_8hpp.html#a393eb4f0d9f7ea580c1d9a6a3e5cc127">TLS_SCOPE_COUNT_RELAXED</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>number of allocations per scope for tls in relaxed mode. </p>
-
-</div>
-</div>
-<a id="ab7754248ef94e32b3e9827f74ef369d6" name="ab7754248ef94e32b3e9827f74ef369d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7754248ef94e32b3e9827f74ef369d6">&#9670;&#160;</a></span>TLS_ALLOC_STRESS_THRESHOLD</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t constexpr TLS_ALLOC_STRESS_THRESHOLD = 8192</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>number of allocations per tls in stress mode. </p>
-
-</div>
-</div>
-<a id="ada4cb1ad2f0d5e43076f981128137721" name="ada4cb1ad2f0d5e43076f981128137721"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada4cb1ad2f0d5e43076f981128137721">&#9670;&#160;</a></span>TLS_ALLOC_STRESS_THRESHOLD_PER_SCOPE</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t constexpr TLS_ALLOC_STRESS_THRESHOLD_PER_SCOPE = <a class="el" href="allocators_8hpp.html#ab7754248ef94e32b3e9827f74ef369d6">TLS_ALLOC_STRESS_THRESHOLD</a> / <a class="el" href="allocators_8hpp.html#ad4d32aef92fd17d74a62ab4a2eeed4c2">TLS_SCOPE_COUNT_STRESS</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>number of allocations per scope for tls in stress mode. </p>
-
-</div>
-</div>
-<a id="aaa8f58aeb0b02b9aae0ab22077fa5d48" name="aaa8f58aeb0b02b9aae0ab22077fa5d48"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa8f58aeb0b02b9aae0ab22077fa5d48">&#9670;&#160;</a></span>TLS_MAP_CAPACITY_RELAXED</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t constexpr TLS_MAP_CAPACITY_RELAXED = <a class="el" href="allocators_8hpp.html#ada4cb1ad2f0d5e43076f981128137721">TLS_ALLOC_STRESS_THRESHOLD_PER_SCOPE</a> &lt;&lt; 1</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>capacity of the hash-map that maps tls variable to its index in relaxed mode. </p>
-
-</div>
-</div>
-<a id="a64b2214d5025e3c00c1cb37792adfa38" name="a64b2214d5025e3c00c1cb37792adfa38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64b2214d5025e3c00c1cb37792adfa38">&#9670;&#160;</a></span>TLS_MAP_CAPACITY_STRESS</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t constexpr TLS_MAP_CAPACITY_STRESS = <a class="el" href="allocators_8hpp.html#ada4cb1ad2f0d5e43076f981128137721">TLS_ALLOC_STRESS_THRESHOLD_PER_SCOPE</a> &lt;&lt; 1</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>capacity of the hash-map that maps tls variable to its index in stress mode. </p>
-
-</div>
-</div>
-<a id="a393eb4f0d9f7ea580c1d9a6a3e5cc127" name="a393eb4f0d9f7ea580c1d9a6a3e5cc127"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a393eb4f0d9f7ea580c1d9a6a3e5cc127">&#9670;&#160;</a></span>TLS_SCOPE_COUNT_RELAXED</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t constexpr TLS_SCOPE_COUNT_RELAXED = 8</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>number of scopes per tls in relaxed mode. </p>
-
-</div>
-</div>
-<a id="ad4d32aef92fd17d74a62ab4a2eeed4c2" name="ad4d32aef92fd17d74a62ab4a2eeed4c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4d32aef92fd17d74a62ab4a2eeed4c2">&#9670;&#160;</a></span>TLS_SCOPE_COUNT_STRESS</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t constexpr TLS_SCOPE_COUNT_STRESS = 8</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>number of scopes per tls for stress mode. </p>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -41,69 +41,59 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classgarbage__collector-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">garbage_collector Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div></div>
+  <div class="headertitle"><div class="title">garbage_collector Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>implementation of the mark-sweep gc  
+<p>base class for garbage collectors. inherits from <a class="el" href="classgc__visitor.html" title="interface for GC&#39;s marking phase.">gc_visitor</a>.  
  <a href="classgarbage__collector.html#details">More...</a></p>
 
-<p><code>#include &lt;gc.hpp&gt;</code></p>
+<p><code>#include &lt;garbage-collector.hpp&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aef1411c65f81d14502e522c6f6ca5ed1" id="r_aef1411c65f81d14502e522c6f6ca5ed1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgarbage__collector.html#aef1411c65f81d14502e522c6f6ca5ed1">garbage_collector</a> (size_t thread_count=1)</td></tr>
 <tr class="memdesc:aef1411c65f81d14502e522c6f6ca5ed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates the instance of the garbage collector.  <br /></td></tr>
 <tr class="separator:aef1411c65f81d14502e522c6f6ca5ed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeef8e9442e426119774cc3b554262e8b" id="r_aeef8e9442e426119774cc3b554262e8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgarbage__collector.html#aeef8e9442e426119774cc3b554262e8b">~garbage_collector</a> ()=default</td></tr>
-<tr class="memdesc:aeef8e9442e426119774cc3b554262e8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes the instance of the garbage collector.  <br /></td></tr>
-<tr class="separator:aeef8e9442e426119774cc3b554262e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e2c72513860812dc2acfee3e7496768" id="r_a3e2c72513860812dc2acfee3e7496768"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgarbage__collector.html#a3e2c72513860812dc2acfee3e7496768">collect</a> (<a class="el" href="classroot__set__table.html">root_set_table</a> &amp;root_set, <a class="el" href="classheap.html">heap</a> &amp;heap_memory) noexcept</td></tr>
-<tr class="memdesc:a3e2c72513860812dc2acfee3e7496768"><td class="mdescLeft">&#160;</td><td class="mdescRight">collects the garbage from the heap.  <br /></td></tr>
-<tr class="separator:a3e2c72513860812dc2acfee3e7496768"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6235266c823d107cd0bf3208be01312a" id="r_a6235266c823d107cd0bf3208be01312a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgarbage__collector.html#a6235266c823d107cd0bf3208be01312a">visit</a> (<a class="el" href="classthread__local__stack.html">thread_local_stack</a> &amp;stack) override final</td></tr>
-<tr class="memdesc:a6235266c823d107cd0bf3208be01312a"><td class="mdescLeft">&#160;</td><td class="mdescRight">marks the objects on the stack.  <br /></td></tr>
-<tr class="separator:a6235266c823d107cd0bf3208be01312a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54aaebbe4bbd77b1568f10e0a375c5d7" id="r_a54aaebbe4bbd77b1568f10e0a375c5d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgarbage__collector.html#a54aaebbe4bbd77b1568f10e0a375c5d7">visit</a> (<a class="el" href="classglobal__root.html">global_root</a> &amp;global) override final</td></tr>
-<tr class="memdesc:a54aaebbe4bbd77b1568f10e0a375c5d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">marks the global object.  <br /></td></tr>
-<tr class="separator:a54aaebbe4bbd77b1568f10e0a375c5d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65ce9ce8d7b2da69a5e516d02a78f1db" id="r_a65ce9ce8d7b2da69a5e516d02a78f1db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgarbage__collector.html#a65ce9ce8d7b2da69a5e516d02a78f1db">visit</a> (<a class="el" href="classregister__root.html">register_root</a> &amp;reg) override final</td></tr>
-<tr class="memdesc:a65ce9ce8d7b2da69a5e516d02a78f1db"><td class="mdescLeft">&#160;</td><td class="mdescRight">marks the register object.  <br /></td></tr>
-<tr class="separator:a65ce9ce8d7b2da69a5e516d02a78f1db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7bed3c56149c0279f9bc391feeff5d7" id="r_ab7bed3c56149c0279f9bc391feeff5d7"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgarbage__collector.html#ab7bed3c56149c0279f9bc391feeff5d7">~garbage_collector</a> ()=default</td></tr>
+<tr class="memdesc:ab7bed3c56149c0279f9bc391feeff5d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes the instance of the garbage collector.  <br /></td></tr>
+<tr class="separator:ab7bed3c56149c0279f9bc391feeff5d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0ee7feb01d27eb83998464ef15467a4" id="r_ad0ee7feb01d27eb83998464ef15467a4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgarbage__collector.html#ad0ee7feb01d27eb83998464ef15467a4">collect</a> (<a class="el" href="classroot__set__table.html">root_set_table</a> &amp;root_set, <a class="el" href="classheap.html">heap</a> &amp;heap_memory, <a class="el" href="classsegment__free__memory__table.html">segment_free_memory_table</a> &amp;free_memory_table) noexcept=0</td></tr>
+<tr class="memdesc:ad0ee7feb01d27eb83998464ef15467a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">collects the garbage from the heap.  <br /></td></tr>
+<tr class="separator:ad0ee7feb01d27eb83998464ef15467a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classgc__visitor"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classgc__visitor')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classgc__visitor.html">gc_visitor</a></td></tr>
 <tr class="memitem:a344b9caf96b76871158ba434449d47d6 inherit pub_methods_classgc__visitor" id="r_a344b9caf96b76871158ba434449d47d6"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgc__visitor.html#a344b9caf96b76871158ba434449d47d6">~gc_visitor</a> ()=default</td></tr>
 <tr class="memdesc:a344b9caf96b76871158ba434449d47d6 inherit pub_methods_classgc__visitor"><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes the <a class="el" href="classgc__visitor.html" title="interface for GC&#39;s marking phase.">gc_visitor</a> object  <br /></td></tr>
 <tr class="separator:a344b9caf96b76871158ba434449d47d6 inherit pub_methods_classgc__visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56c189bdd0d97f187fbb39a65cad6fb7 inherit pub_methods_classgc__visitor" id="r_a56c189bdd0d97f187fbb39a65cad6fb7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgc__visitor.html#a56c189bdd0d97f187fbb39a65cad6fb7">visit</a> (<a class="el" href="classthread__local__stack.html">thread_local_stack</a> &amp;stack)=0</td></tr>
+<tr class="memdesc:a56c189bdd0d97f187fbb39a65cad6fb7 inherit pub_methods_classgc__visitor"><td class="mdescLeft">&#160;</td><td class="mdescRight">virtual function for marking elements of the thread local stack.  <br /></td></tr>
+<tr class="separator:a56c189bdd0d97f187fbb39a65cad6fb7 inherit pub_methods_classgc__visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af386558b9c8e5bbcad894c1ff2f635cf inherit pub_methods_classgc__visitor" id="r_af386558b9c8e5bbcad894c1ff2f635cf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgc__visitor.html#af386558b9c8e5bbcad894c1ff2f635cf">visit</a> (<a class="el" href="classshared__global__space.html">shared_global_space</a> &amp;global)=0</td></tr>
+<tr class="memdesc:af386558b9c8e5bbcad894c1ff2f635cf inherit pub_methods_classgc__visitor"><td class="mdescLeft">&#160;</td><td class="mdescRight">virtual function for marking the global roots.  <br /></td></tr>
+<tr class="separator:af386558b9c8e5bbcad894c1ff2f635cf inherit pub_methods_classgc__visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23e01131201492dde1da0f218f17c4b3 inherit pub_methods_classgc__visitor" id="r_a23e01131201492dde1da0f218f17c4b3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgc__visitor.html#a23e01131201492dde1da0f218f17c4b3">visit</a> (<a class="el" href="classshared__register__space.html">shared_register_space</a> &amp;reg)=0</td></tr>
+<tr class="memdesc:a23e01131201492dde1da0f218f17c4b3 inherit pub_methods_classgc__visitor"><td class="mdescLeft">&#160;</td><td class="mdescRight">virtual function for marking the register roots.  <br /></td></tr>
+<tr class="separator:a23e01131201492dde1da0f218f17c4b3 inherit pub_methods_classgc__visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:ab23c956e054c714f60f53a84e0e10ac7" id="r_ab23c956e054c714f60f53a84e0e10ac7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgarbage__collector.html#ab23c956e054c714f60f53a84e0e10ac7">mark</a> (<a class="el" href="classroot__set__table.html">root_set_table</a> &amp;root_set) noexcept</td></tr>
-<tr class="memdesc:ab23c956e054c714f60f53a84e0e10ac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">marks all objects that are reachable from the root-set-table.  <br /></td></tr>
-<tr class="separator:ab23c956e054c714f60f53a84e0e10ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb8007fcd4a408588eeaf34f4eeb1463" id="r_afb8007fcd4a408588eeaf34f4eeb1463"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgarbage__collector.html#afb8007fcd4a408588eeaf34f4eeb1463">sweep_segment</a> (<a class="el" href="structsegment.html">segment</a> &amp;seg) noexcept</td></tr>
-<tr class="memdesc:afb8007fcd4a408588eeaf34f4eeb1463"><td class="mdescLeft">&#160;</td><td class="mdescRight">sweeps objects from a segment.  <br /></td></tr>
-<tr class="separator:afb8007fcd4a408588eeaf34f4eeb1463"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf83bed933c6bf79b09c0fe3acaebe63" id="r_abf83bed933c6bf79b09c0fe3acaebe63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgarbage__collector.html#abf83bed933c6bf79b09c0fe3acaebe63">sweep</a> (<a class="el" href="classheap.html">heap</a> &amp;heap_memory) noexcept</td></tr>
-<tr class="memdesc:abf83bed933c6bf79b09c0fe3acaebe63"><td class="mdescLeft">&#160;</td><td class="mdescRight">sweeps the unmarked objects from heap.  <br /></td></tr>
-<tr class="separator:abf83bed933c6bf79b09c0fe3acaebe63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
 <tr class="memitem:ad12d4b309c4d322c7255e2a59356c523" id="r_ad12d4b309c4d322c7255e2a59356c523"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classthread__pool.html">thread_pool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgarbage__collector.html#ad12d4b309c4d322c7255e2a59356c523">gc_thread_pool</a></td></tr>
-<tr class="memdesc:ad12d4b309c4d322c7255e2a59356c523"><td class="mdescLeft">&#160;</td><td class="mdescRight">thread pool for concurrent marking and sweeping.  <br /></td></tr>
+<tr class="memdesc:ad12d4b309c4d322c7255e2a59356c523"><td class="mdescLeft">&#160;</td><td class="mdescRight">thread pool for concurrent gc phases.  <br /></td></tr>
 <tr class="separator:ad12d4b309c4d322c7255e2a59356c523"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>implementation of the mark-sweep gc </p>
+<div class="textblock"><p>base class for garbage collectors. inherits from <a class="el" href="classgc__visitor.html" title="interface for GC&#39;s marking phase.">gc_visitor</a>. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aef1411c65f81d14502e522c6f6ca5ed1" name="aef1411c65f81d14502e522c6f6ca5ed1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aef1411c65f81d14502e522c6f6ca5ed1">&#9670;&#160;</a></span>garbage_collector()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">garbage_collector::garbage_collector </td>
@@ -113,20 +103,19 @@ Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>creates the instance of the garbage collector. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">thread_count</td><td>- number of threads in a thread pool, defaults to 1. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
-<a id="aeef8e9442e426119774cc3b554262e8b" name="aeef8e9442e426119774cc3b554262e8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeef8e9442e426119774cc3b554262e8b">&#9670;&#160;</a></span>~garbage_collector()</h2>
+<a id="ab7bed3c56149c0279f9bc391feeff5d7" name="ab7bed3c56149c0279f9bc391feeff5d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7bed3c56149c0279f9bc391feeff5d7">&#9670;&#160;</a></span>~garbage_collector()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -135,7 +124,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">garbage_collector::~garbage_collector </td>
+          <td class="memname">virtual garbage_collector::~garbage_collector </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -143,7 +132,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -153,8 +142,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a3e2c72513860812dc2acfee3e7496768" name="a3e2c72513860812dc2acfee3e7496768"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e2c72513860812dc2acfee3e7496768">&#9670;&#160;</a></span>collect()</h2>
+<a id="ad0ee7feb01d27eb83998464ef15467a4" name="ad0ee7feb01d27eb83998464ef15467a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0ee7feb01d27eb83998464ef15467a4">&#9670;&#160;</a></span>collect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -163,7 +152,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void garbage_collector::collect </td>
+          <td class="memname">virtual void garbage_collector::collect </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classroot__set__table.html">root_set_table</a> &amp;&#160;</td>
           <td class="paramname"><em>root_set</em>, </td>
@@ -172,7 +161,13 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classheap.html">heap</a> &amp;&#160;</td>
-          <td class="paramname"><em>heap_memory</em>&#160;</td>
+          <td class="paramname"><em>heap_memory</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsegment__free__memory__table.html">segment_free_memory_table</a> &amp;&#160;</td>
+          <td class="paramname"><em>free_memory_table</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -182,7 +177,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -196,215 +191,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-</div>
-</div>
-<a id="ab23c956e054c714f60f53a84e0e10ac7" name="ab23c956e054c714f60f53a84e0e10ac7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab23c956e054c714f60f53a84e0e10ac7">&#9670;&#160;</a></span>mark()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void garbage_collector::mark </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classroot__set__table.html">root_set_table</a> &amp;&#160;</td>
-          <td class="paramname"><em>root_set</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>marks all objects that are reachable from the root-set-table. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">root_set</td><td>- reference to a root-set-table </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="abf83bed933c6bf79b09c0fe3acaebe63" name="abf83bed933c6bf79b09c0fe3acaebe63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf83bed933c6bf79b09c0fe3acaebe63">&#9670;&#160;</a></span>sweep()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void garbage_collector::sweep </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classheap.html">heap</a> &amp;&#160;</td>
-          <td class="paramname"><em>heap_memory</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>sweeps the unmarked objects from heap. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">heap_memory</td><td>- reference to a heap. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="afb8007fcd4a408588eeaf34f4eeb1463" name="afb8007fcd4a408588eeaf34f4eeb1463"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb8007fcd4a408588eeaf34f4eeb1463">&#9670;&#160;</a></span>sweep_segment()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void garbage_collector::sweep_segment </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structsegment.html">segment</a> &amp;&#160;</td>
-          <td class="paramname"><em>seg</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>sweeps objects from a segment. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">seg</td><td>- reference to a segment. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a54aaebbe4bbd77b1568f10e0a375c5d7" name="a54aaebbe4bbd77b1568f10e0a375c5d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54aaebbe4bbd77b1568f10e0a375c5d7">&#9670;&#160;</a></span>visit() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void garbage_collector::visit </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classglobal__root.html">global_root</a> &amp;&#160;</td>
-          <td class="paramname"><em>global</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>marks the global object. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">global</td><td>- reference to a global root. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="classgc__visitor.html#ace189ad2278acad596ebb9ba4ca33c1e">gc_visitor</a>.</p>
-
-</div>
-</div>
-<a id="a65ce9ce8d7b2da69a5e516d02a78f1db" name="a65ce9ce8d7b2da69a5e516d02a78f1db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65ce9ce8d7b2da69a5e516d02a78f1db">&#9670;&#160;</a></span>visit() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void garbage_collector::visit </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classregister__root.html">register_root</a> &amp;&#160;</td>
-          <td class="paramname"><em>reg</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>marks the register object. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">reg</td><td>- reference to a register root. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="classgc__visitor.html#aa3756f560a57a91cac021d5622c9f899">gc_visitor</a>.</p>
-
-</div>
-</div>
-<a id="a6235266c823d107cd0bf3208be01312a" name="a6235266c823d107cd0bf3208be01312a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6235266c823d107cd0bf3208be01312a">&#9670;&#160;</a></span>visit() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void garbage_collector::visit </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classthread__local__stack.html">thread_local_stack</a> &amp;&#160;</td>
-          <td class="paramname"><em>stack</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>marks the objects on the stack. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">stack</td><td>- reference to a thread local stack. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="classgc__visitor.html#a56c189bdd0d97f187fbb39a65cad6fb7">gc_visitor</a>.</p>
+<p>Implemented in <a class="el" href="classmc__garbage__collector.html#adf46c890ef48c57b63dad7cb8c5a68d4">mc_garbage_collector</a>, and <a class="el" href="classms__garbage__collector.html#a64f7ec445e7fbda7adf24bf81b8faa2d">ms_garbage_collector</a>.</p>
 
 </div>
 </div>
@@ -424,18 +211,17 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>thread pool for concurrent marking and sweeping. </p>
+<p>thread pool for concurrent gc phases. </p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>ikp-team-16/src/garbage-collector/<a class="el" href="gc_8hpp.html">gc.hpp</a></li>
-<li>ikp-team-16/src/garbage-collector/<a class="el" href="gc_8cpp.html">gc.cpp</a></li>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>gcsim/src/garbage-collector/<a class="el" href="garbage-collector_8hpp.html">garbage-collector.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
