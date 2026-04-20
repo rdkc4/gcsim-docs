@@ -65,7 +65,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a970ffdb6a1f7e014a9f8616cc2f8bf8f" id="r_a970ffdb6a1f7e014a9f8616cc2f8bf8f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a970ffdb6a1f7e014a9f8616cc2f8bf8f">is_marked</a> () const noexcept</td></tr>
 <tr class="memdesc:a970ffdb6a1f7e014a9f8616cc2f8bf8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">checks if the header is marked.  <br /></td></tr>
 <tr class="memitem:a3aba4412979088eab009f71ebcb67e44" id="r_a3aba4412979088eab009f71ebcb67e44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3aba4412979088eab009f71ebcb67e44">set_free</a> (bool free) noexcept</td></tr>
+<tr class="memdesc:a3aba4412979088eab009f71ebcb67e44"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets the is_free flag.  <br /></td></tr>
 <tr class="memitem:a0df3f1045445aaeff3caaaf9012e4544" id="r_a0df3f1045445aaeff3caaaf9012e4544"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0df3f1045445aaeff3caaaf9012e4544">set_marked</a> (bool marked) noexcept</td></tr>
+<tr class="memdesc:a0df3f1045445aaeff3caaaf9012e4544"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets the is_marked flag.  <br /></td></tr>
 <tr class="memitem:a179dc0224c7ee7c598379722d9457926" id="r_a179dc0224c7ee7c598379722d9457926"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a179dc0224c7ee7c598379722d9457926">try_mark</a> () noexcept</td></tr>
 <tr class="memdesc:a179dc0224c7ee7c598379722d9457926"><td class="mdescLeft">&#160;</td><td class="mdescRight">tries to mark the header.  <br /></td></tr>
 <tr class="memitem:a34a217d4e3cb753afdca29019689ccf3" id="r_a34a217d4e3cb753afdca29019689ccf3"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34a217d4e3cb753afdca29019689ccf3">data_ptr</a> () noexcept</td></tr>
@@ -94,7 +96,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a872dcf9fd70e1853e59512a3c0b9b8aa" id="r_a872dcf9fd70e1853e59512a3c0b9b8aa"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a872dcf9fd70e1853e59512a3c0b9b8aa">size</a></td></tr>
 <tr class="memdesc:a872dcf9fd70e1853e59512a3c0b9b8aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">size - the amount of memory the current block occupies.  <br /></td></tr>
 <tr class="memitem:acc46393e50aa06f0a40f19fee6798613" id="r_acc46393e50aa06f0a40f19fee6798613"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc46393e50aa06f0a40f19fee6798613">flags</a></td></tr>
-<tr class="memdesc:acc46393e50aa06f0a40f19fee6798613"><td class="mdescLeft">&#160;</td><td class="mdescRight">flags - 0x000000mf; m - marked (0/1), f - free (0/1).  <br /></td></tr>
+<tr class="memdesc:acc46393e50aa06f0a40f19fee6798613"><td class="mdescLeft">&#160;</td><td class="mdescRight"><span class="tt"><a class="el" href="#acc46393e50aa06f0a40f19fee6798613" title="flags - 0x000000mf: m - marked bit, f - free bit">flags</a> - 0x000000mf</span>: m - marked bit, f - free bit  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>header of the block inside of the heap segment. Occupies 16 bytes. </p>
@@ -323,6 +325,19 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>sets the is_free flag. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">free</td><td>- value for the is_free flag. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>bitwise logic:</dt><dd><ul>
+<li>if <span class="tt">free == true</span>: <span class="tt"><a class="el" href="#acc46393e50aa06f0a40f19fee6798613" title="flags - 0x000000mf: m - marked bit, f - free bit">flags</a> | 0x01</span> (sets free bit)</li>
+<li>if <span class="tt">free == false</span>: <span class="tt"><a class="el" href="#acc46393e50aa06f0a40f19fee6798613" title="flags - 0x000000mf: m - marked bit, f - free bit">flags</a> &amp; ~0x01</span> (clears free bit) </li>
+</ul>
+</dd></dl>
+
 </div>
 </div>
 <a id="a0df3f1045445aaeff3caaaf9012e4544" name="a0df3f1045445aaeff3caaaf9012e4544"></a>
@@ -347,6 +362,19 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>sets the is_marked flag. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">marked</td><td>- value for the is_marked flag. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>bitwise logic:</dt><dd><ul>
+<li>if <span class="tt">marked == true</span>: <span class="tt"><a class="el" href="#acc46393e50aa06f0a40f19fee6798613" title="flags - 0x000000mf: m - marked bit, f - free bit">flags</a> | 0x02</span> (sets marked bit)</li>
+<li>if <span class="tt">marked == false</span>: <span class="tt"><a class="el" href="#acc46393e50aa06f0a40f19fee6798613" title="flags - 0x000000mf: m - marked bit, f - free bit">flags</a> &amp; ~0x02</span> (clears marked bit) </li>
+</ul>
+</dd></dl>
 
 </div>
 </div>
@@ -446,7 +474,7 @@ template&lt;typename Fn&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>flags - 0x000000mf; m - marked (0/1), f - free (0/1). </p>
+<p><span class="tt"><a class="el" href="#acc46393e50aa06f0a40f19fee6798613" title="flags - 0x000000mf: m - marked bit, f - free bit">flags</a> - 0x000000mf</span>: m - marked bit, f - free bit </p>
 
 </div>
 </div>

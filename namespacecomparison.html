@@ -43,418 +43,211 @@ $(function() {
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">comparison Namespace Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>runs GC simulations and generates performance plots.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a236bcef3162f3221ffe022e410cc8f22" id="r_a236bcef3162f3221ffe022e410cc8f22"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a236bcef3162f3221ffe022e410cc8f22">gc_types</a> = [&quot;mc&quot;, &quot;ms&quot;]</td></tr>
-<tr class="memitem:ae759367184eefbd799e588403b9823df" id="r_ae759367184eefbd799e588403b9823df"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae759367184eefbd799e588403b9823df">mutators_list</a> = [1, 2, 5, 10]</td></tr>
-<tr class="memitem:a3030a5112f62907334d48e515ec9ebfa" id="r_a3030a5112f62907334d48e515ec9ebfa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3030a5112f62907334d48e515ec9ebfa">iterations</a> = 100</td></tr>
-<tr class="memitem:acde600580343ce23396af03e8a69ff75" id="r_acde600580343ce23396af03e8a69ff75"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acde600580343ce23396af03e8a69ff75">modes</a> = [&quot;stress&quot;, &quot;relaxed&quot;]</td></tr>
-<tr class="memitem:a3683a7c4f36a95f5e383bd9a067e714f" id="r_a3683a7c4f36a95f5e383bd9a067e714f"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3683a7c4f36a95f5e383bd9a067e714f">simulator_cmd</a> = &quot;./gcsim&quot;</td></tr>
-<tr class="memitem:a7dd8f08225e583970bb91eb703dbda31" id="r_a7dd8f08225e583970bb91eb703dbda31"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7dd8f08225e583970bb91eb703dbda31">data_dir</a> = &quot;data&quot;</td></tr>
-<tr class="memitem:ad973ed68bbb3fc1b6654eb9772086ff8" id="r_ad973ed68bbb3fc1b6654eb9772086ff8"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad973ed68bbb3fc1b6654eb9772086ff8">plots_dir</a> = &quot;plots&quot;</td></tr>
-<tr class="memitem:aef7e31998c5ad24b642785de032d2f97" id="r_aef7e31998c5ad24b642785de032d2f97"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef7e31998c5ad24b642785de032d2f97">exist_ok</a></td></tr>
-<tr class="memitem:af6bfd75883767726115ce044d7d813e7" id="r_af6bfd75883767726115ce044d7d813e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6bfd75883767726115ce044d7d813e7">output_pattern</a> = os.path.join(<a class="el" href="#a7dd8f08225e583970bb91eb703dbda31">data_dir</a>, &quot;results_{gc}_{mode}_{mutators}.csv&quot;)</td></tr>
-<tr class="memitem:a9e26841b184f8bfa9de89844466067a6" id="r_a9e26841b184f8bfa9de89844466067a6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e26841b184f8bfa9de89844466067a6">output_file</a> = output_pattern.format(gc=gc, mode=mode, mutators=mutators)</td></tr>
-<tr class="memitem:a334d88eeb86217fa31c09de8cf5766af" id="r_a334d88eeb86217fa31c09de8cf5766af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a334d88eeb86217fa31c09de8cf5766af">check</a></td></tr>
-<tr class="memitem:a7442ea9f44f59b6075582e340d7bce2b" id="r_a7442ea9f44f59b6075582e340d7bce2b"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7442ea9f44f59b6075582e340d7bce2b">dfs</a> = []</td></tr>
-<tr class="memitem:a12f81dba7b9f1547355073b82aef1d2d" id="r_a12f81dba7b9f1547355073b82aef1d2d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12f81dba7b9f1547355073b82aef1d2d">file</a> = output_pattern.format(gc=gc, mode=mode, mutators=mutators)</td></tr>
-<tr class="memitem:a5d8adb23974d921f53549a172cb4ddb2" id="r_a5d8adb23974d921f53549a172cb4ddb2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d8adb23974d921f53549a172cb4ddb2">df</a> = pd.read_csv(<a class="el" href="#a12f81dba7b9f1547355073b82aef1d2d">file</a>)</td></tr>
-<tr class="memitem:ac41f627e8a00731e7aa5840700822a5f" id="r_ac41f627e8a00731e7aa5840700822a5f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac41f627e8a00731e7aa5840700822a5f">all_results</a> = pd.concat(<a class="el" href="#a7442ea9f44f59b6075582e340d7bce2b">dfs</a>, ignore_index=True)</td></tr>
-<tr class="memitem:a64b21a5c402f10e2a4ceaaede46638d8" id="r_a64b21a5c402f10e2a4ceaaede46638d8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64b21a5c402f10e2a4ceaaede46638d8">style</a></td></tr>
-<tr class="memitem:ac16fc904a0238fe0faa5d17a8459cb65" id="r_ac16fc904a0238fe0faa5d17a8459cb65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac16fc904a0238fe0faa5d17a8459cb65">palette</a></td></tr>
-<tr class="memitem:a0830b968a65df7f818e85928d9e91b89" id="r_a0830b968a65df7f818e85928d9e91b89"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0830b968a65df7f818e85928d9e91b89">mode_results</a> = <a class="el" href="#ac41f627e8a00731e7aa5840700822a5f">all_results</a>[<a class="el" href="#ac41f627e8a00731e7aa5840700822a5f">all_results</a>['mode'] == mode].copy()</td></tr>
-<tr class="memitem:adffedaa6970dd22ea42ef8d94a0a49f2" id="r_adffedaa6970dd22ea42ef8d94a0a49f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adffedaa6970dd22ea42ef8d94a0a49f2">numeric_cols</a> = mode_results.select_dtypes(include='number').columns</td></tr>
-<tr class="memitem:a803d96af5e1d93add9a478dd6a9d1720" id="r_a803d96af5e1d93add9a478dd6a9d1720"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a803d96af5e1d93add9a478dd6a9d1720">avg_results</a> = mode_results.groupby(['gc_type', 'mutators'])[<a class="el" href="#adffedaa6970dd22ea42ef8d94a0a49f2">numeric_cols</a>].mean().reset_index()</td></tr>
-<tr class="memitem:abdb77a10359d42612fb45ab736344fbf" id="r_abdb77a10359d42612fb45ab736344fbf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abdb77a10359d42612fb45ab736344fbf">figsize</a></td></tr>
-<tr class="memitem:a4ec067fb7fe6311de23563b2cfe2f5f3" id="r_a4ec067fb7fe6311de23563b2cfe2f5f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ec067fb7fe6311de23563b2cfe2f5f3">data</a></td></tr>
-<tr class="memitem:ab7194315901678c36b1bc24f76ff4b14" id="r_ab7194315901678c36b1bc24f76ff4b14"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7194315901678c36b1bc24f76ff4b14">x</a></td></tr>
-<tr class="memitem:a288d78e487c020d155f5b5e10f1f07f8" id="r_a288d78e487c020d155f5b5e10f1f07f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a288d78e487c020d155f5b5e10f1f07f8">y</a></td></tr>
-<tr class="memitem:a2a46dc2469945946076e638129bed20e" id="r_a2a46dc2469945946076e638129bed20e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a46dc2469945946076e638129bed20e">hue</a></td></tr>
-<tr class="memitem:a6ccb8abb443daeafa174b34daeeca9fc" id="r_a6ccb8abb443daeafa174b34daeeca9fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ccb8abb443daeafa174b34daeeca9fc">markers</a></td></tr>
-<tr class="memitem:a4ce121529aec77309ebb24ac903bba72" id="r_a4ce121529aec77309ebb24ac903bba72"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ce121529aec77309ebb24ac903bba72">dashes</a></td></tr>
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a2f2b03d163c01218adcead9d77fe2186" id="r_a2f2b03d163c01218adcead9d77fe2186"><td class="memItemLeft" align="right" valign="top">None&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f2b03d163c01218adcead9d77fe2186">run_simulations</a> (list[str] gc_types, list[int] mutators_list, list[str] modes, int iterations, str simulator_cmd, str output_pattern)</td></tr>
+<tr class="memitem:a4d9d8b26230208c0fc12b56e3925e14a" id="r_a4d9d8b26230208c0fc12b56e3925e14a"><td class="memItemLeft" align="right" valign="top">pd.DataFrame&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d9d8b26230208c0fc12b56e3925e14a">load_results</a> (list[str] gc_types, list[int] mutators_list, list[str] modes, str output_pattern)</td></tr>
+<tr class="memitem:adfc1b38831ab68f76e11f6c965fb952a" id="r_adfc1b38831ab68f76e11f6c965fb952a"><td class="memItemLeft" align="right" valign="top">None&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adfc1b38831ab68f76e11f6c965fb952a">plot_mode_results</a> (pd.DataFrame mode_results, str mode, str plots_dir)</td></tr>
+<tr class="memitem:a93b6c00e6bab09c795b36ad23fc76454" id="r_a93b6c00e6bab09c795b36ad23fc76454"><td class="memItemLeft" align="right" valign="top">None&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93b6c00e6bab09c795b36ad23fc76454">plot_results</a> (pd.DataFrame all_results, list[str] modes, str plots_dir)</td></tr>
+<tr class="memitem:a388050326f3eac17c8f1081b7c9103ee" id="r_a388050326f3eac17c8f1081b7c9103ee"><td class="memItemLeft" align="right" valign="top">None&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a388050326f3eac17c8f1081b7c9103ee">main</a> ()</td></tr>
 </table>
-<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
-<a id="ac41f627e8a00731e7aa5840700822a5f" name="ac41f627e8a00731e7aa5840700822a5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac41f627e8a00731e7aa5840700822a5f">&#9670;&#160;</a></span>all_results</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>runs GC simulations and generates performance plots. </p>
+<p>Script:</p><ul>
+<li>Executes the GC simulator with different configurations</li>
+<li>Aggregates CSV results</li>
+<li>Produces plots for throughput and failure rate</li>
+</ul>
+<p>Configurations:</p><ul>
+<li>GC types: mc, ms</li>
+<li>Mutator counts: 1, 2, 5, 10</li>
+<li>Modes: stress, relaxed</li>
+</ul>
+<p>Outputs:</p><ul>
+<li>Raw CSV data in <span class="tt">data/</span></li>
+<li>Plots in <span class="tt">plots/</span> </li>
+</ul>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a4d9d8b26230208c0fc12b56e3925e14a" name="a4d9d8b26230208c0fc12b56e3925e14a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d9d8b26230208c0fc12b56e3925e14a">&#9670;&#160;</a></span>load_results()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">comparison.all_results = pd.concat(<a class="el" href="#a7442ea9f44f59b6075582e340d7bce2b">dfs</a>, ignore_index=True)</td>
+          <td class="memname"> pd.DataFrame comparison.load_results </td>
+          <td>(</td>
+          <td class="paramtype">list[str]</td>          <td class="paramname"><span class="paramname"><em>gc_types</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">list[int]</td>          <td class="paramname"><span class="paramname"><em>mutators_list</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">list[str]</td>          <td class="paramname"><span class="paramname"><em>modes</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str
+</td>          <td class="paramname"><span class="paramname"><em>output_pattern</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<pre class="fragment">@brief load and aggregate simulation results.
 
+@param gc_types - list of GC types
+@param mutators_list - list of mutator counts
+@param modes - list of execution modes
+@param output_pattern - output filename pattern
+
+@return pandas.DataFrame Combined dataset of all results
+</pre> 
 </div>
 </div>
-<a id="a803d96af5e1d93add9a478dd6a9d1720" name="a803d96af5e1d93add9a478dd6a9d1720"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a803d96af5e1d93add9a478dd6a9d1720">&#9670;&#160;</a></span>avg_results</h2>
+<a id="a388050326f3eac17c8f1081b7c9103ee" name="a388050326f3eac17c8f1081b7c9103ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a388050326f3eac17c8f1081b7c9103ee">&#9670;&#160;</a></span>main()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">comparison.avg_results = mode_results.groupby(['gc_type', 'mutators'])[<a class="el" href="#adffedaa6970dd22ea42ef8d94a0a49f2">numeric_cols</a>].mean().reset_index()</td>
+          <td class="memname"> None comparison.main </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<pre class="fragment">@brief entry point for running simulations and plotting results.
+</pre> 
 </div>
 </div>
-<a id="a334d88eeb86217fa31c09de8cf5766af" name="a334d88eeb86217fa31c09de8cf5766af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a334d88eeb86217fa31c09de8cf5766af">&#9670;&#160;</a></span>check</h2>
+<a id="adfc1b38831ab68f76e11f6c965fb952a" name="adfc1b38831ab68f76e11f6c965fb952a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfc1b38831ab68f76e11f6c965fb952a">&#9670;&#160;</a></span>plot_mode_results()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">comparison.check</td>
+          <td class="memname"> None comparison.plot_mode_results </td>
+          <td>(</td>
+          <td class="paramtype">pd.DataFrame</td>          <td class="paramname"><span class="paramname"><em>mode_results</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str</td>          <td class="paramname"><span class="paramname"><em>mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str
+</td>          <td class="paramname"><span class="paramname"><em>plots_dir</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<pre class="fragment">@brief generates all plots for a single mode.
 
+@param mode_results - DataFrame filtered by mode
+@param mode - current mode name
+@param plots_dir - directory to save plots
+</pre> 
 </div>
 </div>
-<a id="a4ce121529aec77309ebb24ac903bba72" name="a4ce121529aec77309ebb24ac903bba72"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ce121529aec77309ebb24ac903bba72">&#9670;&#160;</a></span>dashes</h2>
+<a id="a93b6c00e6bab09c795b36ad23fc76454" name="a93b6c00e6bab09c795b36ad23fc76454"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93b6c00e6bab09c795b36ad23fc76454">&#9670;&#160;</a></span>plot_results()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">comparison.dashes</td>
+          <td class="memname"> None comparison.plot_results </td>
+          <td>(</td>
+          <td class="paramtype">pd.DataFrame</td>          <td class="paramname"><span class="paramname"><em>all_results</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">list[str]</td>          <td class="paramname"><span class="paramname"><em>modes</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str
+</td>          <td class="paramname"><span class="paramname"><em>plots_dir</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<pre class="fragment">@brief generates plots for all modes.
 
+@param all_results - combined DataFrame with all experiment data
+@param modes - list of modes
+@param plots_dir - output directory for plots
+</pre> 
 </div>
 </div>
-<a id="a4ec067fb7fe6311de23563b2cfe2f5f3" name="a4ec067fb7fe6311de23563b2cfe2f5f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ec067fb7fe6311de23563b2cfe2f5f3">&#9670;&#160;</a></span>data</h2>
+<a id="a2f2b03d163c01218adcead9d77fe2186" name="a2f2b03d163c01218adcead9d77fe2186"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f2b03d163c01218adcead9d77fe2186">&#9670;&#160;</a></span>run_simulations()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">comparison.data</td>
+          <td class="memname"> None comparison.run_simulations </td>
+          <td>(</td>
+          <td class="paramtype">list[str]</td>          <td class="paramname"><span class="paramname"><em>gc_types</em></span>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7dd8f08225e583970bb91eb703dbda31" name="a7dd8f08225e583970bb91eb703dbda31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7dd8f08225e583970bb91eb703dbda31">&#9670;&#160;</a></span>data_dir</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">comparison.data_dir = &quot;data&quot;</td>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">list[int]</td>          <td class="paramname"><span class="paramname"><em>mutators_list</em></span>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5d8adb23974d921f53549a172cb4ddb2" name="a5d8adb23974d921f53549a172cb4ddb2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d8adb23974d921f53549a172cb4ddb2">&#9670;&#160;</a></span>df</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">comparison.df = pd.read_csv(<a class="el" href="#a12f81dba7b9f1547355073b82aef1d2d">file</a>)</td>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">list[str]</td>          <td class="paramname"><span class="paramname"><em>modes</em></span>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7442ea9f44f59b6075582e340d7bce2b" name="a7442ea9f44f59b6075582e340d7bce2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7442ea9f44f59b6075582e340d7bce2b">&#9670;&#160;</a></span>dfs</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">list comparison.dfs = []</td>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>iterations</em></span>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aef7e31998c5ad24b642785de032d2f97" name="aef7e31998c5ad24b642785de032d2f97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef7e31998c5ad24b642785de032d2f97">&#9670;&#160;</a></span>exist_ok</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">comparison.exist_ok</td>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str</td>          <td class="paramname"><span class="paramname"><em>simulator_cmd</em></span>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="abdb77a10359d42612fb45ab736344fbf" name="abdb77a10359d42612fb45ab736344fbf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abdb77a10359d42612fb45ab736344fbf">&#9670;&#160;</a></span>figsize</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">comparison.figsize</td>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str
+</td>          <td class="paramname"><span class="paramname"><em>output_pattern</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<pre class="fragment">@brief run GC simulations for all configurations.
 
-</div>
-</div>
-<a id="a12f81dba7b9f1547355073b82aef1d2d" name="a12f81dba7b9f1547355073b82aef1d2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12f81dba7b9f1547355073b82aef1d2d">&#9670;&#160;</a></span>file</h2>
+@param gc_types - list of GC types (["mc", "ms"])
+@param mutators_list - list of mutator counts
+@param modes - list of execution modes (["stress", "relaxed"])
+@param iterations - number of iterations per run
+@param simulator_cmd - path to simulator executable
+@param output_pattern - output filename pattern
 
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">comparison.file = output_pattern.format(gc=gc, mode=mode, mutators=mutators)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a236bcef3162f3221ffe022e410cc8f22" name="a236bcef3162f3221ffe022e410cc8f22"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a236bcef3162f3221ffe022e410cc8f22">&#9670;&#160;</a></span>gc_types</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">list comparison.gc_types = [&quot;mc&quot;, &quot;ms&quot;]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2a46dc2469945946076e638129bed20e" name="a2a46dc2469945946076e638129bed20e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a46dc2469945946076e638129bed20e">&#9670;&#160;</a></span>hue</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">comparison.hue</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a3030a5112f62907334d48e515ec9ebfa" name="a3030a5112f62907334d48e515ec9ebfa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3030a5112f62907334d48e515ec9ebfa">&#9670;&#160;</a></span>iterations</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int comparison.iterations = 100</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6ccb8abb443daeafa174b34daeeca9fc" name="a6ccb8abb443daeafa174b34daeeca9fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ccb8abb443daeafa174b34daeeca9fc">&#9670;&#160;</a></span>markers</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">comparison.markers</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0830b968a65df7f818e85928d9e91b89" name="a0830b968a65df7f818e85928d9e91b89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0830b968a65df7f818e85928d9e91b89">&#9670;&#160;</a></span>mode_results</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">comparison.mode_results = <a class="el" href="#ac41f627e8a00731e7aa5840700822a5f">all_results</a>[<a class="el" href="#ac41f627e8a00731e7aa5840700822a5f">all_results</a>['mode'] == mode].copy()</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="acde600580343ce23396af03e8a69ff75" name="acde600580343ce23396af03e8a69ff75"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acde600580343ce23396af03e8a69ff75">&#9670;&#160;</a></span>modes</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">list comparison.modes = [&quot;stress&quot;, &quot;relaxed&quot;]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae759367184eefbd799e588403b9823df" name="ae759367184eefbd799e588403b9823df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae759367184eefbd799e588403b9823df">&#9670;&#160;</a></span>mutators_list</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">list comparison.mutators_list = [1, 2, 5, 10]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="adffedaa6970dd22ea42ef8d94a0a49f2" name="adffedaa6970dd22ea42ef8d94a0a49f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adffedaa6970dd22ea42ef8d94a0a49f2">&#9670;&#160;</a></span>numeric_cols</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">comparison.numeric_cols = mode_results.select_dtypes(include='number').columns</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9e26841b184f8bfa9de89844466067a6" name="a9e26841b184f8bfa9de89844466067a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e26841b184f8bfa9de89844466067a6">&#9670;&#160;</a></span>output_file</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">comparison.output_file = output_pattern.format(gc=gc, mode=mode, mutators=mutators)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af6bfd75883767726115ce044d7d813e7" name="af6bfd75883767726115ce044d7d813e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6bfd75883767726115ce044d7d813e7">&#9670;&#160;</a></span>output_pattern</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">comparison.output_pattern = os.path.join(<a class="el" href="#a7dd8f08225e583970bb91eb703dbda31">data_dir</a>, &quot;results_{gc}_{mode}_{mutators}.csv&quot;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac16fc904a0238fe0faa5d17a8459cb65" name="ac16fc904a0238fe0faa5d17a8459cb65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac16fc904a0238fe0faa5d17a8459cb65">&#9670;&#160;</a></span>palette</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">comparison.palette</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ad973ed68bbb3fc1b6654eb9772086ff8" name="ad973ed68bbb3fc1b6654eb9772086ff8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad973ed68bbb3fc1b6654eb9772086ff8">&#9670;&#160;</a></span>plots_dir</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">comparison.plots_dir = &quot;plots&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a3683a7c4f36a95f5e383bd9a067e714f" name="a3683a7c4f36a95f5e383bd9a067e714f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3683a7c4f36a95f5e383bd9a067e714f">&#9670;&#160;</a></span>simulator_cmd</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">str comparison.simulator_cmd = &quot;./gcsim&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a64b21a5c402f10e2a4ceaaede46638d8" name="a64b21a5c402f10e2a4ceaaede46638d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64b21a5c402f10e2a4ceaaede46638d8">&#9670;&#160;</a></span>style</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">comparison.style</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab7194315901678c36b1bc24f76ff4b14" name="ab7194315901678c36b1bc24f76ff4b14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7194315901678c36b1bc24f76ff4b14">&#9670;&#160;</a></span>x</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">comparison.x</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a288d78e487c020d155f5b5e10f1f07f8" name="a288d78e487c020d155f5b5e10f1f07f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a288d78e487c020d155f5b5e10f1f07f8">&#9670;&#160;</a></span>y</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">comparison.y</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
+@throws subprocess.CalledProcessError if a simulation fails
+</pre> 
 </div>
 </div>
 </div><!-- contents -->
