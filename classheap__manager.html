@@ -68,10 +68,10 @@ requires std::derived_from&lt;GC, <a class="el" href="classgarbage__collector.ht
 <tr class="memdesc:a0785a25ea29c66e9dbf8ddee61b12cbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted copy constructor.  <br /></td></tr>
 <tr class="memitem:a57ef62b6ceba48f766e831af5d429db6" id="r_a57ef62b6ceba48f766e831af5d429db6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classheap__manager.html">heap_manager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57ef62b6ceba48f766e831af5d429db6">operator=</a> (const <a class="el" href="classheap__manager.html">heap_manager</a> &amp;)=delete</td></tr>
 <tr class="memdesc:a57ef62b6ceba48f766e831af5d429db6"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted assignment operator.  <br /></td></tr>
-<tr class="memitem:af428b14e48ac009cc966bf27c1d03cd0" id="r_af428b14e48ac009cc966bf27c1d03cd0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af428b14e48ac009cc966bf27c1d03cd0">heap_manager</a> (<a class="el" href="classheap__manager.html">heap_manager</a> &amp;&amp;)=delete</td></tr>
-<tr class="memdesc:af428b14e48ac009cc966bf27c1d03cd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted move constructor.  <br /></td></tr>
-<tr class="memitem:ac167b97174b2ca1980321fc390eb69f0" id="r_ac167b97174b2ca1980321fc390eb69f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classheap__manager.html">heap_manager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac167b97174b2ca1980321fc390eb69f0">operator=</a> (<a class="el" href="classheap__manager.html">heap_manager</a> &amp;&amp;)=delete</td></tr>
-<tr class="memdesc:ac167b97174b2ca1980321fc390eb69f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted move assignment operator.  <br /></td></tr>
+<tr class="memitem:ab1d420c3fd974e66b560e081f3b59414" id="r_ab1d420c3fd974e66b560e081f3b59414"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1d420c3fd974e66b560e081f3b59414">heap_manager</a> (<a class="el" href="classheap__manager.html">heap_manager</a> &amp;&amp;) noexcept=delete</td></tr>
+<tr class="memdesc:ab1d420c3fd974e66b560e081f3b59414"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted move constructor.  <br /></td></tr>
+<tr class="memitem:af8cf402af178b29c99cbd688ecb1fad6" id="r_af8cf402af178b29c99cbd688ecb1fad6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classheap__manager.html">heap_manager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8cf402af178b29c99cbd688ecb1fad6">operator=</a> (<a class="el" href="classheap__manager.html">heap_manager</a> &amp;&amp;) noexcept=delete</td></tr>
+<tr class="memdesc:af8cf402af178b29c99cbd688ecb1fad6"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted move assignment operator.  <br /></td></tr>
 <tr class="memitem:a53d529ab3872249c9b2ff32332faca90" id="r_a53d529ab3872249c9b2ff32332faca90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structheader.html">header</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53d529ab3872249c9b2ff32332faca90">allocate</a> (uint32_t bytes)</td></tr>
 <tr class="memdesc:a53d529ab3872249c9b2ff32332faca90"><td class="mdescLeft">&#160;</td><td class="mdescRight">tries to allocate memory on the heap.  <br /></td></tr>
 <tr class="memitem:afbb9443d31088a12bb84aac024c797f1" id="r_afbb9443d31088a12bb84aac024c797f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbb9443d31088a12bb84aac024c797f1">add_root</a> (uint64_t id, <a class="el" href="classroot__set__base.html">root_set_base</a> *base)</td></tr>
@@ -245,8 +245,8 @@ requires std::derived_from&lt;GC, <a class="el" href="classgarbage__collector.ht
 
 </div>
 </div>
-<a id="af428b14e48ac009cc966bf27c1d03cd0" name="af428b14e48ac009cc966bf27c1d03cd0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af428b14e48ac009cc966bf27c1d03cd0">&#9670;&#160;</a></span>heap_manager() <span class="overload">[3/3]</span></h2>
+<a id="ab1d420c3fd974e66b560e081f3b59414" name="ab1d420c3fd974e66b560e081f3b59414"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1d420c3fd974e66b560e081f3b59414">&#9670;&#160;</a></span>heap_manager() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -263,7 +263,7 @@ requires std::derived_from&lt;GC, <a class="el" href="classgarbage__collector.ht
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel delete">delete</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -537,8 +537,8 @@ requires std::derived_from&lt;GC, <a class="el" href="classgarbage__collector.ht
 
 </div>
 </div>
-<a id="ac167b97174b2ca1980321fc390eb69f0" name="ac167b97174b2ca1980321fc390eb69f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac167b97174b2ca1980321fc390eb69f0">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="af8cf402af178b29c99cbd688ecb1fad6" name="af8cf402af178b29c99cbd688ecb1fad6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8cf402af178b29c99cbd688ecb1fad6">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -555,7 +555,7 @@ requires std::derived_from&lt;GC, <a class="el" href="classgarbage__collector.ht
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel delete">delete</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

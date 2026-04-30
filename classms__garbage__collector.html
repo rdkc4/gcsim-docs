@@ -59,8 +59,6 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a56cc68f2b78b8945a7524dd5da9e7346" id="r_a56cc68f2b78b8945a7524dd5da9e7346"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56cc68f2b78b8945a7524dd5da9e7346">ms_garbage_collector</a> (size_t thread_count=1)</td></tr>
 <tr class="memdesc:a56cc68f2b78b8945a7524dd5da9e7346"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates the instance of the garbage collector.  <br /></td></tr>
-<tr class="memitem:aa9cc696b5d37ebb2c67d7245b3b515bd" id="r_aa9cc696b5d37ebb2c67d7245b3b515bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9cc696b5d37ebb2c67d7245b3b515bd">~ms_garbage_collector</a> () override final=default</td></tr>
-<tr class="memdesc:aa9cc696b5d37ebb2c67d7245b3b515bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes the instance of the garbage collector.  <br /></td></tr>
 <tr class="memitem:a64f7ec445e7fbda7adf24bf81b8faa2d" id="r_a64f7ec445e7fbda7adf24bf81b8faa2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64f7ec445e7fbda7adf24bf81b8faa2d">collect</a> (<a class="el" href="classroot__set__table.html">root_set_table</a> &amp;root_set, <a class="el" href="classheap.html">heap</a> &amp;heap_memory, <a class="el" href="classsegment__free__memory__table.html">segment_free_memory_table</a> &amp;free_memory_table) noexcept override final</td></tr>
 <tr class="memdesc:a64f7ec445e7fbda7adf24bf81b8faa2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">collects the garbage from the heap.  <br /></td></tr>
 <tr class="memitem:a4be0ddf9a3aa17fcb733ad8f513ab5e1" id="r_a4be0ddf9a3aa17fcb733ad8f513ab5e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4be0ddf9a3aa17fcb733ad8f513ab5e1">visit</a> (<a class="el" href="classthread__local__stack.html">thread_local_stack</a> &amp;stack) override final</td></tr>
@@ -74,9 +72,27 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aef1411c65f81d14502e522c6f6ca5ed1 inherit pub_methods_classgarbage__collector"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates the instance of the garbage collector.  <br /></td></tr>
 <tr class="memitem:ab7bed3c56149c0279f9bc391feeff5d7 inherit pub_methods_classgarbage__collector" id="r_ab7bed3c56149c0279f9bc391feeff5d7"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgarbage__collector.html#ab7bed3c56149c0279f9bc391feeff5d7">~garbage_collector</a> ()=default</td></tr>
 <tr class="memdesc:ab7bed3c56149c0279f9bc391feeff5d7 inherit pub_methods_classgarbage__collector"><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes the instance of the garbage collector.  <br /></td></tr>
+<tr class="memitem:a31b7a3ebc765e1d2581441e060932a40 inherit pub_methods_classgarbage__collector" id="r_a31b7a3ebc765e1d2581441e060932a40"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgarbage__collector.html#a31b7a3ebc765e1d2581441e060932a40">garbage_collector</a> (const <a class="el" href="classgarbage__collector.html">garbage_collector</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a31b7a3ebc765e1d2581441e060932a40 inherit pub_methods_classgarbage__collector"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted copy constructor.  <br /></td></tr>
+<tr class="memitem:aaa020e810bf9a1969618e862bc6d5793 inherit pub_methods_classgarbage__collector" id="r_aaa020e810bf9a1969618e862bc6d5793"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgarbage__collector.html">garbage_collector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgarbage__collector.html#aaa020e810bf9a1969618e862bc6d5793">operator=</a> (const <a class="el" href="classgarbage__collector.html">garbage_collector</a> &amp;)=delete</td></tr>
+<tr class="memdesc:aaa020e810bf9a1969618e862bc6d5793 inherit pub_methods_classgarbage__collector"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted copy assignment operator.  <br /></td></tr>
+<tr class="memitem:a0a68af6e81a77e45c4769a20d624c74f inherit pub_methods_classgarbage__collector" id="r_a0a68af6e81a77e45c4769a20d624c74f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgarbage__collector.html#a0a68af6e81a77e45c4769a20d624c74f">garbage_collector</a> (<a class="el" href="classgarbage__collector.html">garbage_collector</a> &amp;&amp;) noexcept=delete</td></tr>
+<tr class="memdesc:a0a68af6e81a77e45c4769a20d624c74f inherit pub_methods_classgarbage__collector"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted move constructor.  <br /></td></tr>
+<tr class="memitem:a503740a575dde3f64dbcd41751feb9ce inherit pub_methods_classgarbage__collector" id="r_a503740a575dde3f64dbcd41751feb9ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgarbage__collector.html">garbage_collector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgarbage__collector.html#a503740a575dde3f64dbcd41751feb9ce">operator=</a> (<a class="el" href="classgarbage__collector.html">garbage_collector</a> &amp;&amp;) noexcept=delete</td></tr>
+<tr class="memdesc:a503740a575dde3f64dbcd41751feb9ce inherit pub_methods_classgarbage__collector"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted move assignment operator.  <br /></td></tr>
 <tr class="inherit_header pub_methods_classgc__visitor"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classgc__visitor')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classgc__visitor.html">gc_visitor</a></td></tr>
+<tr class="memitem:a2878a8fca7c1bb1d5c041cb40d54404d inherit pub_methods_classgc__visitor" id="r_a2878a8fca7c1bb1d5c041cb40d54404d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgc__visitor.html#a2878a8fca7c1bb1d5c041cb40d54404d">gc_visitor</a> ()=default</td></tr>
+<tr class="memdesc:a2878a8fca7c1bb1d5c041cb40d54404d inherit pub_methods_classgc__visitor"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates the instance of <a class="el" href="classgc__visitor.html" title="interface for GC&#39;s marking phase.">gc_visitor</a> object.  <br /></td></tr>
 <tr class="memitem:a344b9caf96b76871158ba434449d47d6 inherit pub_methods_classgc__visitor" id="r_a344b9caf96b76871158ba434449d47d6"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgc__visitor.html#a344b9caf96b76871158ba434449d47d6">~gc_visitor</a> ()=default</td></tr>
-<tr class="memdesc:a344b9caf96b76871158ba434449d47d6 inherit pub_methods_classgc__visitor"><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes the <a class="el" href="classgc__visitor.html" title="interface for GC&#39;s marking phase.">gc_visitor</a> object  <br /></td></tr>
+<tr class="memdesc:a344b9caf96b76871158ba434449d47d6 inherit pub_methods_classgc__visitor"><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes the <a class="el" href="classgc__visitor.html" title="interface for GC&#39;s marking phase.">gc_visitor</a> object.  <br /></td></tr>
+<tr class="memitem:a3d528c300ff5935378c29671abdf8797 inherit pub_methods_classgc__visitor" id="r_a3d528c300ff5935378c29671abdf8797"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgc__visitor.html#a3d528c300ff5935378c29671abdf8797">gc_visitor</a> (const <a class="el" href="classgc__visitor.html">gc_visitor</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a3d528c300ff5935378c29671abdf8797 inherit pub_methods_classgc__visitor"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted copy constructor.  <br /></td></tr>
+<tr class="memitem:a5f1d7b505bde921a6532c733ad4db774 inherit pub_methods_classgc__visitor" id="r_a5f1d7b505bde921a6532c733ad4db774"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgc__visitor.html">gc_visitor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgc__visitor.html#a5f1d7b505bde921a6532c733ad4db774">operator=</a> (const <a class="el" href="classgc__visitor.html">gc_visitor</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a5f1d7b505bde921a6532c733ad4db774 inherit pub_methods_classgc__visitor"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted copy assignment operator.  <br /></td></tr>
+<tr class="memitem:a958e49910473fe79c34db083794ad80b inherit pub_methods_classgc__visitor" id="r_a958e49910473fe79c34db083794ad80b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgc__visitor.html#a958e49910473fe79c34db083794ad80b">gc_visitor</a> (<a class="el" href="classgc__visitor.html">gc_visitor</a> &amp;&amp;) noexcept=delete</td></tr>
+<tr class="memdesc:a958e49910473fe79c34db083794ad80b inherit pub_methods_classgc__visitor"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted move constructor.  <br /></td></tr>
+<tr class="memitem:a0bad279fb798c541420b52baf2233885 inherit pub_methods_classgc__visitor" id="r_a0bad279fb798c541420b52baf2233885"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgc__visitor.html">gc_visitor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgc__visitor.html#a0bad279fb798c541420b52baf2233885">operator=</a> (<a class="el" href="classgc__visitor.html">gc_visitor</a> &amp;&amp;) noexcept=delete</td></tr>
+<tr class="memdesc:a0bad279fb798c541420b52baf2233885 inherit pub_methods_classgc__visitor"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted move assignment operator.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -120,33 +136,6 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="aa9cc696b5d37ebb2c67d7245b3b515bd" name="aa9cc696b5d37ebb2c67d7245b3b515bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9cc696b5d37ebb2c67d7245b3b515bd">&#9670;&#160;</a></span>~ms_garbage_collector()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ms_garbage_collector::~ms_garbage_collector </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel final">final</span><span class="mlabel override">override</span><span class="mlabel default">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>deletes the instance of the garbage collector. </p>
 
 </div>
 </div>

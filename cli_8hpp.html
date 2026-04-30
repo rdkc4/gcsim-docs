@@ -49,43 +49,61 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">cli.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;stdexcept&gt;</code><br />
-<code>#include &lt;format&gt;</code><br />
-<code>#include &lt;string_view&gt;</code><br />
+<div class="textblock"><code>#include &lt;string_view&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;expected&gt;</code><br />
 <code>#include &quot;<a class="el" href="allocator-defs_8hpp.html">../allocators/allocator-defs.hpp</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:cli_3A_3Acli_5Foptions" id="r_cli_3A_3Acli_5Foptions"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcli_1_1cli__options.html">cli::cli_options</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">struct defining the cli options for the simulator.  <a href="structcli_1_1cli__options.html#details">More...</a><br /></td></tr>
+<tr class="memitem:cli_3A_3Aopt_5Fdescriptor" id="r_cli_3A_3Aopt_5Fdescriptor"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcli_1_1opt__descriptor.html">cli::opt_descriptor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">descriptor of the option argument.  <a href="structcli_1_1opt__descriptor.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:cli" id="r_cli"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecli.html">cli</a></td></tr>
-<tr class="memdesc:namespacecli"><td class="mdescLeft">&#160;</td><td class="mdescRight">module defining the cli flags for the simulator. <br /></td></tr>
+<tr class="memdesc:namespacecli"><td class="mdescLeft">&#160;</td><td class="mdescRight">module for cli option handling. <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a84dfe97d53c817119b822f42ae711a0c" id="r_a84dfe97d53c817119b822f42ae711a0c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecli.html#a84dfe97d53c817119b822f42ae711a0c">cli::handler_fn</a></td></tr>
+<tr class="memdesc:a84dfe97d53c817119b822f42ae711a0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">alias for handler types.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a3d11074780c1b08a492b7aed55191dbd" id="r_a3d11074780c1b08a492b7aed55191dbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecli.html#a3d11074780c1b08a492b7aed55191dbd">cli::require_argument</a> (std::string_view arg, int &amp;i, int argc)</td></tr>
-<tr class="memdesc:a3d11074780c1b08a492b7aed55191dbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">requires additional argument.  <br /></td></tr>
-<tr class="memitem:a1aa028e290de29e232a2bc3f0cd032c7" id="r_a1aa028e290de29e232a2bc3f0cd032c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcli_1_1cli__options.html">cli_options</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecli.html#a1aa028e290de29e232a2bc3f0cd032c7">cli::parse_args</a> (int argc, char **argv)</td></tr>
-<tr class="memdesc:a1aa028e290de29e232a2bc3f0cd032c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">parses arguments from the cli.  <br /></td></tr>
-<tr class="memitem:a3873266f8be719193739ebf390ca8ca8" id="r_a3873266f8be719193739ebf390ca8ca8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecli.html#a3873266f8be719193739ebf390ca8ca8">cli::handle_gc_type_arg</a> (<a class="el" href="structcli_1_1cli__options.html">cli_options</a> &amp;options, std::string_view gc_type_arg)</td></tr>
-<tr class="memdesc:a3873266f8be719193739ebf390ca8ca8"><td class="mdescLeft">&#160;</td><td class="mdescRight">handles argument for garbage collector type.  <br /></td></tr>
-<tr class="memitem:ac693186d7407628598218b44b4810e95" id="r_ac693186d7407628598218b44b4810e95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecli.html#ac693186d7407628598218b44b4810e95">cli::handle_iteration_arg</a> (<a class="el" href="structcli_1_1cli__options.html">cli_options</a> &amp;options, std::string_view iteration_arg)</td></tr>
-<tr class="memdesc:ac693186d7407628598218b44b4810e95"><td class="mdescLeft">&#160;</td><td class="mdescRight">handles argument for simulator iterations.  <br /></td></tr>
-<tr class="memitem:ac3b6e6197b956ea729f1047a2677e991" id="r_ac3b6e6197b956ea729f1047a2677e991"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecli.html#ac3b6e6197b956ea729f1047a2677e991">cli::handle_mode_arg</a> (<a class="el" href="structcli_1_1cli__options.html">cli_options</a> &amp;options, std::string_view mode_arg)</td></tr>
-<tr class="memdesc:ac3b6e6197b956ea729f1047a2677e991"><td class="mdescLeft">&#160;</td><td class="mdescRight">handles argument for simulation mode.  <br /></td></tr>
-<tr class="memitem:a451be70a6aa5d4ee9db3e4fd5a8e896c" id="r_a451be70a6aa5d4ee9db3e4fd5a8e896c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecli.html#a451be70a6aa5d4ee9db3e4fd5a8e896c">cli::handle_mutator_arg</a> (<a class="el" href="structcli_1_1cli__options.html">cli_options</a> &amp;options, std::string_view mutator_arg)</td></tr>
-<tr class="memdesc:a451be70a6aa5d4ee9db3e4fd5a8e896c"><td class="mdescLeft">&#160;</td><td class="mdescRight">handles argument for mutators.  <br /></td></tr>
-<tr class="memitem:a5b79564929cefa2c63ca67bc218a17ea" id="r_a5b79564929cefa2c63ca67bc218a17ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecli.html#a5b79564929cefa2c63ca67bc218a17ea">cli::handle_output_arg</a> (<a class="el" href="structcli_1_1cli__options.html">cli_options</a> &amp;options, std::string_view output_arg)</td></tr>
-<tr class="memdesc:a5b79564929cefa2c63ca67bc218a17ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">handles argument for output.  <br /></td></tr>
+<tr class="memitem:a922063913a6b57e51af08ba3ddc9d783" id="r_a922063913a6b57e51af08ba3ddc9d783"><td class="memItemLeft" align="right" valign="top">std::expected&lt; <a class="el" href="structcli_1_1cli__options.html">cli_options</a>, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecli.html#a922063913a6b57e51af08ba3ddc9d783">cli::parse_args</a> (int argc, const char *const  *argv)</td></tr>
+<tr class="memdesc:a922063913a6b57e51af08ba3ddc9d783"><td class="mdescLeft">&#160;</td><td class="mdescRight">parses arguments from the cli.  <br /></td></tr>
+<tr class="memitem:ae189166e28a99e28cd44457ac411f50c" id="r_ae189166e28a99e28cd44457ac411f50c"><td class="memItemLeft" align="right" valign="top">std::expected&lt; void, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecli.html#ae189166e28a99e28cd44457ac411f50c">cli::process_opt</a> (<a class="el" href="structcli_1_1cli__options.html">cli_options</a> &amp;options, const <a class="el" href="structcli_1_1opt__descriptor.html">opt_descriptor</a> *desc, int &amp;i, int argc, const char *const  *argv)</td></tr>
+<tr class="memdesc:ae189166e28a99e28cd44457ac411f50c"><td class="mdescLeft">&#160;</td><td class="mdescRight">processes the option argument.  <br /></td></tr>
+<tr class="memitem:a2d23c66f9935cd0cc6735d81140c6b21" id="r_a2d23c66f9935cd0cc6735d81140c6b21"><td class="memItemLeft" align="right" valign="top">std::expected&lt; void, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecli.html#a2d23c66f9935cd0cc6735d81140c6b21">cli::handle_gc_type_arg</a> (<a class="el" href="structcli_1_1cli__options.html">cli_options</a> &amp;options, std::string_view gc_type_arg)</td></tr>
+<tr class="memdesc:a2d23c66f9935cd0cc6735d81140c6b21"><td class="mdescLeft">&#160;</td><td class="mdescRight">handles argument for garbage collector type.  <br /></td></tr>
+<tr class="memitem:a020bfc23eb4d7ed78d7fde910aa20f9c" id="r_a020bfc23eb4d7ed78d7fde910aa20f9c"><td class="memItemLeft" align="right" valign="top">std::expected&lt; void, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecli.html#a020bfc23eb4d7ed78d7fde910aa20f9c">cli::handle_iteration_arg</a> (<a class="el" href="structcli_1_1cli__options.html">cli_options</a> &amp;options, std::string_view iteration_arg)</td></tr>
+<tr class="memdesc:a020bfc23eb4d7ed78d7fde910aa20f9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">handles argument for simulator iterations.  <br /></td></tr>
+<tr class="memitem:a42e29310b6a590856d9d521b023d412a" id="r_a42e29310b6a590856d9d521b023d412a"><td class="memItemLeft" align="right" valign="top">std::expected&lt; void, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecli.html#a42e29310b6a590856d9d521b023d412a">cli::handle_mode_arg</a> (<a class="el" href="structcli_1_1cli__options.html">cli_options</a> &amp;options, std::string_view mode_arg)</td></tr>
+<tr class="memdesc:a42e29310b6a590856d9d521b023d412a"><td class="mdescLeft">&#160;</td><td class="mdescRight">handles argument for simulation mode.  <br /></td></tr>
+<tr class="memitem:afab6a4990b21581c170b58589cdde139" id="r_afab6a4990b21581c170b58589cdde139"><td class="memItemLeft" align="right" valign="top">std::expected&lt; void, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecli.html#afab6a4990b21581c170b58589cdde139">cli::handle_mutator_arg</a> (<a class="el" href="structcli_1_1cli__options.html">cli_options</a> &amp;options, std::string_view mutator_arg)</td></tr>
+<tr class="memdesc:afab6a4990b21581c170b58589cdde139"><td class="mdescLeft">&#160;</td><td class="mdescRight">handles argument for mutators.  <br /></td></tr>
+<tr class="memitem:ac70d530844c4e7da2a82f3011f840660" id="r_ac70d530844c4e7da2a82f3011f840660"><td class="memItemLeft" align="right" valign="top">std::expected&lt; void, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecli.html#ac70d530844c4e7da2a82f3011f840660">cli::handle_output_arg</a> (<a class="el" href="structcli_1_1cli__options.html">cli_options</a> &amp;options, std::string_view output_arg)</td></tr>
+<tr class="memdesc:ac70d530844c4e7da2a82f3011f840660"><td class="mdescLeft">&#160;</td><td class="mdescRight">handles argument for output.  <br /></td></tr>
+<tr class="memitem:abd729fdde09e7afa20393a18351619fa" id="r_abd729fdde09e7afa20393a18351619fa"><td class="memItemLeft" align="right" valign="top">std::expected&lt; void, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecli.html#abd729fdde09e7afa20393a18351619fa">cli::handle_help_arg</a> (<a class="el" href="structcli_1_1cli__options.html">cli_options</a> &amp;options, std::string_view help_arg)</td></tr>
+<tr class="memdesc:abd729fdde09e7afa20393a18351619fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">handles argument for help.  <br /></td></tr>
 <tr class="memitem:af067bdd98467b4ea6b988971ebf100ca" id="r_af067bdd98467b4ea6b988971ebf100ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecli.html#af067bdd98467b4ea6b988971ebf100ca">cli::show_help</a> ()</td></tr>
 <tr class="memdesc:af067bdd98467b4ea6b988971ebf100ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">displays the heap manager simulator usage and options.  <br /></td></tr>
+<tr class="memitem:a40cede80aa4c95e2cbde11218532af85" id="r_a40cede80aa4c95e2cbde11218532af85"><td class="memItemLeft" align="right" valign="top">constexpr const <a class="el" href="structcli_1_1opt__descriptor.html">opt_descriptor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecli.html#a40cede80aa4c95e2cbde11218532af85">cli::to_opt_desc</a> (std::string_view arg)</td></tr>
+<tr class="memdesc:a40cede80aa4c95e2cbde11218532af85"><td class="mdescLeft">&#160;</td><td class="mdescRight">gets the option descriptor of corresponding arg option.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:aa2acc6fa67f21fb2aa4a309225666647" id="r_aa2acc6fa67f21fb2aa4a309225666647"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="structcli_1_1opt__descriptor.html">opt_descriptor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecli.html#aa2acc6fa67f21fb2aa4a309225666647">cli::opt_descriptors</a> []</td></tr>
+<tr class="memdesc:aa2acc6fa67f21fb2aa4a309225666647"><td class="mdescLeft">&#160;</td><td class="mdescRight">descriptors of cli option args.  <br /></td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

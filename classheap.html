@@ -65,10 +65,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a269e624ed10bf33776374fc47778702d"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted copy constructor.  <br /></td></tr>
 <tr class="memitem:a4a7a1df6eb01d335f20a2cf3a088dfdf" id="r_a4a7a1df6eb01d335f20a2cf3a088dfdf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classheap.html">heap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a7a1df6eb01d335f20a2cf3a088dfdf">operator=</a> (const <a class="el" href="classheap.html">heap</a> &amp;)=delete</td></tr>
 <tr class="memdesc:a4a7a1df6eb01d335f20a2cf3a088dfdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted assignment operator.  <br /></td></tr>
-<tr class="memitem:a876d8a895166647ea47266faa76467a3" id="r_a876d8a895166647ea47266faa76467a3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a876d8a895166647ea47266faa76467a3">heap</a> (<a class="el" href="classheap.html">heap</a> &amp;&amp;)=delete</td></tr>
-<tr class="memdesc:a876d8a895166647ea47266faa76467a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted move constructor.  <br /></td></tr>
-<tr class="memitem:a9f9f200c2b7c215bbf2b1d9c55bea238" id="r_a9f9f200c2b7c215bbf2b1d9c55bea238"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classheap.html">heap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f9f200c2b7c215bbf2b1d9c55bea238">operator=</a> (<a class="el" href="classheap.html">heap</a> &amp;&amp;)=delete</td></tr>
-<tr class="memdesc:a9f9f200c2b7c215bbf2b1d9c55bea238"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted move assignment operator.  <br /></td></tr>
+<tr class="memitem:a330c3c1a724a0119f75975b50cab22d8" id="r_a330c3c1a724a0119f75975b50cab22d8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a330c3c1a724a0119f75975b50cab22d8">heap</a> (<a class="el" href="classheap.html">heap</a> &amp;&amp;) noexcept=delete</td></tr>
+<tr class="memdesc:a330c3c1a724a0119f75975b50cab22d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted move constructor.  <br /></td></tr>
+<tr class="memitem:a89ecd25232156cf7a2301dd42400d838" id="r_a89ecd25232156cf7a2301dd42400d838"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classheap.html">heap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89ecd25232156cf7a2301dd42400d838">operator=</a> (<a class="el" href="classheap.html">heap</a> &amp;&amp;) noexcept=delete</td></tr>
+<tr class="memdesc:a89ecd25232156cf7a2301dd42400d838"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted move assignment operator.  <br /></td></tr>
 <tr class="memitem:a12b142a92e89258a0ebc711a06dcefc0" id="r_a12b142a92e89258a0ebc711a06dcefc0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structsegment.html">segment</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12b142a92e89258a0ebc711a06dcefc0">get_small_object_segment</a> (size_t index)</td></tr>
 <tr class="memdesc:a12b142a92e89258a0ebc711a06dcefc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for small object segments.  <br /></td></tr>
 <tr class="memitem:a72076f7f83e6752e03b52e0321b14b5d" id="r_a72076f7f83e6752e03b52e0321b14b5d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structsegment.html">segment</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72076f7f83e6752e03b52e0321b14b5d">get_small_object_segment</a> (size_t index) const</td></tr>
@@ -177,8 +177,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a876d8a895166647ea47266faa76467a3" name="a876d8a895166647ea47266faa76467a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a876d8a895166647ea47266faa76467a3">&#9670;&#160;</a></span>heap() <span class="overload">[3/3]</span></h2>
+<a id="a330c3c1a724a0119f75975b50cab22d8" name="a330c3c1a724a0119f75975b50cab22d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a330c3c1a724a0119f75975b50cab22d8">&#9670;&#160;</a></span>heap() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -195,7 +195,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel delete">delete</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -388,8 +388,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a9f9f200c2b7c215bbf2b1d9c55bea238" name="a9f9f200c2b7c215bbf2b1d9c55bea238"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f9f200c2b7c215bbf2b1d9c55bea238">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a89ecd25232156cf7a2301dd42400d838" name="a89ecd25232156cf7a2301dd42400d838"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89ecd25232156cf7a2301dd42400d838">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -406,7 +406,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel delete">delete</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

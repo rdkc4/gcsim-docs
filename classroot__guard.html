@@ -65,6 +65,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aa201358f7957810fd5b1a87546447b0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted copy constructor.  <br /></td></tr>
 <tr class="memitem:a112f9c2e7da10100caee924538c86ba7" id="r_a112f9c2e7da10100caee924538c86ba7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classroot__guard.html">root_guard</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a112f9c2e7da10100caee924538c86ba7">operator=</a> (const <a class="el" href="classroot__guard.html">root_guard</a> &amp;)=delete</td></tr>
 <tr class="memdesc:a112f9c2e7da10100caee924538c86ba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted assignment operator.  <br /></td></tr>
+<tr class="memitem:ae78334ddecae4d2e6ec6e5d82c92bcfa" id="r_ae78334ddecae4d2e6ec6e5d82c92bcfa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae78334ddecae4d2e6ec6e5d82c92bcfa">root_guard</a> (<a class="el" href="classroot__guard.html">root_guard</a> &amp;&amp;) noexcept=delete</td></tr>
+<tr class="memdesc:ae78334ddecae4d2e6ec6e5d82c92bcfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted move constructor.  <br /></td></tr>
+<tr class="memitem:ab31150e4513301bf7adfaa6425f6732a" id="r_ab31150e4513301bf7adfaa6425f6732a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classroot__guard.html">root_guard</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab31150e4513301bf7adfaa6425f6732a">operator=</a> (<a class="el" href="classroot__guard.html">root_guard</a> &amp;&amp;) noexcept=delete</td></tr>
+<tr class="memdesc:ab31150e4513301bf7adfaa6425f6732a"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted move assignment operator.  <br /></td></tr>
 <tr class="memitem:a411aa8b4c833f7099a4710efe6caf141" id="r_a411aa8b4c833f7099a4710efe6caf141"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structheader.html">header</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a411aa8b4c833f7099a4710efe6caf141">get_slot</a> () const noexcept</td></tr>
 <tr class="memdesc:a411aa8b4c833f7099a4710efe6caf141"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for the slot of the temporary root.  <br /></td></tr>
 </table><table class="memberdecls">
@@ -81,7 +85,7 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><p>manages the lifetime of the temporary roots. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa4d68c99587ba58b64cf8aca28fe28f2" name="aa4d68c99587ba58b64cf8aca28fe28f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4d68c99587ba58b64cf8aca28fe28f2">&#9670;&#160;</a></span>root_guard() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4d68c99587ba58b64cf8aca28fe28f2">&#9670;&#160;</a></span>root_guard() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -146,7 +150,7 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <a id="aa201358f7957810fd5b1a87546447b0e" name="aa201358f7957810fd5b1a87546447b0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa201358f7957810fd5b1a87546447b0e">&#9670;&#160;</a></span>root_guard() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa201358f7957810fd5b1a87546447b0e">&#9670;&#160;</a></span>root_guard() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -169,6 +173,33 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>deleted copy constructor. </p>
+
+</div>
+</div>
+<a id="ae78334ddecae4d2e6ec6e5d82c92bcfa" name="ae78334ddecae4d2e6ec6e5d82c92bcfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae78334ddecae4d2e6ec6e5d82c92bcfa">&#9670;&#160;</a></span>root_guard() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">root_guard::root_guard </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classroot__guard.html">root_guard</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>deleted move constructor. </p>
 
 </div>
 </div>
@@ -202,7 +233,7 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a112f9c2e7da10100caee924538c86ba7" name="a112f9c2e7da10100caee924538c86ba7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a112f9c2e7da10100caee924538c86ba7">&#9670;&#160;</a></span>operator=()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a112f9c2e7da10100caee924538c86ba7">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -225,6 +256,33 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>deleted assignment operator. </p>
+
+</div>
+</div>
+<a id="ab31150e4513301bf7adfaa6425f6732a" name="ab31150e4513301bf7adfaa6425f6732a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab31150e4513301bf7adfaa6425f6732a">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classroot__guard.html">root_guard</a> &amp; root_guard::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classroot__guard.html">root_guard</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>deleted move assignment operator. </p>
 
 </div>
 </div>

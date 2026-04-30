@@ -56,8 +56,18 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ab376a595a2eccbac8cd837de19171c26" id="r_ab376a595a2eccbac8cd837de19171c26"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab376a595a2eccbac8cd837de19171c26">gc_forwarder</a> ()=default</td></tr>
+<tr class="memdesc:ab376a595a2eccbac8cd837de19171c26"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates the instance of the <a class="el" href="classgc__forwarder.html" title="interface for gc&#39;s forwarding phase.">gc_forwarder</a> object.  <br /></td></tr>
 <tr class="memitem:adec93183bf4d527e456acdbfa0a5ed24" id="r_adec93183bf4d527e456acdbfa0a5ed24"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adec93183bf4d527e456acdbfa0a5ed24">~gc_forwarder</a> ()=default</td></tr>
 <tr class="memdesc:adec93183bf4d527e456acdbfa0a5ed24"><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes the <a class="el" href="classgc__forwarder.html" title="interface for gc&#39;s forwarding phase.">gc_forwarder</a> object  <br /></td></tr>
+<tr class="memitem:a9c45b1986f24d82bcceeee6b01428c8c" id="r_a9c45b1986f24d82bcceeee6b01428c8c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c45b1986f24d82bcceeee6b01428c8c">gc_forwarder</a> (const <a class="el" href="classgc__forwarder.html">gc_forwarder</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a9c45b1986f24d82bcceeee6b01428c8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted copy constructor.  <br /></td></tr>
+<tr class="memitem:a3730ece560b79eb720f6577a8521de5b" id="r_a3730ece560b79eb720f6577a8521de5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgc__forwarder.html">gc_forwarder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3730ece560b79eb720f6577a8521de5b">operator=</a> (const <a class="el" href="classgc__forwarder.html">gc_forwarder</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a3730ece560b79eb720f6577a8521de5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted copy assignment operator.  <br /></td></tr>
+<tr class="memitem:ac385ee7564f97610e4b3138b0f0082a7" id="r_ac385ee7564f97610e4b3138b0f0082a7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac385ee7564f97610e4b3138b0f0082a7">gc_forwarder</a> (<a class="el" href="classgc__forwarder.html">gc_forwarder</a> &amp;&amp;) noexcept=delete</td></tr>
+<tr class="memdesc:ac385ee7564f97610e4b3138b0f0082a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted move constructor.  <br /></td></tr>
+<tr class="memitem:a1cbaec35e372358f107070de79cf3860" id="r_a1cbaec35e372358f107070de79cf3860"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgc__forwarder.html">gc_forwarder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1cbaec35e372358f107070de79cf3860">operator=</a> (<a class="el" href="classgc__forwarder.html">gc_forwarder</a> &amp;&amp;) noexcept=delete</td></tr>
+<tr class="memdesc:a1cbaec35e372358f107070de79cf3860"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted move assignment operator.  <br /></td></tr>
 <tr class="memitem:a60b06f39c63fa07fde979fbc38e28be0" id="r_a60b06f39c63fa07fde979fbc38e28be0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60b06f39c63fa07fde979fbc38e28be0">forward</a> (<a class="el" href="classthread__local__stack.html">thread_local_stack</a> &amp;stack)=0</td></tr>
 <tr class="memdesc:a60b06f39c63fa07fde979fbc38e28be0"><td class="mdescLeft">&#160;</td><td class="mdescRight">virtual function for forwarding elements of the thread local stack.  <br /></td></tr>
 <tr class="memitem:a697d2dc145e29c59ec19c6877d86aae8" id="r_a697d2dc145e29c59ec19c6877d86aae8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a697d2dc145e29c59ec19c6877d86aae8">forward</a> (<a class="el" href="classshared__global__space.html">shared_global_space</a> &amp;global)=0</td></tr>
@@ -68,6 +78,33 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>interface for gc's forwarding phase. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ab376a595a2eccbac8cd837de19171c26" name="ab376a595a2eccbac8cd837de19171c26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab376a595a2eccbac8cd837de19171c26">&#9670;&#160;</a></span>gc_forwarder() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">gc_forwarder::gc_forwarder </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>creates the instance of the <a class="el" href="classgc__forwarder.html" title="interface for gc&#39;s forwarding phase.">gc_forwarder</a> object. </p>
+
+</div>
+</div>
 <a id="adec93183bf4d527e456acdbfa0a5ed24" name="adec93183bf4d527e456acdbfa0a5ed24"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adec93183bf4d527e456acdbfa0a5ed24">&#9670;&#160;</a></span>~gc_forwarder()</h2>
 
@@ -92,6 +129,60 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>deletes the <a class="el" href="classgc__forwarder.html" title="interface for gc&#39;s forwarding phase.">gc_forwarder</a> object </p>
+
+</div>
+</div>
+<a id="a9c45b1986f24d82bcceeee6b01428c8c" name="a9c45b1986f24d82bcceeee6b01428c8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c45b1986f24d82bcceeee6b01428c8c">&#9670;&#160;</a></span>gc_forwarder() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">gc_forwarder::gc_forwarder </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgc__forwarder.html">gc_forwarder</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>deleted copy constructor. </p>
+
+</div>
+</div>
+<a id="ac385ee7564f97610e4b3138b0f0082a7" name="ac385ee7564f97610e4b3138b0f0082a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac385ee7564f97610e4b3138b0f0082a7">&#9670;&#160;</a></span>gc_forwarder() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">gc_forwarder::gc_forwarder </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classgc__forwarder.html">gc_forwarder</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>deleted move constructor. </p>
 
 </div>
 </div>
@@ -198,6 +289,60 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Implemented in <a class="el" href="classmc__garbage__collector.html#a4185bb6316a787b0257f5bd0949dfb8e">mc_garbage_collector</a>.</p>
+
+</div>
+</div>
+<a id="a3730ece560b79eb720f6577a8521de5b" name="a3730ece560b79eb720f6577a8521de5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3730ece560b79eb720f6577a8521de5b">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgc__forwarder.html">gc_forwarder</a> &amp; gc_forwarder::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgc__forwarder.html">gc_forwarder</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>deleted copy assignment operator. </p>
+
+</div>
+</div>
+<a id="a1cbaec35e372358f107070de79cf3860" name="a1cbaec35e372358f107070de79cf3860"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cbaec35e372358f107070de79cf3860">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgc__forwarder.html">gc_forwarder</a> &amp; gc_forwarder::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classgc__forwarder.html">gc_forwarder</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>deleted move assignment operator. </p>
 
 </div>
 </div>

@@ -56,8 +56,18 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a2878a8fca7c1bb1d5c041cb40d54404d" id="r_a2878a8fca7c1bb1d5c041cb40d54404d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2878a8fca7c1bb1d5c041cb40d54404d">gc_visitor</a> ()=default</td></tr>
+<tr class="memdesc:a2878a8fca7c1bb1d5c041cb40d54404d"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates the instance of <a class="el" href="classgc__visitor.html" title="interface for GC&#39;s marking phase.">gc_visitor</a> object.  <br /></td></tr>
 <tr class="memitem:a344b9caf96b76871158ba434449d47d6" id="r_a344b9caf96b76871158ba434449d47d6"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a344b9caf96b76871158ba434449d47d6">~gc_visitor</a> ()=default</td></tr>
-<tr class="memdesc:a344b9caf96b76871158ba434449d47d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes the <a class="el" href="classgc__visitor.html" title="interface for GC&#39;s marking phase.">gc_visitor</a> object  <br /></td></tr>
+<tr class="memdesc:a344b9caf96b76871158ba434449d47d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes the <a class="el" href="classgc__visitor.html" title="interface for GC&#39;s marking phase.">gc_visitor</a> object.  <br /></td></tr>
+<tr class="memitem:a3d528c300ff5935378c29671abdf8797" id="r_a3d528c300ff5935378c29671abdf8797"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d528c300ff5935378c29671abdf8797">gc_visitor</a> (const <a class="el" href="classgc__visitor.html">gc_visitor</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a3d528c300ff5935378c29671abdf8797"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted copy constructor.  <br /></td></tr>
+<tr class="memitem:a5f1d7b505bde921a6532c733ad4db774" id="r_a5f1d7b505bde921a6532c733ad4db774"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgc__visitor.html">gc_visitor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f1d7b505bde921a6532c733ad4db774">operator=</a> (const <a class="el" href="classgc__visitor.html">gc_visitor</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a5f1d7b505bde921a6532c733ad4db774"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted copy assignment operator.  <br /></td></tr>
+<tr class="memitem:a958e49910473fe79c34db083794ad80b" id="r_a958e49910473fe79c34db083794ad80b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a958e49910473fe79c34db083794ad80b">gc_visitor</a> (<a class="el" href="classgc__visitor.html">gc_visitor</a> &amp;&amp;) noexcept=delete</td></tr>
+<tr class="memdesc:a958e49910473fe79c34db083794ad80b"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted move constructor.  <br /></td></tr>
+<tr class="memitem:a0bad279fb798c541420b52baf2233885" id="r_a0bad279fb798c541420b52baf2233885"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgc__visitor.html">gc_visitor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0bad279fb798c541420b52baf2233885">operator=</a> (<a class="el" href="classgc__visitor.html">gc_visitor</a> &amp;&amp;) noexcept=delete</td></tr>
+<tr class="memdesc:a0bad279fb798c541420b52baf2233885"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted move assignment operator.  <br /></td></tr>
 <tr class="memitem:a56c189bdd0d97f187fbb39a65cad6fb7" id="r_a56c189bdd0d97f187fbb39a65cad6fb7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56c189bdd0d97f187fbb39a65cad6fb7">visit</a> (<a class="el" href="classthread__local__stack.html">thread_local_stack</a> &amp;stack)=0</td></tr>
 <tr class="memdesc:a56c189bdd0d97f187fbb39a65cad6fb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">virtual function for marking elements of the thread local stack.  <br /></td></tr>
 <tr class="memitem:af386558b9c8e5bbcad894c1ff2f635cf" id="r_af386558b9c8e5bbcad894c1ff2f635cf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af386558b9c8e5bbcad894c1ff2f635cf">visit</a> (<a class="el" href="classshared__global__space.html">shared_global_space</a> &amp;global)=0</td></tr>
@@ -68,6 +78,33 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>interface for GC's marking phase. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a2878a8fca7c1bb1d5c041cb40d54404d" name="a2878a8fca7c1bb1d5c041cb40d54404d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2878a8fca7c1bb1d5c041cb40d54404d">&#9670;&#160;</a></span>gc_visitor() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">gc_visitor::gc_visitor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>creates the instance of <a class="el" href="classgc__visitor.html" title="interface for GC&#39;s marking phase.">gc_visitor</a> object. </p>
+
+</div>
+</div>
 <a id="a344b9caf96b76871158ba434449d47d6" name="a344b9caf96b76871158ba434449d47d6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a344b9caf96b76871158ba434449d47d6">&#9670;&#160;</a></span>~gc_visitor()</h2>
 
@@ -91,11 +128,119 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>deletes the <a class="el" href="classgc__visitor.html" title="interface for GC&#39;s marking phase.">gc_visitor</a> object </p>
+<p>deletes the <a class="el" href="classgc__visitor.html" title="interface for GC&#39;s marking phase.">gc_visitor</a> object. </p>
+
+</div>
+</div>
+<a id="a3d528c300ff5935378c29671abdf8797" name="a3d528c300ff5935378c29671abdf8797"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d528c300ff5935378c29671abdf8797">&#9670;&#160;</a></span>gc_visitor() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">gc_visitor::gc_visitor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgc__visitor.html">gc_visitor</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>deleted copy constructor. </p>
+
+</div>
+</div>
+<a id="a958e49910473fe79c34db083794ad80b" name="a958e49910473fe79c34db083794ad80b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a958e49910473fe79c34db083794ad80b">&#9670;&#160;</a></span>gc_visitor() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">gc_visitor::gc_visitor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classgc__visitor.html">gc_visitor</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>deleted move constructor. </p>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a5f1d7b505bde921a6532c733ad4db774" name="a5f1d7b505bde921a6532c733ad4db774"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f1d7b505bde921a6532c733ad4db774">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgc__visitor.html">gc_visitor</a> &amp; gc_visitor::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgc__visitor.html">gc_visitor</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>deleted copy assignment operator. </p>
+
+</div>
+</div>
+<a id="a0bad279fb798c541420b52baf2233885" name="a0bad279fb798c541420b52baf2233885"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bad279fb798c541420b52baf2233885">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgc__visitor.html">gc_visitor</a> &amp; gc_visitor::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classgc__visitor.html">gc_visitor</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>deleted move assignment operator. </p>
+
+</div>
+</div>
 <a id="af386558b9c8e5bbcad894c1ff2f635cf" name="af386558b9c8e5bbcad894c1ff2f635cf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af386558b9c8e5bbcad894c1ff2f635cf">&#9670;&#160;</a></span>visit() <span class="overload">[1/3]</span></h2>
 

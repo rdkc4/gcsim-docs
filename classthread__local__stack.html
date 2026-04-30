@@ -66,10 +66,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ade57dc931ca19f4a6fddd0bafdfa21a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted copy constructor.  <br /></td></tr>
 <tr class="memitem:a35600f6800481a6275640884fa733a96" id="r_a35600f6800481a6275640884fa733a96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classthread__local__stack.html">thread_local_stack</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35600f6800481a6275640884fa733a96">operator=</a> (const <a class="el" href="classthread__local__stack.html">thread_local_stack</a> &amp;)=delete</td></tr>
 <tr class="memdesc:a35600f6800481a6275640884fa733a96"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted assignment operator.  <br /></td></tr>
-<tr class="memitem:a80d0d9ae62238c9c1493e0dc866f19c0" id="r_a80d0d9ae62238c9c1493e0dc866f19c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80d0d9ae62238c9c1493e0dc866f19c0">thread_local_stack</a> (<a class="el" href="classthread__local__stack.html">thread_local_stack</a> &amp;&amp;other)=delete</td></tr>
-<tr class="memdesc:a80d0d9ae62238c9c1493e0dc866f19c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted move constructor.  <br /></td></tr>
-<tr class="memitem:aebe8bbed7da55cedc09cc37dae58641b" id="r_aebe8bbed7da55cedc09cc37dae58641b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classthread__local__stack.html">thread_local_stack</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebe8bbed7da55cedc09cc37dae58641b">operator=</a> (<a class="el" href="classthread__local__stack.html">thread_local_stack</a> &amp;&amp;other)=delete</td></tr>
-<tr class="memdesc:aebe8bbed7da55cedc09cc37dae58641b"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted move assignment operator.  <br /></td></tr>
+<tr class="memitem:a12fc6709494bf9ad4aa788f7b795c109" id="r_a12fc6709494bf9ad4aa788f7b795c109"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12fc6709494bf9ad4aa788f7b795c109">thread_local_stack</a> (<a class="el" href="classthread__local__stack.html">thread_local_stack</a> &amp;&amp;other) noexcept=delete</td></tr>
+<tr class="memdesc:a12fc6709494bf9ad4aa788f7b795c109"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted move constructor.  <br /></td></tr>
+<tr class="memitem:a8531bdbe83754dd4088f4ec684dc3c1a" id="r_a8531bdbe83754dd4088f4ec684dc3c1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classthread__local__stack.html">thread_local_stack</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8531bdbe83754dd4088f4ec684dc3c1a">operator=</a> (<a class="el" href="classthread__local__stack.html">thread_local_stack</a> &amp;&amp;other) noexcept=delete</td></tr>
+<tr class="memdesc:a8531bdbe83754dd4088f4ec684dc3c1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">deleted move assignment operator.  <br /></td></tr>
 <tr class="memitem:aa8f725227ceccb4c0db2f8f1f6af61ab" id="r_aa8f725227ceccb4c0db2f8f1f6af61ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8f725227ceccb4c0db2f8f1f6af61ab">init</a> (<a class="el" href="structheader.html">header</a> *heap_ptr=nullptr)</td></tr>
 <tr class="memdesc:aa8f725227ceccb4c0db2f8f1f6af61ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">initializes new variable.  <br /></td></tr>
 <tr class="memitem:a4e66e8baea62fd4818e8f036883b8e47" id="r_a4e66e8baea62fd4818e8f036883b8e47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e66e8baea62fd4818e8f036883b8e47">reassign_ref</a> (size_t index, <a class="el" href="structheader.html">header</a> *new_ref_to)</td></tr>
@@ -198,8 +198,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a80d0d9ae62238c9c1493e0dc866f19c0" name="a80d0d9ae62238c9c1493e0dc866f19c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80d0d9ae62238c9c1493e0dc866f19c0">&#9670;&#160;</a></span>thread_local_stack() <span class="overload">[3/3]</span></h2>
+<a id="a12fc6709494bf9ad4aa788f7b795c109" name="a12fc6709494bf9ad4aa788f7b795c109"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12fc6709494bf9ad4aa788f7b795c109">&#9670;&#160;</a></span>thread_local_stack() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -216,7 +216,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel delete">delete</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -471,8 +471,8 @@ template&lt;typename Fn&gt; </div>
 
 </div>
 </div>
-<a id="aebe8bbed7da55cedc09cc37dae58641b" name="aebe8bbed7da55cedc09cc37dae58641b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aebe8bbed7da55cedc09cc37dae58641b">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a8531bdbe83754dd4088f4ec684dc3c1a" name="a8531bdbe83754dd4088f4ec684dc3c1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8531bdbe83754dd4088f4ec684dc3c1a">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -489,7 +489,7 @@ template&lt;typename Fn&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel delete">delete</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
